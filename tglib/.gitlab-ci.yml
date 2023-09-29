@@ -1,0 +1,53 @@
+image: python:3.9.17-bullseye
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+before_script:
+ - apt-get update --yes
+ - apt-get install --yes cmake 
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - test
+
+build-job:       # This job runs in the build stage, which runs first.
+  stage: build
+  artifacts:
+    untracked: true
+  script:
+    - cd tglib_cpp
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+    - mkdir build
+    - cd build
+    - cmake .. -DCMAKE_BUILD_TYPE=Release
+    - make
+
+unit-test-job:   # This job runs in the test stage.
+  stage: test    # It only starts when the job in the build stage completes successfully.
+  dependencies: 
+    - build-job
+  script:
+    - cd tglib_cpp/build/test
+    - ctest
+
+pages: # Generate and publish the documentation
+  stage: build
+  script:
+    - apt-get update
+    - apt-get install -y doxygen 
+    - cd tglib_cpp
+    - mkdir build-doc
+    - cd build-doc
+    - cmake .. -DCMAKE_BUILD_TYPE=Release
+    - make doxygen
+    - cd ../..
+    - mkdir public
+    - cp -a tglib_cpp/build-doc/html/. public 
+  artifacts:
+    untracked: true
+    paths:
+      - public
+  only:
+    - main

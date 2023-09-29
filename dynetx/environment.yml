@@ -1,0 +1,12 @@
+name: dynetx
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python>=3.8
+- pendulum
+- numpy
+- future
+- tqdm
+- networkx>=2.4
+- decorator

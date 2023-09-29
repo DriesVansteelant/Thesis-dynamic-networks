@@ -1,0 +1,7 @@
+sphinx_rtd_theme==0.4.3
+mock
+numpy
+decorators
+networkx
+pytest>=5.4.3
+docutils==0.15.2
