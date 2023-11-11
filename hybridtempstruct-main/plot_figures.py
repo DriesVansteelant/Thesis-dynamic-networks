@@ -4,14 +4,18 @@ import numpy as np
 import pickle
 
 structs = ['interval', 'snapshot', 'adjtree', 'tvg', 'networkx']
-datasets = ['realitymining', 'wikipedia', 'infectious', 'bikeshare', 'wallposts', 'askubuntu', 'enron']
+datasets = ['realitymining', 'enron']#, 'wikipedia', 'infectious', 'bikeshare', 'wallposts', 'askubuntu', 'enron']
 
 def plot_memory(structs, datasets):
+    print("start plot")
     memory_results = {}
+    # print("structs", structs)
+    # print("datasets",datasets)
     for struct in structs:
         for dataset_name in datasets:
+            # print("inLoop: ", struct, dataset_name)
             memory_results.setdefault(struct, {})[dataset_name] = pickle.load(open(f'memory_results_{struct}_{dataset_name}.pkl', 'rb'))
-
+    print("mem loaded")
     fig, ax = plt.subplots()
     width = 0.15
     offset = {'interval': 2 * width, 'snapshot': 1 * width, 'adjtree': 0 * width, 'tvg': -1 * width,'networkx': -2 * width}
@@ -21,13 +25,13 @@ def plot_memory(structs, datasets):
 
     for struct in structs:
         nums = [memory_results[struct][d] for d in memory_results[struct]]
-        ax.barh(label_location + offset[struct], nums, width, label=labels[struct], color=color[struct])
+        ax.bar(label_location + offset[struct], nums, width, label=labels[struct], color=color[struct])
 
     # ax.set_title('Memory')
-    ax.set_yticks(label_location)
-    ax.set_yticklabels(datasets)
-    ax.set_xscale('log')
-    ax.set_xlabel('Memory (MB)')
+    ax.set_xticks(label_location)
+    ax.set_xticklabels(datasets)
+    ax.set_yscale('log')
+    ax.set_ylabel('Memory (MB)')
     fig.tight_layout()
     fig.set_figheight(4)
     fig.set_figwidth(6)
@@ -35,6 +39,7 @@ def plot_memory(structs, datasets):
     plt.legend()
     fig.savefig('memory.eps', format='eps')
     plt.show()
+    print("done!")
 
 
 def plot_slices(structs, datasets, percent=None):
@@ -505,15 +510,15 @@ def _separate_creation_results(dataset_name, percent):
 
 
 plot_memory(structs, datasets)
-plot_creation(structs, datasets)
-plot_slices(structs, datasets)
-plot_slices(structs, datasets, [1, 5])
-plot_slices(structs, datasets, 5)
-plot_compound(datasets)
-plot_compound_compare(datasets)
-plot_predict('infectious')
-plot_predict_compare('infectious')
-plot_train_time(datasets)
-plot_accuracy(datasets)
-plot_feat_times(datasets)
-plot_casestudy()
+# plot_creation(structs, datasets)
+# plot_slices(structs, datasets)
+# plot_slices(structs, datasets, [1, 5])
+# plot_slices(structs, datasets, 5)
+# plot_compound(datasets)
+# plot_compound_compare(datasets)
+# plot_predict('infectious')
+# plot_predict_compare('infectious')
+# plot_train_time(datasets)
+# plot_accuracy(datasets)
+# plot_feat_times(datasets)
+# plot_casestudy()

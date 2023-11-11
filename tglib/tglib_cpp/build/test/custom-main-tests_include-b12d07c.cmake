@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake")
+  include("C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake")
+else()
+  add_test(custom-main-tests_NOT_BUILT-b12d07c custom-main-tests_NOT_BUILT-b12d07c)
+endif()

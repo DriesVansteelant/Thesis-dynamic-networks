@@ -1,0 +1,506 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 14/10/2023 11:02:51.
+      Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\3.27.6\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\3.27.6\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\3.27.6\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.33
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/3.27.6/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 14/10/2023 11:02:53.
+      Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\3.27.6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\3.27.6\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\3.27.6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.05
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/3.27.6/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-x3db3s"
+      binary: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-x3db3s"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-x3db3s'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_df88e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 14/10/2023 11:02:54.
+        Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x3db3s\\cmTC_df88e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_df88e.dir\\Debug\\".
+          Creating directory "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x3db3s\\Debug\\".
+          Creating directory "cmTC_df88e.dir\\Debug\\cmTC_df88e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_df88e.dir\\Debug\\cmTC_df88e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_df88e.dir\\Debug\\\\" /Fd"cmTC_df88e.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30152 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CMakeCCompilerABI.c
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_df88e.dir\\Debug\\\\" /Fd"cmTC_df88e.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x3db3s\\Debug\\cmTC_df88e.exe" /INCREMENTAL /ILK:"cmTC_df88e.dir\\Debug\\cmTC_df88e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-x3db3s/Debug/cmTC_df88e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-x3db3s/Debug/cmTC_df88e.lib" /MACHINE:X64  /machine:x64 cmTC_df88e.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_df88e.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x3db3s\\Debug\\cmTC_df88e.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_df88e.dir\\Debug\\cmTC_df88e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_df88e.dir\\Debug\\cmTC_df88e.tlog\\cmTC_df88e.lastbuildstate".
+        Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x3db3s\\cmTC_df88e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.99
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-npfpp4"
+      binary: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-npfpp4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-npfpp4'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_04442.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 14/10/2023 11:02:56.
+        Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-npfpp4\\cmTC_04442.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_04442.dir\\Debug\\".
+          Creating directory "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-npfpp4\\Debug\\".
+          Creating directory "cmTC_04442.dir\\Debug\\cmTC_04442.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_04442.dir\\Debug\\cmTC_04442.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_04442.dir\\Debug\\\\" /Fd"cmTC_04442.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30152 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_04442.dir\\Debug\\\\" /Fd"cmTC_04442.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-npfpp4\\Debug\\cmTC_04442.exe" /INCREMENTAL /ILK:"cmTC_04442.dir\\Debug\\cmTC_04442.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-npfpp4/Debug/cmTC_04442.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-npfpp4/Debug/cmTC_04442.lib" /MACHINE:X64  /machine:x64 cmTC_04442.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_04442.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-npfpp4\\Debug\\cmTC_04442.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_04442.dir\\Debug\\cmTC_04442.tlog\\unsuccessfulbuild".
+          Touching "cmTC_04442.dir\\Debug\\cmTC_04442.tlog\\cmTC_04442.lastbuildstate".
+        Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-npfpp4\\cmTC_04442.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.98
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenMP.cmake:219 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenMP.cmake:483 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:15 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-raxskv"
+      binary: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-raxskv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_openmp"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-raxskv'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_7b3cf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 14/10/2023 11:02:57.
+        Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-raxskv\\cmTC_7b3cf.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_7b3cf.dir\\Debug\\".
+          Creating directory "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-raxskv\\Debug\\".
+          Creating directory "cmTC_7b3cf.dir\\Debug\\cmTC_7b3cf.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_7b3cf.dir\\Debug\\cmTC_7b3cf.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_7b3cf.dir\\Debug\\\\" /Fd"cmTC_7b3cf.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-raxskv\\OpenMPTryFlag.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30152 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          OpenMPTryFlag.c
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_7b3cf.dir\\Debug\\\\" /Fd"cmTC_7b3cf.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-raxskv\\OpenMPTryFlag.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-raxskv\\Debug\\cmTC_7b3cf.exe" /INCREMENTAL /ILK:"cmTC_7b3cf.dir\\Debug\\cmTC_7b3cf.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-raxskv/Debug/cmTC_7b3cf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-raxskv/Debug/cmTC_7b3cf.lib" /MACHINE:X64  /machine:x64 cmTC_7b3cf.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_7b3cf.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-raxskv\\Debug\\cmTC_7b3cf.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_7b3cf.dir\\Debug\\cmTC_7b3cf.tlog\\unsuccessfulbuild".
+          Touching "cmTC_7b3cf.dir\\Debug\\cmTC_7b3cf.tlog\\cmTC_7b3cf.lastbuildstate".
+        Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-raxskv\\cmTC_7b3cf.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.01
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenMP.cmake:219 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenMP.cmake:483 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:15 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-spn6bx"
+      binary: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-spn6bx"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_openmp"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-spn6bx'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_4496e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 14/10/2023 11:02:59.
+        Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-spn6bx\\cmTC_4496e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_4496e.dir\\Debug\\".
+          Creating directory "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-spn6bx\\Debug\\".
+          Creating directory "cmTC_4496e.dir\\Debug\\cmTC_4496e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_4496e.dir\\Debug\\cmTC_4496e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++20 /Fo"cmTC_4496e.dir\\Debug\\\\" /Fd"cmTC_4496e.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-spn6bx\\OpenMPTryFlag.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30152 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          OpenMPTryFlag.cpp
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++20 /Fo"cmTC_4496e.dir\\Debug\\\\" /Fd"cmTC_4496e.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-spn6bx\\OpenMPTryFlag.cpp"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-spn6bx\\Debug\\cmTC_4496e.exe" /INCREMENTAL /ILK:"cmTC_4496e.dir\\Debug\\cmTC_4496e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-spn6bx/Debug/cmTC_4496e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-spn6bx/Debug/cmTC_4496e.lib" /MACHINE:X64  /machine:x64 cmTC_4496e.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_4496e.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-spn6bx\\Debug\\cmTC_4496e.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_4496e.dir\\Debug\\cmTC_4496e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_4496e.dir\\Debug\\cmTC_4496e.tlog\\cmTC_4496e.lastbuildstate".
+        Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-spn6bx\\cmTC_4496e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.97
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenMP.cmake:419 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:15 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-zaq2cf"
+      binary: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-zaq2cf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-zaq2cf'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_9b92a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 14/10/2023 11:03:00.
+        Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zaq2cf\\cmTC_9b92a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_9b92a.dir\\Debug\\".
+          Creating directory "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zaq2cf\\Debug\\".
+          Creating directory "cmTC_9b92a.dir\\Debug\\cmTC_9b92a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_9b92a.dir\\Debug\\cmTC_9b92a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_9b92a.dir\\Debug\\\\" /Fd"cmTC_9b92a.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zaq2cf\\OpenMPCheckVersion.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30152 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          OpenMPCheckVersion.c
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_9b92a.dir\\Debug\\\\" /Fd"cmTC_9b92a.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zaq2cf\\OpenMPCheckVersion.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zaq2cf\\Debug\\cmTC_9b92a.exe" /INCREMENTAL /ILK:"cmTC_9b92a.dir\\Debug\\cmTC_9b92a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-zaq2cf/Debug/cmTC_9b92a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-zaq2cf/Debug/cmTC_9b92a.lib" /MACHINE:X64  /machine:x64 cmTC_9b92a.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_9b92a.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zaq2cf\\Debug\\cmTC_9b92a.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_9b92a.dir\\Debug\\cmTC_9b92a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_9b92a.dir\\Debug\\cmTC_9b92a.tlog\\cmTC_9b92a.lastbuildstate".
+        Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zaq2cf\\cmTC_9b92a.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.00
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenMP.cmake:419 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:15 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-yj05ed"
+      binary: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-yj05ed"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-yj05ed'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_47139.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 14/10/2023 11:03:02.
+        Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yj05ed\\cmTC_47139.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_47139.dir\\Debug\\".
+          Creating directory "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yj05ed\\Debug\\".
+          Creating directory "cmTC_47139.dir\\Debug\\cmTC_47139.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_47139.dir\\Debug\\cmTC_47139.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++20 /Fo"cmTC_47139.dir\\Debug\\\\" /Fd"cmTC_47139.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yj05ed\\OpenMPCheckVersion.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30152 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          OpenMPCheckVersion.cpp
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++20 /Fo"cmTC_47139.dir\\Debug\\\\" /Fd"cmTC_47139.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yj05ed\\OpenMPCheckVersion.cpp"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yj05ed\\Debug\\cmTC_47139.exe" /INCREMENTAL /ILK:"cmTC_47139.dir\\Debug\\cmTC_47139.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-yj05ed/Debug/cmTC_47139.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-yj05ed/Debug/cmTC_47139.lib" /MACHINE:X64  /machine:x64 cmTC_47139.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_47139.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yj05ed\\Debug\\cmTC_47139.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_47139.dir\\Debug\\cmTC_47139.tlog\\unsuccessfulbuild".
+          Touching "cmTC_47139.dir\\Debug\\cmTC_47139.tlog\\cmTC_47139.lastbuildstate".
+        Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yj05ed\\cmTC_47139.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.12
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "extern/pybind11/tools/pybind11Common.cmake:268 (check_cxx_compiler_flag)"
+      - "extern/pybind11/tools/pybind11Common.cmake:322 (_pybind11_return_if_cxx_and_linker_flags_work)"
+      - "extern/pybind11/tools/pybind11Common.cmake:366 (_pybind11_generate_lto)"
+      - "extern/pybind11/CMakeLists.txt:200 (include)"
+    checks:
+      - "Performing Test HAS_MSVC_GL_LTCG"
+    directories:
+      source: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-aq4c0f"
+      binary: "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-aq4c0f"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc -openmp"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64 "
+      CMAKE_MODULE_PATH: ""
+    buildResult:
+      variable: "HAS_MSVC_GL_LTCG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-aq4c0f'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_a8b58.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 14/10/2023 11:03:04.
+        Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\cmTC_a8b58.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_a8b58.dir\\Debug\\".
+          Creating directory "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\Debug\\".
+          Creating directory "cmTC_a8b58.dir\\Debug\\cmTC_a8b58.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_a8b58.dir\\Debug\\cmTC_a8b58.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++20 /Fo"cmTC_a8b58.dir\\Debug\\\\" /Fd"cmTC_a8b58.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30152 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          src.cxx
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /std:c++20 /Fo"cmTC_a8b58.dir\\Debug\\\\" /Fd"cmTC_a8b58.dir\\Debug\\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\src.cxx"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\Debug\\cmTC_a8b58.exe" /INCREMENTAL /ILK:"cmTC_a8b58.dir\\Debug\\cmTC_a8b58.ilk" /NOLOGO "-LTCG" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-aq4c0f/Debug/cmTC_a8b58.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/CMakeScratch/TryCompile-aq4c0f/Debug/cmTC_a8b58.lib" /MACHINE:X64  /machine:x64 cmTC_a8b58.dir\\Debug\\src.obj
+        LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification [C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\cmTC_a8b58.vcxproj]
+          Generating code
+          Finished generating code
+          cmTC_a8b58.vcxproj -> C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\Debug\\cmTC_a8b58.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_a8b58.dir\\Debug\\cmTC_a8b58.tlog\\unsuccessfulbuild".
+          Touching "cmTC_a8b58.dir\\Debug\\cmTC_a8b58.tlog\\cmTC_a8b58.lastbuildstate".
+        Done Building Project "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\cmTC_a8b58.vcxproj" (default targets).
+        
+        Build succeeded.
+        
+        "C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\cmTC_a8b58.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification [C:\\Users\\dries\\Documents\\school\\Thesis\\Thesis-dynamic-networks\\tglib\\tglib_cpp\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aq4c0f\\cmTC_a8b58.vcxproj]
+        
+            1 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.97
+        
+      exitCode: 0
+...
