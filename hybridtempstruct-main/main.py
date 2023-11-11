@@ -16,7 +16,8 @@ from random import sample
 
 from intervalIntervalGraph import IntervalGraph
 from snapshotGraph import SnapshotGraph
-from networkx import MultiGraph, nx
+import networkx as nx
+from networkx import MultiGraph
 from dictsortlist import AdjTree
 from tvg import TVG
 
@@ -24,6 +25,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression, LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score, accuracy_score, balanced_accuracy_score
 
+if __name__ == "__main__":
+
+    creation_results = {}
 
 def load_from_txt(path, delimiter=" ", nodetype=int, intervaltype=float, order=('u', 'v', 'begin', 'end'), comments="#", impulse=False):
     if delimiter == '=':
@@ -111,8 +115,8 @@ def generateStructures(struct_item, dataset_item):
 
 
 def generateCompoundSlices(inputs):
-    global creation_results
-    G = creation_results[inputs[0]][inputs[1]][0]
+    # global creation_results
+    G = inputs[2][inputs[0]][inputs[1]][0]
     if type(G) == MultiGraph:
         node_list = list(G.nodes)
         graph_begin = math.inf
@@ -176,8 +180,8 @@ def generateCompoundSlices(inputs):
 
 
 def generateSlices(inputs):
-    global creation_results
-    G = creation_results[inputs[0]][inputs[1]][0]
+    # global creation_results
+    G = inputs[2][inputs[0]][inputs[1]][0]
     if type(G) == MultiGraph:
         graph_begin = math.inf
         graph_end = -math.inf
@@ -361,51 +365,57 @@ if __name__ == "__main__":
 
     ## LOAD DATASETS
     data_edge_lists = {}
-    # bikeshare dataset is unique format
-    for filename in glob.glob(os.path.join('2016TripDataZip', '*.csv')):
-        with open(filename, 'r') as file:
-            next(file)
-            for line in csv.reader(file, delimiter=","):
-                if len(line) < 9:
-                    continue
-                start_station_id = line[7]
-                end_station_id = line[4]
-                start_date = line[6]
-                end_date = line[3]
-                try:
-                    day, month, year, hour, minute = re.split('\s|/|:', end_date)
-                    end_time = dt(int(year), int(month), int(day), int(hour), int(minute)).timestamp()
-                    day, month, year, hour, minute = re.split('\s|/|:', start_date)
-                    start_time = dt(int(year), int(month), int(day), int(hour), int(minute)).timestamp()
-                except:
-                    continue
-                data_edge_lists.setdefault('bikeshare', []).append((start_station_id, end_station_id, int(start_time), int(end_time)))
+    ## bikeshare dataset is unique format
+    # for filename in glob.glob(os.path.join('2016TripDataZip', '*.csv')):
+    #     with open(filename, 'r') as file:
+    #         next(file)
+    #         for line in csv.reader(file, delimiter=","):
+    #             if len(line) < 9:
+    #                 continue
+    #             start_station_id = line[7]
+    #             end_station_id = line[4]
+    #             start_date = line[6]
+    #             end_date = line[3]
+    #             try:
+    #                 day, month, year, hour, minute = re.split('\s|/|:', end_date)
+    #                 end_time = dt(int(year), int(month), int(day), int(hour), int(minute)).timestamp()
+    #                 day, month, year, hour, minute = re.split('\s|/|:', start_date)
+    #                 start_time = dt(int(year), int(month), int(day), int(hour), int(minute)).timestamp()
+    #             except:
+    #                 continue
+    #             data_edge_lists.setdefault('bikeshare', []).append((start_station_id, end_station_id, int(start_time), int(end_time)))
     data_edge_lists['realitymining'] = load_from_txt('realitymining.edges', delimiter='\t', order=('u', 'v', 'begin', 'end'))
-    data_edge_lists['wikipedia'] = load_from_txt('wikipedia.edges', delimiter=' ', order=('u', 'v', 'begin', 'end'))
-    data_edge_lists['infectious'] = load_from_txt('infectious_merged.edges', delimiter='\t', order=('u', 'v', 'begin', 'end'))
-    data_edge_lists['askubuntu'] = load_from_txt('askubuntu.edges', delimiter=' ', order=('u', 'v', 'timestamp'), impulse=True)
-    data_edge_lists['wallposts'] = load_from_txt('fb_wall.edges', delimiter='\t', order=('u', 'v', 'timestamp'), impulse=True)
+    print("realitymining")
+    # data_edge_lists['wikipedia'] = load_from_txt('wikipedia.edges', delimiter=' ', order=('u', 'v', 'begin', 'end'))
+    # print("wikipedia")
+    # data_edge_lists['infectious'] = load_from_txt('infectious_merged.edges', delimiter='\t', order=('u', 'v', 'begin', 'end'))
+    # print("infectious")
+    # data_edge_lists['askubuntu'] = load_from_txt('askubuntu.edges', delimiter=' ', order=('u', 'v', 'timestamp'), impulse=True)
+    # data_edge_lists['wallposts'] = load_from_txt('fb_wall.edges', delimiter='\t', order=('u', 'v', 'timestamp'), impulse=True)
     data_edge_lists['enron'] = load_from_txt('execs.email.lines2.txt', delimiter=' ', order=('timestamp', 'u', 'v'), impulse=True)
+    print("loaded from text")
 
     ## GENERATE STRUCTURES
-    global creation_results
+    # global creation_results
     creation_results = {}
     structures = {'interval': IntervalGraph(), 'snapshot': SnapshotGraph(), 'networkx': MultiGraph(), 'adjtree': AdjTree(), 'tvg': TVG()}
-    with mp.Pool(24) as p:
+    with mp.Pool(10) as p:
         for creation_time, struct_name, dataset_name, G in tqdm.tqdm(p.starmap(generateStructures, product(structures.items(), data_edge_lists.items())), total=len(structures)*len(data_edge_lists)):
             creation_results.setdefault(struct_name, {})[dataset_name] = (G, creation_time)
             pickle.dump((G, creation_time), open(f'creation_results_{struct_name}_{dataset_name}.pkl', 'wb'))  # Comment out this line if you do not wish to save structures
-
+    print("struct generated")
+    # print('creation_results', creation_results)
+    
     ## TRAIN INTERVALGRAPH
-    for dataset_name in creation_results['interval']:
-        for t in [50, 100, 150, 200, 250, 300, 350, 400, 450, 500]:
-            G = creation_results['interval'][dataset_name][0]
-            start_time = timer()
-            attempts = G.generateModel(trainingSize=t)
-            model_time = timer() - start_time
-            print(dataset_name, creation_results['interval'][dataset_name][1], model_time, attempts)
-            pickle.dump((None, creation_results['interval'][dataset_name][1], model_time, attempts), open(f'creation_results_interval_{dataset_name}_{t}.pkl', 'wb')) # Comment out this line if you do not wish to save structures
-
+    # for dataset_name in creation_results['interval']:
+    #     for t in [50, 100, 150, 200, 250, 300, 350, 400, 450, 500]:
+    #         G = creation_results['interval'][dataset_name][0]
+    #         start_time = timer()
+    #         attempts = G.generateModel(trainingSize=t)
+    #         model_time = timer() - start_time
+    #         print(dataset_name, creation_results['interval'][dataset_name][1], model_time, attempts)
+    #         pickle.dump((None, creation_results['interval'][dataset_name][1], model_time, attempts), open(f'creation_results_interval_{dataset_name}_{t}.pkl', 'wb')) # Comment out this line if you do not wish to save structures
+    # print("intervalgraph trained")
 
     ## GENERATE MEMORY
     memory_results = {}
@@ -414,36 +424,45 @@ if __name__ == "__main__":
             mem = asizeof.asizeof(creation_results[struct_name][dataset_name][0])*1e-6
             memory_results.setdefault(struct_name, {})[dataset_name] = mem
             pickle.dump(memory_results[struct_name][dataset_name], open(f'memory_results_{struct_name}_{dataset_name}.pkl', 'wb'))  # Comment out this line if you do not wish to save results
+    print("memory result aquired")
+    print("preplot", structures, ["realitymining", "enron"] )
 
-
+    import plot_figures as pf
+    pf.plot_memory(structures, ["realitymining", "enron"])
     ## CALCULATE INTERVALGRAPH MODEL MEMORY
-    model_memory_results = {}
-    for dataset_name in creation_results['interval']:
-        mem = asizeof.asizeof(creation_results[struct_name][dataset_name][0].model) * 1e-6
-        model_memory_results.setdefault(struct_name, {})[dataset_name] = mem
-        pickle.dump(model_memory_results[struct_name][dataset_name], open(f'model_memory_results_{struct_name}_{dataset_name}.pkl', 'wb'))
-    print(model_memory_results)
+    # model_memory_results = {}
+    # for dataset_name in creation_results['interval']:
+    #     print(struct_name)
+    #     mem = asizeof.asizeof(creation_results[struct_name][dataset_name][0].model) * 1e-6
+    #     model_memory_results.setdefault(struct_name, {})[dataset_name] = mem
+    #     pickle.dump(model_memory_results[struct_name][dataset_name], open(f'model_memory_results_{struct_name}_{dataset_name}.pkl', 'wb'))
+    # print(model_memory_results)
 
     # GENERATE INTERVAL SLICES
     slice_results = {}
     for struct_name in creation_results:
         for dataset_name in creation_results[struct_name]:
-            with mp.Pool(12) as p:
-                for one, five, ten, twenty in tqdm.tqdm(p.imap_unordered(generateSlices, [(struct_name, dataset_name)]*5000), total=5000):
+            # print('struct_name', struct_name)
+            # print('dataset_name', dataset_name)
+            # print('creation_results', creation_results)
+            with mp.Pool(10) as p:
+                for one, five, ten, twenty in tqdm.tqdm(p.imap_unordered(generateSlices, [(struct_name, dataset_name, creation_results)]*50), total=50):
                     slice_results.setdefault(struct_name, {}).setdefault(dataset_name, {}).setdefault(1, []).append(one)
                     slice_results.setdefault(struct_name, {}).setdefault(dataset_name, {}).setdefault(5, []).append(five)
                     slice_results.setdefault(struct_name, {}).setdefault(dataset_name, {}).setdefault(10, []).append(ten)
                     slice_results.setdefault(struct_name, {}).setdefault(dataset_name, {}).setdefault(20, []).append(twenty)
                 pickle.dump(slice_results[struct_name][dataset_name], open(f'slice_results_{struct_name}_{dataset_name}.pkl', 'wb'))  # Comment out this line if you do not wish to save results
+    print("INTERVAL SLICES generated")
 
     ## GENERATE COMPOUND SLICES
     query_results = {}
     for struct_name in creation_results:
         for dataset_name in creation_results[struct_name]:
-            with mp.Pool(12) as p:
-                for result in tqdm.tqdm(p.imap_unordered(generateCompoundSlices, [(struct_name, dataset_name)]*5000), total=5000):
+            with mp.Pool(10) as p:
+                for result in tqdm.tqdm(p.imap_unordered(generateCompoundSlices, [(struct_name, dataset_name, creation_results)]*50), total=50):
                     query_results.setdefault(struct_name, {}).setdefault(dataset_name, []).append(result)
                 pickle.dump(query_results[struct_name][dataset_name], open(f'compound_results_{struct_name}_{dataset_name}.pkl', 'wb'))  # Comment out this line if you do not wish to save results
+    print("COMPOUND SLICES generated")
 
     ## Generating Samples
     structures = {'interval': IntervalGraph()}
@@ -453,11 +472,12 @@ if __name__ == "__main__":
         sample_data_edge_lists[dataset_name] = sample(data_edge_lists[dataset_name], int(len(data_edge_lists[dataset_name])*0.01))
 
     subsetCreateTime = {}
-    with mp.Pool(24) as p:
+    with mp.Pool(10) as p:
         for creation_time, struct_name, dataset_name, G in tqdm.tqdm(p.starmap(generateStructures, product(structures.items(), sample_data_edge_lists.items())), total=len(structures)*len(sample_data_edge_lists)):
             sample_creation_results.setdefault(struct_name, {})[dataset_name] = (G, creation_time)
 
     pickle.dump((G, creation_time), open(f'sample_creation_results_{struct_name}_{dataset_name}.pkl', 'wb'))  # Comment out this line if you do not wish to save structures
+    print("samples generated")
 
     # # # Create Bins
     global numEdges
@@ -473,17 +493,18 @@ if __name__ == "__main__":
             results = [x for x in G.slice(b, e)]
             numEdges.setdefault(dataset_name, {})[(b, e)] = len(results)
         end_time = timer() - start_time
+    print("bins generated")
 
     # GENERATE FEATURES (IntervalGraph Only!)
     print("Generating Features")
     feature_results = {}
     for dataset_name in query_results['interval']:
-        with mp.Pool(12) as p:
+        with mp.Pool(10) as p:
             for features, times, results in tqdm.tqdm(p.starmap(generateFeatures, [(dataset_name, x) for x in query_results['interval'][dataset_name]]), total=5000):
                 feature_results.setdefault(dataset_name, []).append((features, results, times))
         pickle.dump(feature_results[dataset_name],
                     open(f'feature_results_interval_{dataset_name}.pkl', 'wb'))  # Comment out this line if you do not wish to save results
-
+    print("feats generated")
 
     ## LOG MODEL FEATURES (IntervalGraph Only!)
     score_results = {}
