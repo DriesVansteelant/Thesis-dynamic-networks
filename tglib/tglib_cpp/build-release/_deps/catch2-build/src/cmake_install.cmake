@@ -1,4 +1,4 @@
-# Install script for directory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-src/src
+# Install script for directory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-src/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

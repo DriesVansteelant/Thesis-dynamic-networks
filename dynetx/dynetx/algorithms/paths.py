@@ -16,6 +16,7 @@ __all__ = ['time_respecting_paths', 'all_time_respecting_paths', 'annotate_paths
 
 def temporal_dag(G, u, v=None, start=None, end=None):
     """
+        DAG = directed acyclical graph
         Creates a rooted temporal DAG assuming interaction chains of length 1 within each network snapshot.
 
         Parameters

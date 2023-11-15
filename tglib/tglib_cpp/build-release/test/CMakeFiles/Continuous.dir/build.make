@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp
+CMAKE_SOURCE_DIR = /home/dries/Documents/Thesis/code/tglib/tglib_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release
+CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release
 
 # Utility rule file for Continuous.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-
 include test/CMakeFiles/Continuous.dir/progress.make
 
 test/CMakeFiles/Continuous:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test && /usr/bin/ctest -D Continuous
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test && /usr/bin/ctest -D Continuous
 
 Continuous: test/CMakeFiles/Continuous
 Continuous: test/CMakeFiles/Continuous.dir/build.make
@@ -67,10 +67,10 @@ test/CMakeFiles/Continuous.dir/build: Continuous
 .PHONY : test/CMakeFiles/Continuous.dir/build
 
 test/CMakeFiles/Continuous.dir/clean:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test && $(CMAKE_COMMAND) -P CMakeFiles/Continuous.dir/cmake_clean.cmake
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test && $(CMAKE_COMMAND) -P CMakeFiles/Continuous.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/Continuous.dir/clean
 
 test/CMakeFiles/Continuous.dir/depend:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/test /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test/CMakeFiles/Continuous.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dries/Documents/Thesis/code/tglib/tglib_cpp /home/dries/Documents/Thesis/code/tglib/tglib_cpp/test /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test/CMakeFiles/Continuous.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/Continuous.dir/depend
 

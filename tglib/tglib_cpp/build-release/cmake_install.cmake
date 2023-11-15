@@ -1,4 +1,4 @@
-# Install script for directory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp
+# Install script for directory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,17 +39,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/extern/pybind11/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/extern/pybind11/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/src/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

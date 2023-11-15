@@ -6,5 +6,5 @@ CXX_FLAGS =  -fopenmp -O3 -DNDEBUG   -Wall -Wextra -Wpedantic -Werror -std=gnu++
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-src/src/catch2/.. -I/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/generated-includes 
+CXX_INCLUDES = -I/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-src/src/catch2/.. -I/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/generated-includes 
 

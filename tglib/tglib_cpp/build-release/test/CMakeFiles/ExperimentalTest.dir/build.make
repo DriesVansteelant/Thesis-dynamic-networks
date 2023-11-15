@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp
+CMAKE_SOURCE_DIR = /home/dries/Documents/Thesis/code/tglib/tglib_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release
+CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release
 
 # Utility rule file for ExperimentalTest.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-
 include test/CMakeFiles/ExperimentalTest.dir/progress.make
 
 test/CMakeFiles/ExperimentalTest:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test && /usr/bin/ctest -D ExperimentalTest
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test && /usr/bin/ctest -D ExperimentalTest
 
 ExperimentalTest: test/CMakeFiles/ExperimentalTest
 ExperimentalTest: test/CMakeFiles/ExperimentalTest.dir/build.make
@@ -67,10 +67,10 @@ test/CMakeFiles/ExperimentalTest.dir/build: ExperimentalTest
 .PHONY : test/CMakeFiles/ExperimentalTest.dir/build
 
 test/CMakeFiles/ExperimentalTest.dir/clean:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test && $(CMAKE_COMMAND) -P CMakeFiles/ExperimentalTest.dir/cmake_clean.cmake
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test && $(CMAKE_COMMAND) -P CMakeFiles/ExperimentalTest.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/ExperimentalTest.dir/clean
 
 test/CMakeFiles/ExperimentalTest.dir/depend:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/test /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test/CMakeFiles/ExperimentalTest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dries/Documents/Thesis/code/tglib/tglib_cpp /home/dries/Documents/Thesis/code/tglib/tglib_cpp/test /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test/CMakeFiles/ExperimentalTest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/ExperimentalTest.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/test
+# Install script for directory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,21 +39,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-build/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test/test-algorithms/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test/test-algorithms/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test/test-core/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test/test-core/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test/test-util/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test/test-util/cmake_install.cmake")
 endif()
 

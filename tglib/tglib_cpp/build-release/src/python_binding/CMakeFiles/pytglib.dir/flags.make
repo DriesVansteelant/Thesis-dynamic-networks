@@ -6,5 +6,5 @@ CXX_FLAGS =  -fopenmp -O3 -DNDEBUG -fPIC -fvisibility=hidden   -Wall -Wextra -Wp
 
 CXX_DEFINES = -Dpytglib_EXPORTS
 
-CXX_INCLUDES = -isystem /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/extern/pybind11/include -isystem /usr/include/python3.8 
+CXX_INCLUDES = -isystem /home/dries/Documents/Thesis/code/tglib/tglib_cpp/extern/pybind11/include -isystem /usr/include/python3.8 
 
