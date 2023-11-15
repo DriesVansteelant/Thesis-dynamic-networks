@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-src/src/catch2/internal/catch_main.cpp" "/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o"
+  "/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-src/src/catch2/internal/catch_main.cpp" "/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-build/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
+  "/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-build/src/CMakeFiles/Catch2.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

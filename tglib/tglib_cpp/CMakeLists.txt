@@ -9,24 +9,15 @@ project(tglib)
 
 set(CMAKE_CXX_STANDARD 20)
 
-cmake_policy(SET CMP0148 OLD) 
+add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 
-if(CMAKE_COMPILER_IS_GNUCXX)
-    message(STATUS "GCC detected, adding compile options")
-    add_compile_options(-Wall -Wextra -Wpedantic -Werror)
-else(CMAKE_COMPILER_IS_GNUCXX)
-    message(STATUS "NOT GCC")
-endif(CMAKE_COMPILER_IS_GNUCXX)
 # OpenMP for parallelization
 find_package(OpenMP REQUIRED)
 
 if (OPENMP_FOUND)
-    message("open MP found")
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
     set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
-else (OPENMP_FOUND)
-    message("open MP NOT found")
 endif()
 
 add_subdirectory(extern/pybind11)
@@ -36,18 +27,18 @@ add_subdirectory(src)
 add_subdirectory(test)
 
 
-# # Doxygen for documentation
-# find_package(Doxygen)
-# if (DOXYGEN_FOUND)
-#     set(DOXYGEN_GENERATE_TREEVIEW YES)
-#     set(DOXYGEN_PROJECT_NAME TGLib)
-#     set(DOXYGEN_USE_MDFILE_AS_MAINPAGE ../README.md)
-#     set(DOXYGEN_TOC_INCLUDE_HEADINGS 2)
+# Doxygen for documentation
+find_package(Doxygen)
+if (DOXYGEN_FOUND)
+    set(DOXYGEN_GENERATE_TREEVIEW YES)
+    set(DOXYGEN_PROJECT_NAME TGLib)
+    set(DOXYGEN_USE_MDFILE_AS_MAINPAGE ../README.md)
+    set(DOXYGEN_TOC_INCLUDE_HEADINGS 2)
 
-#     doxygen_add_docs(doxygen ${TO_DOCUMENT} src/namespaces.h ../README.md)
-# else (DOXYGEN_FOUND)
-#     message("Doxygen need to be installed to generate the documentation")
-# endif (DOXYGEN_FOUND)
+    doxygen_add_docs(doxygen ${TO_DOCUMENT} src/namespaces.h ../README.md)
+else (DOXYGEN_FOUND)
+    message("Doxygen need to be installed to generate the documentation")
+endif (DOXYGEN_FOUND)
 
 
 # automatically generate amalgamated header

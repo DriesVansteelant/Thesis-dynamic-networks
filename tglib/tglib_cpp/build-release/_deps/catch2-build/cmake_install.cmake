@@ -1,4 +1,4 @@
-# Install script for directory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-src
+# Install script for directory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-build/src/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-build/src/cmake_install.cmake")
 
 endif()
 

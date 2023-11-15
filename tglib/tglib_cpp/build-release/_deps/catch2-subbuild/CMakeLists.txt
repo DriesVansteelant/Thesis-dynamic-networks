@@ -12,8 +12,8 @@ project(catch2-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(catch2-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/catchorg/Catch2.git" "GIT_TAG" "v3.0.1"
-                    SOURCE_DIR          "/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-src"
-                    BINARY_DIR          "/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/_deps/catch2-build"
+                    SOURCE_DIR          "/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-src"
+                    BINARY_DIR          "/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/_deps/catch2-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

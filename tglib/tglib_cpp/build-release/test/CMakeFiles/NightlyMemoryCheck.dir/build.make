@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp
+CMAKE_SOURCE_DIR = /home/dries/Documents/Thesis/code/tglib/tglib_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release
+CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release
 
 # Utility rule file for NightlyMemoryCheck.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-
 include test/CMakeFiles/NightlyMemoryCheck.dir/progress.make
 
 test/CMakeFiles/NightlyMemoryCheck:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test && /usr/bin/ctest -D NightlyMemoryCheck
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test && /usr/bin/ctest -D NightlyMemoryCheck
 
 NightlyMemoryCheck: test/CMakeFiles/NightlyMemoryCheck
 NightlyMemoryCheck: test/CMakeFiles/NightlyMemoryCheck.dir/build.make
@@ -67,10 +67,10 @@ test/CMakeFiles/NightlyMemoryCheck.dir/build: NightlyMemoryCheck
 .PHONY : test/CMakeFiles/NightlyMemoryCheck.dir/build
 
 test/CMakeFiles/NightlyMemoryCheck.dir/clean:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test && $(CMAKE_COMMAND) -P CMakeFiles/NightlyMemoryCheck.dir/cmake_clean.cmake
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test && $(CMAKE_COMMAND) -P CMakeFiles/NightlyMemoryCheck.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/NightlyMemoryCheck.dir/clean
 
 test/CMakeFiles/NightlyMemoryCheck.dir/depend:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/test /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test/CMakeFiles/NightlyMemoryCheck.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dries/Documents/Thesis/code/tglib/tglib_cpp /home/dries/Documents/Thesis/code/tglib/tglib_cpp/test /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test/CMakeFiles/NightlyMemoryCheck.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/NightlyMemoryCheck.dir/depend
 

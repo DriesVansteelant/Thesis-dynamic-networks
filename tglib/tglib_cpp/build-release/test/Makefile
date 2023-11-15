@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp
+CMAKE_SOURCE_DIR = /home/dries/Documents/Thesis/code/tglib/tglib_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release
+CMAKE_BINARY_DIR = /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(CMAKE_COMMAND) -E cmake_progress_start /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/CMakeFiles /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test/CMakeFiles/progress.marks
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/CMakeFiles 0
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(CMAKE_COMMAND) -E cmake_progress_start /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/CMakeFiles /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test/CMakeFiles/progress.marks
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/clean
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/NightlyMemCheck.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyMemCheck.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyMemCheck.dir/rule
 .PHONY : test/CMakeFiles/NightlyMemCheck.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ NightlyMemCheck: test/CMakeFiles/NightlyMemCheck.dir/rule
 
 # fast build rule for target.
 NightlyMemCheck/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyMemCheck.dir/build.make test/CMakeFiles/NightlyMemCheck.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyMemCheck.dir/build.make test/CMakeFiles/NightlyMemCheck.dir/build
 .PHONY : NightlyMemCheck/fast
 
 # Convenience name for target.
 test/CMakeFiles/NightlyTest.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyTest.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyTest.dir/rule
 .PHONY : test/CMakeFiles/NightlyTest.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ NightlyTest: test/CMakeFiles/NightlyTest.dir/rule
 
 # fast build rule for target.
 NightlyTest/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyTest.dir/build.make test/CMakeFiles/NightlyTest.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyTest.dir/build.make test/CMakeFiles/NightlyTest.dir/build
 .PHONY : NightlyTest/fast
 
 # Convenience name for target.
 test/CMakeFiles/ContinuousConfigure.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousConfigure.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousConfigure.dir/rule
 .PHONY : test/CMakeFiles/ContinuousConfigure.dir/rule
 
 # Convenience name for target.
@@ -152,12 +152,12 @@ ContinuousConfigure: test/CMakeFiles/ContinuousConfigure.dir/rule
 
 # fast build rule for target.
 ContinuousConfigure/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousConfigure.dir/build.make test/CMakeFiles/ContinuousConfigure.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousConfigure.dir/build.make test/CMakeFiles/ContinuousConfigure.dir/build
 .PHONY : ContinuousConfigure/fast
 
 # Convenience name for target.
 test/CMakeFiles/ContinuousBuild.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousBuild.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousBuild.dir/rule
 .PHONY : test/CMakeFiles/ContinuousBuild.dir/rule
 
 # Convenience name for target.
@@ -167,12 +167,12 @@ ContinuousBuild: test/CMakeFiles/ContinuousBuild.dir/rule
 
 # fast build rule for target.
 ContinuousBuild/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousBuild.dir/build.make test/CMakeFiles/ContinuousBuild.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousBuild.dir/build.make test/CMakeFiles/ContinuousBuild.dir/build
 .PHONY : ContinuousBuild/fast
 
 # Convenience name for target.
 test/CMakeFiles/NightlyMemoryCheck.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyMemoryCheck.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyMemoryCheck.dir/rule
 .PHONY : test/CMakeFiles/NightlyMemoryCheck.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,12 @@ NightlyMemoryCheck: test/CMakeFiles/NightlyMemoryCheck.dir/rule
 
 # fast build rule for target.
 NightlyMemoryCheck/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyMemoryCheck.dir/build.make test/CMakeFiles/NightlyMemoryCheck.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyMemoryCheck.dir/build.make test/CMakeFiles/NightlyMemoryCheck.dir/build
 .PHONY : NightlyMemoryCheck/fast
 
 # Convenience name for target.
 test/CMakeFiles/ExperimentalTest.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalTest.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalTest.dir/rule
 .PHONY : test/CMakeFiles/ExperimentalTest.dir/rule
 
 # Convenience name for target.
@@ -197,12 +197,12 @@ ExperimentalTest: test/CMakeFiles/ExperimentalTest.dir/rule
 
 # fast build rule for target.
 ExperimentalTest/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalTest.dir/build.make test/CMakeFiles/ExperimentalTest.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalTest.dir/build.make test/CMakeFiles/ExperimentalTest.dir/build
 .PHONY : ExperimentalTest/fast
 
 # Convenience name for target.
 test/CMakeFiles/ContinuousUpdate.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousUpdate.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousUpdate.dir/rule
 .PHONY : test/CMakeFiles/ContinuousUpdate.dir/rule
 
 # Convenience name for target.
@@ -212,12 +212,12 @@ ContinuousUpdate: test/CMakeFiles/ContinuousUpdate.dir/rule
 
 # fast build rule for target.
 ContinuousUpdate/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousUpdate.dir/build.make test/CMakeFiles/ContinuousUpdate.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousUpdate.dir/build.make test/CMakeFiles/ContinuousUpdate.dir/build
 .PHONY : ContinuousUpdate/fast
 
 # Convenience name for target.
 test/CMakeFiles/NightlyUpdate.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyUpdate.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyUpdate.dir/rule
 .PHONY : test/CMakeFiles/NightlyUpdate.dir/rule
 
 # Convenience name for target.
@@ -227,12 +227,12 @@ NightlyUpdate: test/CMakeFiles/NightlyUpdate.dir/rule
 
 # fast build rule for target.
 NightlyUpdate/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyUpdate.dir/build.make test/CMakeFiles/NightlyUpdate.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyUpdate.dir/build.make test/CMakeFiles/NightlyUpdate.dir/build
 .PHONY : NightlyUpdate/fast
 
 # Convenience name for target.
 test/CMakeFiles/ExperimentalMemCheck.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalMemCheck.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalMemCheck.dir/rule
 .PHONY : test/CMakeFiles/ExperimentalMemCheck.dir/rule
 
 # Convenience name for target.
@@ -242,12 +242,12 @@ ExperimentalMemCheck: test/CMakeFiles/ExperimentalMemCheck.dir/rule
 
 # fast build rule for target.
 ExperimentalMemCheck/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalMemCheck.dir/build.make test/CMakeFiles/ExperimentalMemCheck.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalMemCheck.dir/build.make test/CMakeFiles/ExperimentalMemCheck.dir/build
 .PHONY : ExperimentalMemCheck/fast
 
 # Convenience name for target.
 test/CMakeFiles/ExperimentalSubmit.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalSubmit.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalSubmit.dir/rule
 .PHONY : test/CMakeFiles/ExperimentalSubmit.dir/rule
 
 # Convenience name for target.
@@ -257,12 +257,12 @@ ExperimentalSubmit: test/CMakeFiles/ExperimentalSubmit.dir/rule
 
 # fast build rule for target.
 ExperimentalSubmit/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalSubmit.dir/build.make test/CMakeFiles/ExperimentalSubmit.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalSubmit.dir/build.make test/CMakeFiles/ExperimentalSubmit.dir/build
 .PHONY : ExperimentalSubmit/fast
 
 # Convenience name for target.
 test/CMakeFiles/Experimental.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Experimental.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Experimental.dir/rule
 .PHONY : test/CMakeFiles/Experimental.dir/rule
 
 # Convenience name for target.
@@ -272,12 +272,12 @@ Experimental: test/CMakeFiles/Experimental.dir/rule
 
 # fast build rule for target.
 Experimental/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/Experimental.dir/build.make test/CMakeFiles/Experimental.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/Experimental.dir/build.make test/CMakeFiles/Experimental.dir/build
 .PHONY : Experimental/fast
 
 # Convenience name for target.
 test/CMakeFiles/ContinuousCoverage.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousCoverage.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousCoverage.dir/rule
 .PHONY : test/CMakeFiles/ContinuousCoverage.dir/rule
 
 # Convenience name for target.
@@ -287,12 +287,12 @@ ContinuousCoverage: test/CMakeFiles/ContinuousCoverage.dir/rule
 
 # fast build rule for target.
 ContinuousCoverage/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousCoverage.dir/build.make test/CMakeFiles/ContinuousCoverage.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousCoverage.dir/build.make test/CMakeFiles/ContinuousCoverage.dir/build
 .PHONY : ContinuousCoverage/fast
 
 # Convenience name for target.
 test/CMakeFiles/ExperimentalConfigure.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalConfigure.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalConfigure.dir/rule
 .PHONY : test/CMakeFiles/ExperimentalConfigure.dir/rule
 
 # Convenience name for target.
@@ -302,12 +302,12 @@ ExperimentalConfigure: test/CMakeFiles/ExperimentalConfigure.dir/rule
 
 # fast build rule for target.
 ExperimentalConfigure/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalConfigure.dir/build.make test/CMakeFiles/ExperimentalConfigure.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalConfigure.dir/build.make test/CMakeFiles/ExperimentalConfigure.dir/build
 .PHONY : ExperimentalConfigure/fast
 
 # Convenience name for target.
 test/CMakeFiles/Continuous.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Continuous.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Continuous.dir/rule
 .PHONY : test/CMakeFiles/Continuous.dir/rule
 
 # Convenience name for target.
@@ -317,12 +317,12 @@ Continuous: test/CMakeFiles/Continuous.dir/rule
 
 # fast build rule for target.
 Continuous/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/Continuous.dir/build.make test/CMakeFiles/Continuous.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/Continuous.dir/build.make test/CMakeFiles/Continuous.dir/build
 .PHONY : Continuous/fast
 
 # Convenience name for target.
 test/CMakeFiles/Nightly.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Nightly.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Nightly.dir/rule
 .PHONY : test/CMakeFiles/Nightly.dir/rule
 
 # Convenience name for target.
@@ -332,12 +332,12 @@ Nightly: test/CMakeFiles/Nightly.dir/rule
 
 # fast build rule for target.
 Nightly/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/Nightly.dir/build.make test/CMakeFiles/Nightly.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/Nightly.dir/build.make test/CMakeFiles/Nightly.dir/build
 .PHONY : Nightly/fast
 
 # Convenience name for target.
 test/CMakeFiles/NightlySubmit.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlySubmit.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlySubmit.dir/rule
 .PHONY : test/CMakeFiles/NightlySubmit.dir/rule
 
 # Convenience name for target.
@@ -347,12 +347,12 @@ NightlySubmit: test/CMakeFiles/NightlySubmit.dir/rule
 
 # fast build rule for target.
 NightlySubmit/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlySubmit.dir/build.make test/CMakeFiles/NightlySubmit.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlySubmit.dir/build.make test/CMakeFiles/NightlySubmit.dir/build
 .PHONY : NightlySubmit/fast
 
 # Convenience name for target.
 test/CMakeFiles/NightlyStart.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyStart.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyStart.dir/rule
 .PHONY : test/CMakeFiles/NightlyStart.dir/rule
 
 # Convenience name for target.
@@ -362,12 +362,12 @@ NightlyStart: test/CMakeFiles/NightlyStart.dir/rule
 
 # fast build rule for target.
 NightlyStart/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyStart.dir/build.make test/CMakeFiles/NightlyStart.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyStart.dir/build.make test/CMakeFiles/NightlyStart.dir/build
 .PHONY : NightlyStart/fast
 
 # Convenience name for target.
 test/CMakeFiles/ExperimentalCoverage.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalCoverage.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalCoverage.dir/rule
 .PHONY : test/CMakeFiles/ExperimentalCoverage.dir/rule
 
 # Convenience name for target.
@@ -377,12 +377,12 @@ ExperimentalCoverage: test/CMakeFiles/ExperimentalCoverage.dir/rule
 
 # fast build rule for target.
 ExperimentalCoverage/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalCoverage.dir/build.make test/CMakeFiles/ExperimentalCoverage.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalCoverage.dir/build.make test/CMakeFiles/ExperimentalCoverage.dir/build
 .PHONY : ExperimentalCoverage/fast
 
 # Convenience name for target.
 test/CMakeFiles/NightlyCoverage.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyCoverage.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyCoverage.dir/rule
 .PHONY : test/CMakeFiles/NightlyCoverage.dir/rule
 
 # Convenience name for target.
@@ -392,12 +392,12 @@ NightlyCoverage: test/CMakeFiles/NightlyCoverage.dir/rule
 
 # fast build rule for target.
 NightlyCoverage/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyCoverage.dir/build.make test/CMakeFiles/NightlyCoverage.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyCoverage.dir/build.make test/CMakeFiles/NightlyCoverage.dir/build
 .PHONY : NightlyCoverage/fast
 
 # Convenience name for target.
 test/CMakeFiles/NightlyConfigure.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyConfigure.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyConfigure.dir/rule
 .PHONY : test/CMakeFiles/NightlyConfigure.dir/rule
 
 # Convenience name for target.
@@ -407,12 +407,12 @@ NightlyConfigure: test/CMakeFiles/NightlyConfigure.dir/rule
 
 # fast build rule for target.
 NightlyConfigure/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyConfigure.dir/build.make test/CMakeFiles/NightlyConfigure.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyConfigure.dir/build.make test/CMakeFiles/NightlyConfigure.dir/build
 .PHONY : NightlyConfigure/fast
 
 # Convenience name for target.
 test/CMakeFiles/custom-main-tests.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/custom-main-tests.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/custom-main-tests.dir/rule
 .PHONY : test/CMakeFiles/custom-main-tests.dir/rule
 
 # Convenience name for target.
@@ -422,12 +422,12 @@ custom-main-tests: test/CMakeFiles/custom-main-tests.dir/rule
 
 # fast build rule for target.
 custom-main-tests/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/build
 .PHONY : custom-main-tests/fast
 
 # Convenience name for target.
 test/CMakeFiles/ExperimentalStart.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalStart.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalStart.dir/rule
 .PHONY : test/CMakeFiles/ExperimentalStart.dir/rule
 
 # Convenience name for target.
@@ -437,12 +437,12 @@ ExperimentalStart: test/CMakeFiles/ExperimentalStart.dir/rule
 
 # fast build rule for target.
 ExperimentalStart/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalStart.dir/build.make test/CMakeFiles/ExperimentalStart.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalStart.dir/build.make test/CMakeFiles/ExperimentalStart.dir/build
 .PHONY : ExperimentalStart/fast
 
 # Convenience name for target.
 test/CMakeFiles/NightlyBuild.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyBuild.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/NightlyBuild.dir/rule
 .PHONY : test/CMakeFiles/NightlyBuild.dir/rule
 
 # Convenience name for target.
@@ -452,12 +452,12 @@ NightlyBuild: test/CMakeFiles/NightlyBuild.dir/rule
 
 # fast build rule for target.
 NightlyBuild/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyBuild.dir/build.make test/CMakeFiles/NightlyBuild.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/NightlyBuild.dir/build.make test/CMakeFiles/NightlyBuild.dir/build
 .PHONY : NightlyBuild/fast
 
 # Convenience name for target.
 test/CMakeFiles/ExperimentalBuild.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalBuild.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalBuild.dir/rule
 .PHONY : test/CMakeFiles/ExperimentalBuild.dir/rule
 
 # Convenience name for target.
@@ -467,12 +467,12 @@ ExperimentalBuild: test/CMakeFiles/ExperimentalBuild.dir/rule
 
 # fast build rule for target.
 ExperimentalBuild/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalBuild.dir/build.make test/CMakeFiles/ExperimentalBuild.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalBuild.dir/build.make test/CMakeFiles/ExperimentalBuild.dir/build
 .PHONY : ExperimentalBuild/fast
 
 # Convenience name for target.
 test/CMakeFiles/ExperimentalUpdate.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalUpdate.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ExperimentalUpdate.dir/rule
 .PHONY : test/CMakeFiles/ExperimentalUpdate.dir/rule
 
 # Convenience name for target.
@@ -482,12 +482,12 @@ ExperimentalUpdate: test/CMakeFiles/ExperimentalUpdate.dir/rule
 
 # fast build rule for target.
 ExperimentalUpdate/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalUpdate.dir/build.make test/CMakeFiles/ExperimentalUpdate.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ExperimentalUpdate.dir/build.make test/CMakeFiles/ExperimentalUpdate.dir/build
 .PHONY : ExperimentalUpdate/fast
 
 # Convenience name for target.
 test/CMakeFiles/ContinuousStart.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousStart.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousStart.dir/rule
 .PHONY : test/CMakeFiles/ContinuousStart.dir/rule
 
 # Convenience name for target.
@@ -497,12 +497,12 @@ ContinuousStart: test/CMakeFiles/ContinuousStart.dir/rule
 
 # fast build rule for target.
 ContinuousStart/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousStart.dir/build.make test/CMakeFiles/ContinuousStart.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousStart.dir/build.make test/CMakeFiles/ContinuousStart.dir/build
 .PHONY : ContinuousStart/fast
 
 # Convenience name for target.
 test/CMakeFiles/ContinuousMemCheck.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousMemCheck.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousMemCheck.dir/rule
 .PHONY : test/CMakeFiles/ContinuousMemCheck.dir/rule
 
 # Convenience name for target.
@@ -512,12 +512,12 @@ ContinuousMemCheck: test/CMakeFiles/ContinuousMemCheck.dir/rule
 
 # fast build rule for target.
 ContinuousMemCheck/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousMemCheck.dir/build.make test/CMakeFiles/ContinuousMemCheck.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousMemCheck.dir/build.make test/CMakeFiles/ContinuousMemCheck.dir/build
 .PHONY : ContinuousMemCheck/fast
 
 # Convenience name for target.
 test/CMakeFiles/ContinuousTest.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousTest.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousTest.dir/rule
 .PHONY : test/CMakeFiles/ContinuousTest.dir/rule
 
 # Convenience name for target.
@@ -527,12 +527,12 @@ ContinuousTest: test/CMakeFiles/ContinuousTest.dir/rule
 
 # fast build rule for target.
 ContinuousTest/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousTest.dir/build.make test/CMakeFiles/ContinuousTest.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousTest.dir/build.make test/CMakeFiles/ContinuousTest.dir/build
 .PHONY : ContinuousTest/fast
 
 # Convenience name for target.
 test/CMakeFiles/ContinuousSubmit.dir/rule:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousSubmit.dir/rule
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/ContinuousSubmit.dir/rule
 .PHONY : test/CMakeFiles/ContinuousSubmit.dir/rule
 
 # Convenience name for target.
@@ -542,7 +542,7 @@ ContinuousSubmit: test/CMakeFiles/ContinuousSubmit.dir/rule
 
 # fast build rule for target.
 ContinuousSubmit/fast:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousSubmit.dir/build.make test/CMakeFiles/ContinuousSubmit.dir/build
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/ContinuousSubmit.dir/build.make test/CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
 TemporalGraphsInstances.o: TemporalGraphsInstances.cpp.o
@@ -551,7 +551,7 @@ TemporalGraphsInstances.o: TemporalGraphsInstances.cpp.o
 
 # target to build an object file
 TemporalGraphsInstances.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/TemporalGraphsInstances.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/TemporalGraphsInstances.cpp.o
 .PHONY : TemporalGraphsInstances.cpp.o
 
 TemporalGraphsInstances.i: TemporalGraphsInstances.cpp.i
@@ -560,7 +560,7 @@ TemporalGraphsInstances.i: TemporalGraphsInstances.cpp.i
 
 # target to preprocess a source file
 TemporalGraphsInstances.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/TemporalGraphsInstances.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/TemporalGraphsInstances.cpp.i
 .PHONY : TemporalGraphsInstances.cpp.i
 
 TemporalGraphsInstances.s: TemporalGraphsInstances.cpp.s
@@ -569,7 +569,7 @@ TemporalGraphsInstances.s: TemporalGraphsInstances.cpp.s
 
 # target to generate assembly for a file
 TemporalGraphsInstances.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/TemporalGraphsInstances.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/TemporalGraphsInstances.cpp.s
 .PHONY : TemporalGraphsInstances.cpp.s
 
 test-algorithms/test-burstiness.o: test-algorithms/test-burstiness.cpp.o
@@ -578,7 +578,7 @@ test-algorithms/test-burstiness.o: test-algorithms/test-burstiness.cpp.o
 
 # target to build an object file
 test-algorithms/test-burstiness.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-burstiness.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-burstiness.cpp.o
 .PHONY : test-algorithms/test-burstiness.cpp.o
 
 test-algorithms/test-burstiness.i: test-algorithms/test-burstiness.cpp.i
@@ -587,7 +587,7 @@ test-algorithms/test-burstiness.i: test-algorithms/test-burstiness.cpp.i
 
 # target to preprocess a source file
 test-algorithms/test-burstiness.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-burstiness.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-burstiness.cpp.i
 .PHONY : test-algorithms/test-burstiness.cpp.i
 
 test-algorithms/test-burstiness.s: test-algorithms/test-burstiness.cpp.s
@@ -596,7 +596,7 @@ test-algorithms/test-burstiness.s: test-algorithms/test-burstiness.cpp.s
 
 # target to generate assembly for a file
 test-algorithms/test-burstiness.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-burstiness.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-burstiness.cpp.s
 .PHONY : test-algorithms/test-burstiness.cpp.s
 
 test-algorithms/test-temporalBetweenness.o: test-algorithms/test-temporalBetweenness.cpp.o
@@ -605,7 +605,7 @@ test-algorithms/test-temporalBetweenness.o: test-algorithms/test-temporalBetween
 
 # target to build an object file
 test-algorithms/test-temporalBetweenness.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalBetweenness.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalBetweenness.cpp.o
 .PHONY : test-algorithms/test-temporalBetweenness.cpp.o
 
 test-algorithms/test-temporalBetweenness.i: test-algorithms/test-temporalBetweenness.cpp.i
@@ -614,7 +614,7 @@ test-algorithms/test-temporalBetweenness.i: test-algorithms/test-temporalBetween
 
 # target to preprocess a source file
 test-algorithms/test-temporalBetweenness.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalBetweenness.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalBetweenness.cpp.i
 .PHONY : test-algorithms/test-temporalBetweenness.cpp.i
 
 test-algorithms/test-temporalBetweenness.s: test-algorithms/test-temporalBetweenness.cpp.s
@@ -623,7 +623,7 @@ test-algorithms/test-temporalBetweenness.s: test-algorithms/test-temporalBetween
 
 # target to generate assembly for a file
 test-algorithms/test-temporalBetweenness.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalBetweenness.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalBetweenness.cpp.s
 .PHONY : test-algorithms/test-temporalBetweenness.cpp.s
 
 test-algorithms/test-temporalCloseness.o: test-algorithms/test-temporalCloseness.cpp.o
@@ -632,7 +632,7 @@ test-algorithms/test-temporalCloseness.o: test-algorithms/test-temporalCloseness
 
 # target to build an object file
 test-algorithms/test-temporalCloseness.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalCloseness.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalCloseness.cpp.o
 .PHONY : test-algorithms/test-temporalCloseness.cpp.o
 
 test-algorithms/test-temporalCloseness.i: test-algorithms/test-temporalCloseness.cpp.i
@@ -641,7 +641,7 @@ test-algorithms/test-temporalCloseness.i: test-algorithms/test-temporalCloseness
 
 # target to preprocess a source file
 test-algorithms/test-temporalCloseness.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalCloseness.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalCloseness.cpp.i
 .PHONY : test-algorithms/test-temporalCloseness.cpp.i
 
 test-algorithms/test-temporalCloseness.s: test-algorithms/test-temporalCloseness.cpp.s
@@ -650,7 +650,7 @@ test-algorithms/test-temporalCloseness.s: test-algorithms/test-temporalCloseness
 
 # target to generate assembly for a file
 test-algorithms/test-temporalCloseness.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalCloseness.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalCloseness.cpp.s
 .PHONY : test-algorithms/test-temporalCloseness.cpp.s
 
 test-algorithms/test-temporalClosenessApproximation.o: test-algorithms/test-temporalClosenessApproximation.cpp.o
@@ -659,7 +659,7 @@ test-algorithms/test-temporalClosenessApproximation.o: test-algorithms/test-temp
 
 # target to build an object file
 test-algorithms/test-temporalClosenessApproximation.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClosenessApproximation.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClosenessApproximation.cpp.o
 .PHONY : test-algorithms/test-temporalClosenessApproximation.cpp.o
 
 test-algorithms/test-temporalClosenessApproximation.i: test-algorithms/test-temporalClosenessApproximation.cpp.i
@@ -668,7 +668,7 @@ test-algorithms/test-temporalClosenessApproximation.i: test-algorithms/test-temp
 
 # target to preprocess a source file
 test-algorithms/test-temporalClosenessApproximation.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClosenessApproximation.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClosenessApproximation.cpp.i
 .PHONY : test-algorithms/test-temporalClosenessApproximation.cpp.i
 
 test-algorithms/test-temporalClosenessApproximation.s: test-algorithms/test-temporalClosenessApproximation.cpp.s
@@ -677,7 +677,7 @@ test-algorithms/test-temporalClosenessApproximation.s: test-algorithms/test-temp
 
 # target to generate assembly for a file
 test-algorithms/test-temporalClosenessApproximation.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClosenessApproximation.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClosenessApproximation.cpp.s
 .PHONY : test-algorithms/test-temporalClosenessApproximation.cpp.s
 
 test-algorithms/test-temporalClusteringCoefficient.o: test-algorithms/test-temporalClusteringCoefficient.cpp.o
@@ -686,7 +686,7 @@ test-algorithms/test-temporalClusteringCoefficient.o: test-algorithms/test-tempo
 
 # target to build an object file
 test-algorithms/test-temporalClusteringCoefficient.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClusteringCoefficient.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClusteringCoefficient.cpp.o
 .PHONY : test-algorithms/test-temporalClusteringCoefficient.cpp.o
 
 test-algorithms/test-temporalClusteringCoefficient.i: test-algorithms/test-temporalClusteringCoefficient.cpp.i
@@ -695,7 +695,7 @@ test-algorithms/test-temporalClusteringCoefficient.i: test-algorithms/test-tempo
 
 # target to preprocess a source file
 test-algorithms/test-temporalClusteringCoefficient.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClusteringCoefficient.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClusteringCoefficient.cpp.i
 .PHONY : test-algorithms/test-temporalClusteringCoefficient.cpp.i
 
 test-algorithms/test-temporalClusteringCoefficient.s: test-algorithms/test-temporalClusteringCoefficient.cpp.s
@@ -704,7 +704,7 @@ test-algorithms/test-temporalClusteringCoefficient.s: test-algorithms/test-tempo
 
 # target to generate assembly for a file
 test-algorithms/test-temporalClusteringCoefficient.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClusteringCoefficient.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalClusteringCoefficient.cpp.s
 .PHONY : test-algorithms/test-temporalClusteringCoefficient.cpp.s
 
 test-algorithms/test-temporalDiameter.o: test-algorithms/test-temporalDiameter.cpp.o
@@ -713,7 +713,7 @@ test-algorithms/test-temporalDiameter.o: test-algorithms/test-temporalDiameter.c
 
 # target to build an object file
 test-algorithms/test-temporalDiameter.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDiameter.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDiameter.cpp.o
 .PHONY : test-algorithms/test-temporalDiameter.cpp.o
 
 test-algorithms/test-temporalDiameter.i: test-algorithms/test-temporalDiameter.cpp.i
@@ -722,7 +722,7 @@ test-algorithms/test-temporalDiameter.i: test-algorithms/test-temporalDiameter.c
 
 # target to preprocess a source file
 test-algorithms/test-temporalDiameter.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDiameter.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDiameter.cpp.i
 .PHONY : test-algorithms/test-temporalDiameter.cpp.i
 
 test-algorithms/test-temporalDiameter.s: test-algorithms/test-temporalDiameter.cpp.s
@@ -731,7 +731,7 @@ test-algorithms/test-temporalDiameter.s: test-algorithms/test-temporalDiameter.c
 
 # target to generate assembly for a file
 test-algorithms/test-temporalDiameter.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDiameter.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDiameter.cpp.s
 .PHONY : test-algorithms/test-temporalDiameter.cpp.s
 
 test-algorithms/test-temporalDistances.o: test-algorithms/test-temporalDistances.cpp.o
@@ -740,7 +740,7 @@ test-algorithms/test-temporalDistances.o: test-algorithms/test-temporalDistances
 
 # target to build an object file
 test-algorithms/test-temporalDistances.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDistances.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDistances.cpp.o
 .PHONY : test-algorithms/test-temporalDistances.cpp.o
 
 test-algorithms/test-temporalDistances.i: test-algorithms/test-temporalDistances.cpp.i
@@ -749,7 +749,7 @@ test-algorithms/test-temporalDistances.i: test-algorithms/test-temporalDistances
 
 # target to preprocess a source file
 test-algorithms/test-temporalDistances.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDistances.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDistances.cpp.i
 .PHONY : test-algorithms/test-temporalDistances.cpp.i
 
 test-algorithms/test-temporalDistances.s: test-algorithms/test-temporalDistances.cpp.s
@@ -758,7 +758,7 @@ test-algorithms/test-temporalDistances.s: test-algorithms/test-temporalDistances
 
 # target to generate assembly for a file
 test-algorithms/test-temporalDistances.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDistances.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalDistances.cpp.s
 .PHONY : test-algorithms/test-temporalDistances.cpp.s
 
 test-algorithms/test-temporalEfficiency.o: test-algorithms/test-temporalEfficiency.cpp.o
@@ -767,7 +767,7 @@ test-algorithms/test-temporalEfficiency.o: test-algorithms/test-temporalEfficien
 
 # target to build an object file
 test-algorithms/test-temporalEfficiency.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalEfficiency.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalEfficiency.cpp.o
 .PHONY : test-algorithms/test-temporalEfficiency.cpp.o
 
 test-algorithms/test-temporalEfficiency.i: test-algorithms/test-temporalEfficiency.cpp.i
@@ -776,7 +776,7 @@ test-algorithms/test-temporalEfficiency.i: test-algorithms/test-temporalEfficien
 
 # target to preprocess a source file
 test-algorithms/test-temporalEfficiency.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalEfficiency.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalEfficiency.cpp.i
 .PHONY : test-algorithms/test-temporalEfficiency.cpp.i
 
 test-algorithms/test-temporalEfficiency.s: test-algorithms/test-temporalEfficiency.cpp.s
@@ -785,7 +785,7 @@ test-algorithms/test-temporalEfficiency.s: test-algorithms/test-temporalEfficien
 
 # target to generate assembly for a file
 test-algorithms/test-temporalEfficiency.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalEfficiency.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalEfficiency.cpp.s
 .PHONY : test-algorithms/test-temporalEfficiency.cpp.s
 
 test-algorithms/test-temporalKatz.o: test-algorithms/test-temporalKatz.cpp.o
@@ -794,7 +794,7 @@ test-algorithms/test-temporalKatz.o: test-algorithms/test-temporalKatz.cpp.o
 
 # target to build an object file
 test-algorithms/test-temporalKatz.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalKatz.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalKatz.cpp.o
 .PHONY : test-algorithms/test-temporalKatz.cpp.o
 
 test-algorithms/test-temporalKatz.i: test-algorithms/test-temporalKatz.cpp.i
@@ -803,7 +803,7 @@ test-algorithms/test-temporalKatz.i: test-algorithms/test-temporalKatz.cpp.i
 
 # target to preprocess a source file
 test-algorithms/test-temporalKatz.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalKatz.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalKatz.cpp.i
 .PHONY : test-algorithms/test-temporalKatz.cpp.i
 
 test-algorithms/test-temporalKatz.s: test-algorithms/test-temporalKatz.cpp.s
@@ -812,7 +812,7 @@ test-algorithms/test-temporalKatz.s: test-algorithms/test-temporalKatz.cpp.s
 
 # target to generate assembly for a file
 test-algorithms/test-temporalKatz.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalKatz.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalKatz.cpp.s
 .PHONY : test-algorithms/test-temporalKatz.cpp.s
 
 test-algorithms/test-temporalPageRank.o: test-algorithms/test-temporalPageRank.cpp.o
@@ -821,7 +821,7 @@ test-algorithms/test-temporalPageRank.o: test-algorithms/test-temporalPageRank.c
 
 # target to build an object file
 test-algorithms/test-temporalPageRank.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPageRank.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPageRank.cpp.o
 .PHONY : test-algorithms/test-temporalPageRank.cpp.o
 
 test-algorithms/test-temporalPageRank.i: test-algorithms/test-temporalPageRank.cpp.i
@@ -830,7 +830,7 @@ test-algorithms/test-temporalPageRank.i: test-algorithms/test-temporalPageRank.c
 
 # target to preprocess a source file
 test-algorithms/test-temporalPageRank.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPageRank.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPageRank.cpp.i
 .PHONY : test-algorithms/test-temporalPageRank.cpp.i
 
 test-algorithms/test-temporalPageRank.s: test-algorithms/test-temporalPageRank.cpp.s
@@ -839,7 +839,7 @@ test-algorithms/test-temporalPageRank.s: test-algorithms/test-temporalPageRank.c
 
 # target to generate assembly for a file
 test-algorithms/test-temporalPageRank.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPageRank.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPageRank.cpp.s
 .PHONY : test-algorithms/test-temporalPageRank.cpp.s
 
 test-algorithms/test-temporalPaths.o: test-algorithms/test-temporalPaths.cpp.o
@@ -848,7 +848,7 @@ test-algorithms/test-temporalPaths.o: test-algorithms/test-temporalPaths.cpp.o
 
 # target to build an object file
 test-algorithms/test-temporalPaths.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPaths.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPaths.cpp.o
 .PHONY : test-algorithms/test-temporalPaths.cpp.o
 
 test-algorithms/test-temporalPaths.i: test-algorithms/test-temporalPaths.cpp.i
@@ -857,7 +857,7 @@ test-algorithms/test-temporalPaths.i: test-algorithms/test-temporalPaths.cpp.i
 
 # target to preprocess a source file
 test-algorithms/test-temporalPaths.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPaths.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPaths.cpp.i
 .PHONY : test-algorithms/test-temporalPaths.cpp.i
 
 test-algorithms/test-temporalPaths.s: test-algorithms/test-temporalPaths.cpp.s
@@ -866,7 +866,7 @@ test-algorithms/test-temporalPaths.s: test-algorithms/test-temporalPaths.cpp.s
 
 # target to generate assembly for a file
 test-algorithms/test-temporalPaths.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPaths.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalPaths.cpp.s
 .PHONY : test-algorithms/test-temporalPaths.cpp.s
 
 test-algorithms/test-temporalTemporalWalkCentrality.o: test-algorithms/test-temporalTemporalWalkCentrality.cpp.o
@@ -875,7 +875,7 @@ test-algorithms/test-temporalTemporalWalkCentrality.o: test-algorithms/test-temp
 
 # target to build an object file
 test-algorithms/test-temporalTemporalWalkCentrality.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalTemporalWalkCentrality.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalTemporalWalkCentrality.cpp.o
 .PHONY : test-algorithms/test-temporalTemporalWalkCentrality.cpp.o
 
 test-algorithms/test-temporalTemporalWalkCentrality.i: test-algorithms/test-temporalTemporalWalkCentrality.cpp.i
@@ -884,7 +884,7 @@ test-algorithms/test-temporalTemporalWalkCentrality.i: test-algorithms/test-temp
 
 # target to preprocess a source file
 test-algorithms/test-temporalTemporalWalkCentrality.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalTemporalWalkCentrality.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalTemporalWalkCentrality.cpp.i
 .PHONY : test-algorithms/test-temporalTemporalWalkCentrality.cpp.i
 
 test-algorithms/test-temporalTemporalWalkCentrality.s: test-algorithms/test-temporalTemporalWalkCentrality.cpp.s
@@ -893,7 +893,7 @@ test-algorithms/test-temporalTemporalWalkCentrality.s: test-algorithms/test-temp
 
 # target to generate assembly for a file
 test-algorithms/test-temporalTemporalWalkCentrality.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalTemporalWalkCentrality.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalTemporalWalkCentrality.cpp.s
 .PHONY : test-algorithms/test-temporalTemporalWalkCentrality.cpp.s
 
 test-algorithms/test-temporalkhCore.o: test-algorithms/test-temporalkhCore.cpp.o
@@ -902,7 +902,7 @@ test-algorithms/test-temporalkhCore.o: test-algorithms/test-temporalkhCore.cpp.o
 
 # target to build an object file
 test-algorithms/test-temporalkhCore.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalkhCore.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalkhCore.cpp.o
 .PHONY : test-algorithms/test-temporalkhCore.cpp.o
 
 test-algorithms/test-temporalkhCore.i: test-algorithms/test-temporalkhCore.cpp.i
@@ -911,7 +911,7 @@ test-algorithms/test-temporalkhCore.i: test-algorithms/test-temporalkhCore.cpp.i
 
 # target to preprocess a source file
 test-algorithms/test-temporalkhCore.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalkhCore.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalkhCore.cpp.i
 .PHONY : test-algorithms/test-temporalkhCore.cpp.i
 
 test-algorithms/test-temporalkhCore.s: test-algorithms/test-temporalkhCore.cpp.s
@@ -920,7 +920,7 @@ test-algorithms/test-temporalkhCore.s: test-algorithms/test-temporalkhCore.cpp.s
 
 # target to generate assembly for a file
 test-algorithms/test-temporalkhCore.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalkhCore.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-temporalkhCore.cpp.s
 .PHONY : test-algorithms/test-temporalkhCore.cpp.s
 
 test-algorithms/test-topkTemporalCloseness.o: test-algorithms/test-topkTemporalCloseness.cpp.o
@@ -929,7 +929,7 @@ test-algorithms/test-topkTemporalCloseness.o: test-algorithms/test-topkTemporalC
 
 # target to build an object file
 test-algorithms/test-topkTemporalCloseness.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topkTemporalCloseness.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topkTemporalCloseness.cpp.o
 .PHONY : test-algorithms/test-topkTemporalCloseness.cpp.o
 
 test-algorithms/test-topkTemporalCloseness.i: test-algorithms/test-topkTemporalCloseness.cpp.i
@@ -938,7 +938,7 @@ test-algorithms/test-topkTemporalCloseness.i: test-algorithms/test-topkTemporalC
 
 # target to preprocess a source file
 test-algorithms/test-topkTemporalCloseness.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topkTemporalCloseness.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topkTemporalCloseness.cpp.i
 .PHONY : test-algorithms/test-topkTemporalCloseness.cpp.i
 
 test-algorithms/test-topkTemporalCloseness.s: test-algorithms/test-topkTemporalCloseness.cpp.s
@@ -947,7 +947,7 @@ test-algorithms/test-topkTemporalCloseness.s: test-algorithms/test-topkTemporalC
 
 # target to generate assembly for a file
 test-algorithms/test-topkTemporalCloseness.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topkTemporalCloseness.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topkTemporalCloseness.cpp.s
 .PHONY : test-algorithms/test-topkTemporalCloseness.cpp.s
 
 test-algorithms/test-topologicalOverlap.o: test-algorithms/test-topologicalOverlap.cpp.o
@@ -956,7 +956,7 @@ test-algorithms/test-topologicalOverlap.o: test-algorithms/test-topologicalOverl
 
 # target to build an object file
 test-algorithms/test-topologicalOverlap.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topologicalOverlap.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topologicalOverlap.cpp.o
 .PHONY : test-algorithms/test-topologicalOverlap.cpp.o
 
 test-algorithms/test-topologicalOverlap.i: test-algorithms/test-topologicalOverlap.cpp.i
@@ -965,7 +965,7 @@ test-algorithms/test-topologicalOverlap.i: test-algorithms/test-topologicalOverl
 
 # target to preprocess a source file
 test-algorithms/test-topologicalOverlap.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topologicalOverlap.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topologicalOverlap.cpp.i
 .PHONY : test-algorithms/test-topologicalOverlap.cpp.i
 
 test-algorithms/test-topologicalOverlap.s: test-algorithms/test-topologicalOverlap.cpp.s
@@ -974,7 +974,7 @@ test-algorithms/test-topologicalOverlap.s: test-algorithms/test-topologicalOverl
 
 # target to generate assembly for a file
 test-algorithms/test-topologicalOverlap.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topologicalOverlap.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-algorithms/test-topologicalOverlap.cpp.s
 .PHONY : test-algorithms/test-topologicalOverlap.cpp.s
 
 test-core/test-basictypes.o: test-core/test-basictypes.cpp.o
@@ -983,7 +983,7 @@ test-core/test-basictypes.o: test-core/test-basictypes.cpp.o
 
 # target to build an object file
 test-core/test-basictypes.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-basictypes.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-basictypes.cpp.o
 .PHONY : test-core/test-basictypes.cpp.o
 
 test-core/test-basictypes.i: test-core/test-basictypes.cpp.i
@@ -992,7 +992,7 @@ test-core/test-basictypes.i: test-core/test-basictypes.cpp.i
 
 # target to preprocess a source file
 test-core/test-basictypes.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-basictypes.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-basictypes.cpp.i
 .PHONY : test-core/test-basictypes.cpp.i
 
 test-core/test-basictypes.s: test-core/test-basictypes.cpp.s
@@ -1001,7 +1001,7 @@ test-core/test-basictypes.s: test-core/test-basictypes.cpp.s
 
 # target to generate assembly for a file
 test-core/test-basictypes.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-basictypes.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-basictypes.cpp.s
 .PHONY : test-core/test-basictypes.cpp.s
 
 test-core/test-transformations.o: test-core/test-transformations.cpp.o
@@ -1010,7 +1010,7 @@ test-core/test-transformations.o: test-core/test-transformations.cpp.o
 
 # target to build an object file
 test-core/test-transformations.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-transformations.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-transformations.cpp.o
 .PHONY : test-core/test-transformations.cpp.o
 
 test-core/test-transformations.i: test-core/test-transformations.cpp.i
@@ -1019,7 +1019,7 @@ test-core/test-transformations.i: test-core/test-transformations.cpp.i
 
 # target to preprocess a source file
 test-core/test-transformations.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-transformations.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-transformations.cpp.i
 .PHONY : test-core/test-transformations.cpp.i
 
 test-core/test-transformations.s: test-core/test-transformations.cpp.s
@@ -1028,7 +1028,7 @@ test-core/test-transformations.s: test-core/test-transformations.cpp.s
 
 # target to generate assembly for a file
 test-core/test-transformations.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-transformations.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-core/test-transformations.cpp.s
 .PHONY : test-core/test-transformations.cpp.s
 
 test-main.o: test-main.cpp.o
@@ -1037,7 +1037,7 @@ test-main.o: test-main.cpp.o
 
 # target to build an object file
 test-main.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-main.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-main.cpp.o
 .PHONY : test-main.cpp.o
 
 test-main.i: test-main.cpp.i
@@ -1046,7 +1046,7 @@ test-main.i: test-main.cpp.i
 
 # target to preprocess a source file
 test-main.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-main.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-main.cpp.i
 .PHONY : test-main.cpp.i
 
 test-main.s: test-main.cpp.s
@@ -1055,7 +1055,7 @@ test-main.s: test-main.cpp.s
 
 # target to generate assembly for a file
 test-main.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-main.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-main.cpp.s
 .PHONY : test-main.cpp.s
 
 test-util/test-inputOutput.o: test-util/test-inputOutput.cpp.o
@@ -1064,7 +1064,7 @@ test-util/test-inputOutput.o: test-util/test-inputOutput.cpp.o
 
 # target to build an object file
 test-util/test-inputOutput.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-inputOutput.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-inputOutput.cpp.o
 .PHONY : test-util/test-inputOutput.cpp.o
 
 test-util/test-inputOutput.i: test-util/test-inputOutput.cpp.i
@@ -1073,7 +1073,7 @@ test-util/test-inputOutput.i: test-util/test-inputOutput.cpp.i
 
 # target to preprocess a source file
 test-util/test-inputOutput.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-inputOutput.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-inputOutput.cpp.i
 .PHONY : test-util/test-inputOutput.cpp.i
 
 test-util/test-inputOutput.s: test-util/test-inputOutput.cpp.s
@@ -1082,7 +1082,7 @@ test-util/test-inputOutput.s: test-util/test-inputOutput.cpp.s
 
 # target to generate assembly for a file
 test-util/test-inputOutput.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-inputOutput.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-inputOutput.cpp.s
 .PHONY : test-util/test-inputOutput.cpp.s
 
 test-util/test-topkresult.o: test-util/test-topkresult.cpp.o
@@ -1091,7 +1091,7 @@ test-util/test-topkresult.o: test-util/test-topkresult.cpp.o
 
 # target to build an object file
 test-util/test-topkresult.cpp.o:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-topkresult.cpp.o
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-topkresult.cpp.o
 .PHONY : test-util/test-topkresult.cpp.o
 
 test-util/test-topkresult.i: test-util/test-topkresult.cpp.i
@@ -1100,7 +1100,7 @@ test-util/test-topkresult.i: test-util/test-topkresult.cpp.i
 
 # target to preprocess a source file
 test-util/test-topkresult.cpp.i:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-topkresult.cpp.i
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-topkresult.cpp.i
 .PHONY : test-util/test-topkresult.cpp.i
 
 test-util/test-topkresult.s: test-util/test-topkresult.cpp.s
@@ -1109,7 +1109,7 @@ test-util/test-topkresult.s: test-util/test-topkresult.cpp.s
 
 # target to generate assembly for a file
 test-util/test-topkresult.cpp.s:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-topkresult.cpp.s
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(MAKE) -f test/CMakeFiles/custom-main-tests.dir/build.make test/CMakeFiles/custom-main-tests.dir/test-util/test-topkresult.cpp.s
 .PHONY : test-util/test-topkresult.cpp.s
 
 # Help Target
@@ -1223,6 +1223,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

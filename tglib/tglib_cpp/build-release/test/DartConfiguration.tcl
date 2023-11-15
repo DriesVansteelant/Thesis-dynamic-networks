@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/test
-BuildDirectory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/test
+SourceDirectory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp/test
+BuildDirectory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/test
 
 # Where to place the cost data store
 CostDataFile: 
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/test"
+ConfigureCommand: "/usr/bin/cmake" "/home/dries/Documents/Thesis/code/tglib/tglib_cpp/test"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

@@ -289,8 +289,11 @@ def read_snapshots(path, comments="#", directed=False, delimiter=None,
     """
     ids = None
     lines = (line.decode(encoding) for line in path)
+    # for l in lines:
+    #     print(l)
     if keys:
         ids = read_ids(path.name, delimiter=delimiter, timestamptype=timestamptype)
+        print('ids', ids)
 
     return parse_snapshots(lines, comments=comments, directed=directed, delimiter=delimiter, nodetype=nodetype,
                            timestamptype=timestamptype, keys=ids)

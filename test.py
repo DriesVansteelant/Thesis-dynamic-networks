@@ -1,5 +1,5 @@
 import sys
-# import pytglib as tgl  # tglib
+import pytglib as tgl  # tglib
 import scipy.stats as ss  # for Kendall's tau correlation
 from tqdm import tqdm
 # sys.path.append("/dynetx/dynetx")
@@ -7,41 +7,12 @@ from tqdm import tqdm
 import dynetx.dynetx as dn
 import dynetx.dynetx.algorithms as al
 import time
-import matplotlib.pylab as plt
-import numpy as np
 
 
-list1 = [1,2,3,4,5,6]
-list2 = [2,3,4,5,6,7]
-labels = ["jeff","piet","jan","rogier","kurt","jorik"]
-    memory_results = {}
-    for struct in structs:
-        for dataset_name in datasets:
-            memory_results.setdefault(struct, {})[dataset_name] = pickle.load(open(f'memory_results_{struct}_{dataset_name}.pkl', 'rb'))
 
-    fig, ax = plt.subplots()
-    width = 0.15
-    offset = {'interval': 2 * width, 'snapshot': 1 * width, 'adjtree': 0 * width, 'tvg': -1 * width,'networkx': -2 * width}
-    color = {'interval': (0.65, 0.3, 0.3), 'snapshot': (0, 0.75, 0), 'networkx': (0.8, 0.8, 0.8), 'adjtree': (0, 0, .75), 'tvg': (1, 1, 0)}
-    labels = {'interval': 'IntervalGraph', 'snapshot': 'SnapshotGraph', 'networkx': 'NetworkX', 'adjtree': 'AdjTree', 'tvg': 'TVG'}
-    label_location = np.arange(len(datasets))
+from benchmark_tglib import BenchmarkTGLib as btgl
 
-    for struct in structs:
-        nums = [memory_results[struct][d] for d in memory_results[struct]]
-        ax.barh(label_location + offset[struct], nums, width, label=labels[struct], color=color[struct])
-
-    # ax.set_title('Memory')
-    ax.set_yticks(label_location)
-    ax.set_yticklabels(datasets)
-    ax.set_xscale('log')
-    ax.set_xlabel('Memory (MB)')
-    fig.tight_layout()
-    fig.set_figheight(4)
-    fig.set_figwidth(6)
-    plt.tight_layout(pad=0.2)
-    plt.legend()
-    fig.savefig('memory.eps', format='eps')
-    plt.show()
+btgl.do_benchmark('la', 'di', 3)
 
 # outp = open('./tglib/example_datasets/edgeList_final.txt', 'w')
 # outp.write('')
@@ -72,7 +43,7 @@ labels = ["jeff","piet","jan","rogier","kurt","jorik"]
 
 # inp.close()
 # outp.close()
-print('file Formatted, loading list')
+# print('file Formatted, loading list')
 
 # ================================ dynetX ====================================
 
@@ -87,7 +58,7 @@ print('file Formatted, loading list')
 # print(h.interactions()[0])
 # pts = al.time_respecting_paths(h, 30122, 18303)
 # pts2 = al.all_time_respecting_paths(h)
-end1 = time.time()
+# end1 = time.time()
 
 # print(f"Time taken to calculate paths between 1 set of nodes {end1-end} seconds")
 # print(pts2)
@@ -109,7 +80,7 @@ end1 = time.time()
 # print(pts2)
 # ================================ tglib =====================================
 
-# tgs = tgl.load_ordered_edge_list("./tglib/example_datasets/edgeList_final.txt")
+# tgs = tgl.load_ordered_edge_list("./datasets/tgbl-wiki_edgelist_final.txt")
 # stats = tgl.get_statistics(tgs)
 # print(stats)
 # print('loaded')

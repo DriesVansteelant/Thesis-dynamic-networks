@@ -1,7 +1,7 @@
 import unittest
-import dynetx as dn
+# import dynetx.dynetx as dn
 import networkx as nx
-import dynetx.algorithms as al
+import dynetx.dynetx.algorithms as al
 
 
 def get_network():
