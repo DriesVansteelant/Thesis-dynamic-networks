@@ -23,7 +23,7 @@ import pandas as pd
 
 
 start = time.time()
-edges_df = pd.read_csv("tglib/example_datasets/example_from_paper.tg", delimiter=" ")
+edges_df = pd.read_csv("tgbl-wiki_edgelist.txt", delimiter=" ")
 end = time.time()
 print(f"Time to read pandas from file: {end - start}")
 
@@ -75,12 +75,27 @@ end = time.time()
 print(f"Time to get stats: {end - start}")
 
 # print(g.vertices)
-nodes = [x.name for x in g.vertices] [0:10]
-print(nodes)
-# paths = algo.single_source_shortest_path(g, nodes)
-for s in tqdm(nodes):
-    path = algo.single_source_shortest_path(g, str(s))
-    print(path.to_string())
+nodes = [x.name for x in g.vertices] 
+
+# reachable = algo.temporally_reachable_nodes(g, 9999999, 0, nodes)
+# print(reachable.to_string())
+# print(reachable.to_df())
+
+for s in tqdm(g.vertices):
+    path = algo.temporally_reachable_nodes(g, 9999999, 0, nodes)
+    # print(f"source: {s}")
+    # if(len(path.get_all()) > 0):
+    #     print(path.to_string())
+    #     print(path.to_df())
+    #     print("==================================")
+        
+# for s in tqdm(g.vertices):
+#     path = algo.single_source_shortest_path(g, str(s))
+#     # print(f"source: {s}")
+#     if(len(path.get_all()) > 0):
+#         print(path.to_string())
+#         print(path.to_df())
+#         print("==================================")
 
 
 # print("Edge Dataframe:")

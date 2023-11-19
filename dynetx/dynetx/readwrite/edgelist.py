@@ -232,11 +232,16 @@ def parse_snapshots(lines, comments='#', directed=False, delimiter=None, nodetyp
             t = s.pop(0)
             e = s.pop(0)
 
+        # print(type(t))
+        # if type(t) == type("jeff"):
+        #     continue
+
         if nodetype is not None:
             try:
                 u = nodetype(u)
                 v = nodetype(v)
             except:
+                continue
                 raise TypeError("Failed to convert nodes %s,%s to type %s." % (u, v, nodetype))
 
         if timestamptype is not None:
@@ -245,6 +250,7 @@ def parse_snapshots(lines, comments='#', directed=False, delimiter=None, nodetyp
                 if e is not None:
                     e = timestamptype(e)
             except:
+                continue
                 raise TypeError("Failed to convert timestamp %s to type %s." % (t, nodetype))
 
         if keys is not None:
