@@ -2,13 +2,13 @@ from tqdm import tqdm
 import time
 import numpy as np
 
-inPath = 'tgbl-review_edgelist_v2.csv'
-outPath = 'tgbl-review_edgelist_final.txt'
+inPath = 'C:/Users/dries/Documents/school/Thesis/Code/Data/tgbl-review_edgelist_v2.csv'
+outPath = 'C:/Users/dries/Documents/school/Thesis/Code/Data/tgbl-review_edgelist_final.txt'
 outp = open(outPath, 'w')
 outp.write('')
 outp.close()
 
-outPath2 = 'tgbl-review_edgelist_final_with_intervals.txt'
+outPath2 = 'C:/Users/dries/Documents/school/Thesis/Code/Data/tgbl-review_edgelist_final_with_intervals.txt'
 
 outp2 = open(outPath2, 'w')
 outp2.write('')

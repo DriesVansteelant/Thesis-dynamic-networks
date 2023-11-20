@@ -80,7 +80,7 @@ class BenchmarkRaphtory():
         """..."""
 
 
-# inPath = "tgbl-wiki_edgelist.txt"
+# inPath = "../Code/Data/tgbl-wiki_edgelist_final.txt"
 # res = BenchmarkRaphtory.do_benchmark(inPath)
 # print(res)
 # inPath = "tgbl-review_edgelist_final.txt"
