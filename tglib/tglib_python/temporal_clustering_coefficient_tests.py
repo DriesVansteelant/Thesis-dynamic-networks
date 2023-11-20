@@ -19,12 +19,16 @@ def temporal_clustering_coefficient_test_all_nodes():
     >>> temporal_clustering_coefficient_test_all_nodes()
     VectorDouble[0.0454545, 0, 0, 0]
     """
-    tgs = tgl.load_ordered_edge_list("../example_datasets/example_from_paper.tg")
+    tgs = tgl.load_ordered_edge_list("./tglib/example_datasets/example_from_paper.tg")
     tg = tgl.to_incident_lists(tgs)
+
+    print((tg.getTimeInterval()))
+    print((tg))
 
     c = tgl.temporal_clustering_coefficient(tg, tg.getTimeInterval())
     return c
 
 
-if __name__ == "__main__":
-    doctest.testmod()
+# if __name__ == "__main__":
+#     doctest.testmod()
+print(temporal_clustering_coefficient_test_all_nodes())

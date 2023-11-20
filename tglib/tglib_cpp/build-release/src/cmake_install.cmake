@@ -1,4 +1,4 @@
-# Install script for directory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/src
+# Install script for directory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/build-release/src/python_binding/cmake_install.cmake")
+  include("/home/dries/Documents/Thesis/code/tglib/tglib_cpp/build-release/src/python_binding/cmake_install.cmake")
 endif()
 

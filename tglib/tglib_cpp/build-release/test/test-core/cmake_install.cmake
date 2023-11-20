@@ -1,4 +1,4 @@
-# Install script for directory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/test/test-core
+# Install script for directory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp/test/test-core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

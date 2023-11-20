@@ -1,4 +1,4 @@
-# Install script for directory: /home/dries/Documents/Thesis/code/tglib-main/tglib_cpp/extern/pybind11
+# Install script for directory: /home/dries/Documents/Thesis/code/tglib/tglib_cpp/extern/pybind11
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
