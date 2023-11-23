@@ -85,17 +85,23 @@ class BenchmarkDyNetX():
         selected_from = np.random.choice(nodes, size=numPaths)
         selected_to = np.random.choice(nodes, size=numPaths)
 
+
+        from_nodes = [2265, 2265, 2267, 7560, 7241, 2186, 2176, 2174, 2164, 2157, 1723, 1716]
+        to_nodes =   [980, 973, 992, 341, 993, 979, 988, 948, 995, 981, 271, 995]
+
         pathStats = {}
 
-        for fro in tqdm(selected_from):
-            for to in (selected_to):
+        for fro in tqdm(from_nodes):
+            for to in (to_nodes):
 
                 paths = al.time_respecting_paths(h, fro, to)
                 
+                # print(paths)
                 for path in paths:
                     if len(paths[path]) > 0:
                         annotated = (al.annotate_paths(paths[path]))
                         pathStats[(fro,to)] = annotated
+                        # print(annotated)
 
         end = time.time()
         tt = end-start
@@ -103,7 +109,7 @@ class BenchmarkDyNetX():
         h, m = divmod(m, 60)
         
         results["paths"] = end-start
-        print(f"Time taken to get and annotate {num_select * 5} paths {tt} seconds or {int(h)}:{int(m)}:{s}")
+        print(f"Time taken to get and annotate {num_select * numPaths} paths {tt} seconds or {int(h)}:{int(m)}:{s}")
         
         return results
         # statsFile.write(f"Time taken to get and annotate {num_select * 5} paths {tt} seconds or {int(h)}:{int(m)}:{s}" + "\n")
@@ -115,7 +121,7 @@ class BenchmarkDyNetX():
 
         # statsFile.close()
 
-# inPath = "tgbl-wiki_edgelist.txt"
+# inPath = "../Code/Data/tgbl-wiki_edgelist_final.txt"
 # res = BenchmarkDyNetX.do_benchmark(inPath,5)
 # print(res)
 # inPath = "tgbl-review_edgelist_final.txt"

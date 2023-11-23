@@ -74,11 +74,10 @@ class BenchmarkRaphtory():
         results["pagerank"] = end-start
         print(f"Time to get Pagerank: {end - start}")
 
-        return results
-
 # Traingles and triplets
         """..."""
 
+        return results
 
 # inPath = "../Code/Data/tgbl-wiki_edgelist_final.txt"
 # res = BenchmarkRaphtory.do_benchmark(inPath)
