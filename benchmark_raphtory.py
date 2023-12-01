@@ -55,6 +55,8 @@ class BenchmarkRaphtory():
 
 # Paths
         """..."""
+        algo.single_source_shortest_path(g,g.vertex(2265))
+
 
 # clustering coefficient
         start = time.time()
@@ -79,9 +81,9 @@ class BenchmarkRaphtory():
 
         return results
 
-# inPath = "../Code/Data/tgbl-wiki_edgelist_final.txt"
-# res = BenchmarkRaphtory.do_benchmark(inPath)
-# print(res)
+inPath = "../Code/Data/tgbl-wiki_edgelist_final.txt"
+res = BenchmarkRaphtory.do_benchmark(inPath)
+print(res)
 # inPath = "tgbl-review_edgelist_final.txt"
 # res = BenchmarkRaphtory.do_benchmark(inPath)
 # print(res)
