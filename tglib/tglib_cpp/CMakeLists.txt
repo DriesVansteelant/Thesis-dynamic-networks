@@ -4,12 +4,12 @@
 # See file LICENSE.md or go to https://gitlab.com/tgpublic/tglib
 # for full license details.
 
-cmake_minimum_required(VERSION 3.4...3.18)
+cmake_minimum_required(VERSION 3.6...3.18)
 project(tglib)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_compile_options(-Wall -Wextra -Wpedantic -Werror)
+add_compile_options(-Wall) #-Wextra -Wpedantic -Werror
 
 # OpenMP for parallelization
 find_package(OpenMP REQUIRED)
@@ -28,17 +28,17 @@ add_subdirectory(test)
 
 
 # Doxygen for documentation
-find_package(Doxygen)
-if (DOXYGEN_FOUND)
-    set(DOXYGEN_GENERATE_TREEVIEW YES)
-    set(DOXYGEN_PROJECT_NAME TGLib)
-    set(DOXYGEN_USE_MDFILE_AS_MAINPAGE ../README.md)
-    set(DOXYGEN_TOC_INCLUDE_HEADINGS 2)
+# find_package(Doxygen)
+# if (DOXYGEN_FOUND)
+#     set(DOXYGEN_GENERATE_TREEVIEW YES)
+#     set(DOXYGEN_PROJECT_NAME TGLib)
+#     set(DOXYGEN_USE_MDFILE_AS_MAINPAGE ../README.md)
+#     set(DOXYGEN_TOC_INCLUDE_HEADINGS 2)
 
-    doxygen_add_docs(doxygen ${TO_DOCUMENT} src/namespaces.h ../README.md)
-else (DOXYGEN_FOUND)
-    message("Doxygen need to be installed to generate the documentation")
-endif (DOXYGEN_FOUND)
+#     doxygen_add_docs(doxygen ${TO_DOCUMENT} src/namespaces.h ../README.md)
+# else (DOXYGEN_FOUND)
+#     message("Doxygen need to be installed to generate the documentation")
+# endif (DOXYGEN_FOUND)
 
 
 # automatically generate amalgamated header

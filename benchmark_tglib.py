@@ -1,5 +1,4 @@
-
-import pytglib as tgl  # tglib
+import tglib.tglib_cpp.build.src.python_binding.Release.pytglib as tgl  # tglib
 import scipy.stats as ss  # for Kendall's tau correlation
 from tqdm import tqdm
 import time
@@ -29,22 +28,29 @@ class testname():
         print(f"Time taken to get stats {end-start} seconds \n")
         print(stats)
 
+
+        start = time.time()
+        stats2 = tgl.get_node_statistics(g)
+        results["stats"] = end-start
+        print(f"Time taken to get node stats {end-start} seconds \n")
+        # print(stats2)
+
 # Paths
         incidents = tgl.to_incident_lists(g)
 
-        from_nodes = [2265, 2265, 2267, 7560, 7241, 2186, 2176, 2174, 2164, 2157, 1723, 1716]
-        to_nodes =   [980, 973, 992, 341, 993, 979, 988, 948, 995, 981, 271, 995]
-        paths = []
+        # from_nodes = [2265, 2265, 2267, 7560, 7241, 2186, 2176, 2174, 2164, 2157, 1723, 1716]
+        # to_nodes =   [980, 973, 992, 341, 993, 979, 988, 948, 995, 981, 271, 995]
+        # paths = []
 
-        if do_paths:
-            start = time.time()
-            for fro in tqdm(from_nodes):
-                for to in (to_nodes):
-                    temp = tgl.minimum_transition_time_path(incidents, fro, to, g.getTimeInterval())
-                    paths.append(temp)
-            end = time.time()
-            results["paths"] = end-start
-            print(f"Time taken to get shortest paths {end-start} seconds")
+        # if do_paths:
+        #     start = time.time()
+        #     for fro in tqdm(from_nodes):
+        #         for to in (to_nodes):
+        #             temp = tgl.minimum_transition_time_path(incidents, fro, to, g.getTimeInterval())
+        #             paths.append(temp)
+        #     end = time.time()
+        #     results["paths"] = end-start
+        #     print(f"Time taken to get shortest paths {end-start} seconds")
         
 
 # clustering coefficient
@@ -72,7 +78,7 @@ class testname():
         # print(np.random.choice(paths, size=20))
         return results
     
-#     do_benchmark("../Code/Data/tgbl-wiki_edgelist_final.txt", 10, do_paths = True)
+    do_benchmark("../Code/Data/tgbl-wiki_edgelist_final.txt", 10, do_paths = True)
 
 # VectorTemporalEdge[(2265 660 457519 1), (660 678 632686 1), (678 337 756363 1), (337 233 811793 1), (233 717 1663063 1), (717 980 2433174 1)]
 # VectorTemporalEdge[(2265 660 457519 1), (660 678 632686 1), (678 337 756363 1), (337 233 811793 1), (233 17 1839174 1), (17 367 1942183 1), (367 973 2108004 1)]

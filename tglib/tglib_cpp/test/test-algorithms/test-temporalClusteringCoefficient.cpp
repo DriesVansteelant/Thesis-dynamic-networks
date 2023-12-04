@@ -5,8 +5,8 @@
  * for full license details.
  */
 
-#include <catch2/catch_test_macros.hpp>
 #include <iostream>
+#include <catch2/catch_test_macros.hpp>
 #include "../TemporalGraphsInstances.h"
 #include "../../src/algorithms/TemporalClusteringCoefficient.h"
 #include "../../src/core/Transformations.h"

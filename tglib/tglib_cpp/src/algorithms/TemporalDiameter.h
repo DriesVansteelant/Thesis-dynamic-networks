@@ -72,7 +72,7 @@ Time temporal_diameter(TempGraph const &tg, tglib::TimeInterval timeInterval, tg
     std::vector<Time> ecc(tg.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tg, ecc, distanceType, timeInterval)
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
         ecc[nid] = temporal_eccentricity(tg, nid, timeInterval, distanceType);
     }
 

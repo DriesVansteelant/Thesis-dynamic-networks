@@ -5,6 +5,7 @@
  * for full license details.
  */
 
+#include <sstream>
 #include <algorithm>
 #include <set>
 #include "TemporalGraphsInstances.h"

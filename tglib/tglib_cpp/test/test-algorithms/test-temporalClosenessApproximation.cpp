@@ -5,9 +5,9 @@
  * for full license details.
  */
 
+#include <iostream>
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/catch_approx.hpp>
-#include <iostream>
 #include "../TemporalGraphsInstances.h"
 #include "../../src/algorithms/TemporalCloseness.h"
 #include "../../src/algorithms/TemporalClosenessApproximation.h"

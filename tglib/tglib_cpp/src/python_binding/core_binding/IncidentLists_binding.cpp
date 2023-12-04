@@ -11,6 +11,8 @@
  *
  */
 
+
+#include <sstream>
 #include <pybind11/pybind11.h>
 #include "../../core/IncidentLists.h"
 

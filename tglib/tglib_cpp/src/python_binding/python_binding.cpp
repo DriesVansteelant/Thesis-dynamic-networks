@@ -12,6 +12,7 @@
  *
  */
 
+#include <sstream>
 #include <pybind11/pybind11.h>
 
 #include "python_binding.h"

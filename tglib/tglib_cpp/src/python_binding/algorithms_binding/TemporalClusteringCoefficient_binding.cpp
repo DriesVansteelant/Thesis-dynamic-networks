@@ -11,8 +11,9 @@
  *
  */
 
-#include <pybind11/pybind11.h>
+#include <sstream>
 #include "../../algorithms/TemporalClusteringCoefficient.h"
+#include <pybind11/pybind11.h>
 
 namespace tglib_python_binding {
 

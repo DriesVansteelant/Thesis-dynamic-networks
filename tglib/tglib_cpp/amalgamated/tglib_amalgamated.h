@@ -14,10 +14,10 @@
 #ifndef TGLIB_BASICTYPES_H
 #define TGLIB_BASICTYPES_H
 
+#include <string>
 #include <cstdint>
 #include <limits>
 #include <utility>
-#include <string>
 #include <tuple>
 
 
@@ -269,9 +269,9 @@ struct TemporalGraphStatistics {
  * for full license details.
  */
 
-/** @file OrderedEdgeList.h
- *  @brief Contains the ordered edge list representation data structure for temporal graphs
- */
+ /** @file OrderedEdgeList.h
+  *  @brief Contains the ordered edge list representation data structure for temporal graphs
+  */
 
 #ifndef CPP_TEMPORALGRAPHSTREAM_H
 #define CPP_TEMPORALGRAPHSTREAM_H
@@ -287,204 +287,257 @@ struct TemporalGraphStatistics {
 
 namespace tglib {
 
-/**
- * @brief The ordered edge list contains all temporal edges in chronological order
- */
-template<typename E>
-class OrderedEdgeList {
+	/**
+	 * @brief The ordered edge list contains all temporal edges in chronological order
+	 */
+	template<typename E>
+	class OrderedEdgeList {
 
-public:
+	public:
 
-    /**
-     * @brief Default constructor
-     */
-    OrderedEdgeList() = default;
+		/**
+		 * @brief Default constructor
+		 */
+		OrderedEdgeList() = default;
 
-    /**
-     * @brief Constructor
-     * @param num_nodes_ The number of nodes
-     * @param edges_ The temporal edges
-     * @param ti_ The time interval
-     */
-    OrderedEdgeList(size_t num_nodes_, std::vector<E> edges_, TimeInterval ti_) :
-        num_nodes(num_nodes_), edges(edges_), ti(std::move(ti_)){};
+		/**
+		 * @brief Constructor
+		 * @param num_nodes_ The number of nodes
+		 * @param edges_ The temporal edges
+		 * @param ti_ The time interval
+		 */
+		OrderedEdgeList(size_t num_nodes_, std::vector<E> edges_, TimeInterval ti_) :
+			num_nodes(num_nodes_), edges(edges_), ti(std::move(ti_)) {};
 
-    /**
-     * @brief Constructor
-     * @param num_nodes_ The number of nodes
-     * @param edges_ The temporal edges
-     * @param ti_ The time interval
-     * @param node_mapping_ The node mapping
-     */
-    OrderedEdgeList(size_t num_nodes_, std::vector<E> edges_, TimeInterval ti_,
-                        std::unordered_map<NodeId, NodeId> node_mapping_) :
-        num_nodes(num_nodes_), edges(edges_), ti(std::move(ti_)){
-        node_map = std::move(node_mapping_);
-        reverse_node_map.resize(node_map.size(), 0);
-        for (auto p : node_map) {
-            reverse_node_map[p.second] = p.first;
-        }
-    };
+		/**
+		 * @brief Constructor
+		 * @param num_nodes_ The number of nodes
+		 * @param edges_ The temporal edges
+		 * @param ti_ The time interval
+		 * @param node_mapping_ The node mapping
+		 */
+		OrderedEdgeList(size_t num_nodes_, std::vector<E> edges_, TimeInterval ti_,
+			std::unordered_map<NodeId, NodeId> node_mapping_) :
+			num_nodes(num_nodes_), edges(edges_), ti(std::move(ti_)) {
+			node_map = std::move(node_mapping_);
+			reverse_node_map.resize(node_map.size(), 0);
+			for (auto p : node_map) {
+				reverse_node_map[p.second] = p.first;
+			}
+		};
 
-    /**
-     * @brief Getter for number of nodes
-     * @return The number of nodes.
-     */
-    [[nodiscard]] size_t getNumberOfNodes() const {
-        return num_nodes;
-    }
+		/**
+		 * @brief Getter for number of nodes
+		 * @return The number of nodes.
+		 */
+		[[nodiscard]] size_t getNumberOfNodes() const {
+			return num_nodes;
+		}
 
-     /**
-     * @brief Getter for number of edges
-     * @return The number of edges.
-     */
-    [[nodiscard]] size_t getNumberOfEdges() const {
-        return edges.size();
-    }
+		/**
+		* @brief Getter for number of edges
+		* @return The number of edges.
+		*/
+		[[nodiscard]] size_t getNumberOfEdges() const {
+			return edges.size();
+		}
 
-    /**
-     * @brief Getter for edges
-     * @return Const reference to edges.
-     */
-    const std::vector<E> &getEdges() const {
-        return edges;
-    }
+		/**
+		 * @brief Getter for edges
+		 * @return Const reference to edges.
+		 */
+		const std::vector<E>& getEdges() const {
+			return edges;
+		}
 
-    /**
-     * @brief Getter for number of the time interval spanned by the temporal graph
-     * @return The time interval.
-     */
-    [[nodiscard]] TimeInterval getTimeInterval() const {
-        return ti;
-    }
+		/**
+		 * @brief Getter for number of the time interval spanned by the temporal graph
+		 * @return The time interval.
+		 */
+		[[nodiscard]] TimeInterval getTimeInterval() const {
+			return ti;
+		}
 
-    /**
-      * @brief Getter for mapping from new ids to the original ids used in input file
-      * @return The mapping
-      */
-    const std::vector<NodeId> &getReverseNodeMap() const {
-        return reverse_node_map;
-    }
+		/**
+		  * @brief Getter for mapping from new ids to the original ids used in input file
+		  * @return The mapping
+		  */
+		const std::vector<NodeId>& getReverseNodeMap() const {
+			return reverse_node_map;
+		}
 
-    /**
-      * @brief Getter for mapping from new ids to the original ids used in input file
-      * @return The mapping
-      */
-    const std::unordered_map<NodeId, NodeId> &getNodeMap() const {
-        return node_map;
-    }
-
-
-
-private:
-
-    /**
-     * @brief The number of nodes.
-     */
-    size_t num_nodes{};
-
-    /**
-     * @brief The chronological ordered temporal edges. Ties are broken arbitrarily.
-     */
-    std::vector<E> edges;
-
-    /**
-     * @brief The time interval spanned by the temporal graph
-     */
-     TimeInterval ti;
-
-     /**
-      * @brief The mapping from new ids to the original ids used in input file
-      */
-     std::vector<NodeId> reverse_node_map;
-
-     /**
-       * @brief The mapping from the original ids used in input file to the new node ids in [0, num_nodes-1]
-       */
-     std::unordered_map<NodeId, NodeId> node_map;
-
-};
-
-/**
- * @brief == operator OrderedEdgeList<E>
- * @tparam E
- * @param e1
- * @param e2
- * @return
- */
-template<typename E>
-inline bool operator==(const OrderedEdgeList<E> &e1, const OrderedEdgeList<E> &e2){
-    return e1.getNumberOfNodes() == e2.getNumberOfNodes() &&
-        e1.getEdges() == e2.getEdges() &&
-        e1.getTimeInterval() == e2.getTimeInterval();
-}
-
-/**
- * @brief != operator OrderedEdgeList<E>
- * @tparam E
- * @param e1
- * @param e2
- * @return
- */
-template<typename E>
-inline bool operator!=(const OrderedEdgeList<E> &e1, const OrderedEdgeList<E> &e2){
-    return !(e1 == e2);
-}
+		/**
+		  * @brief Getter for mapping from new ids to the original ids used in input file
+		  * @return The mapping
+		  */
+		const std::unordered_map<NodeId, NodeId>& getNodeMap() const {
+			return node_map;
+		}
 
 
-// todo add edge, remove edge
-/**
- * @brief Computes the basic statistics of a temporal graph
- * @tparam E The edge type
- * @param tgs The temporal graph
- * @return The basic statistics
- */
-template<typename E>
-TemporalGraphStatistics get_statistics(OrderedEdgeList<E> const &tgs) {
-    TemporalGraphStatistics statistics{};
-    statistics.minTemporalInDegree = inf;
-    statistics.minTemporalOutDegree = inf;
-    statistics.maxTemporalInDegree = 0;
-    statistics.maxTemporalOutDegree = 0;
-    statistics.maximalTimeStamp = 0;
-    statistics.minimalTimeStamp = inf;
-    statistics.maximalTransitionTime = 0;
-    statistics.minimalTransitionTime = inf;
 
-    std::vector<long> inDegree(tgs.getNumberOfNodes(), 0);
-    std::vector<long> outDegree(tgs.getNumberOfNodes(), 0);
-    std::unordered_set<Time> times;
-    std::unordered_set<Time> transition_times;
-    std::set<std::pair<NodeId, NodeId>> static_edges;
+	private:
 
-    for (auto &e : tgs.getEdges()){
-        inDegree[e.v]++;
-        outDegree[e.u]++;
-        times.insert(e.t);
-        transition_times.insert(e.tt);
-        static_edges.insert({e.u, e.v});
+		/**
+		 * @brief The number of nodes.
+		 */
+		size_t num_nodes{};
 
-        if (statistics.maximalTimeStamp < e.t) statistics.maximalTimeStamp = e.t;
-        if (statistics.minimalTimeStamp > e.t) statistics.minimalTimeStamp = e.t;
-        if (statistics.maximalTransitionTime < e.tt) statistics.maximalTransitionTime = e.tt;
-        if (statistics.minimalTransitionTime > e.tt) statistics.minimalTransitionTime = e.tt;
-    }
+		/**
+		 * @brief The chronological ordered temporal edges. Ties are broken arbitrarily.
+		 */
+		std::vector<E> edges;
 
-    for (size_t nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
-        if (statistics.minTemporalInDegree > inDegree[nid]) statistics.minTemporalInDegree = inDegree[nid];
-        if (statistics.minTemporalOutDegree > outDegree[nid]) statistics.minTemporalOutDegree = outDegree[nid];
-        if (statistics.maxTemporalInDegree < inDegree[nid])  statistics.maxTemporalInDegree = inDegree[nid];
-        if (statistics.maxTemporalOutDegree < outDegree[nid])  statistics.maxTemporalOutDegree = outDegree[nid];
-    }
+		/**
+		 * @brief The time interval spanned by the temporal graph
+		 */
+		TimeInterval ti;
 
-    statistics.numberOfNodes = tgs.getNumberOfNodes();
-    statistics.numberOfEdges = tgs.getEdges().size();
-    statistics.numberOfStaticEdges = static_edges.size();
-    statistics.numberOfTimeStamps = times.size();
-    statistics.numberOfTransitionTimes = transition_times.size();
+		/**
+		 * @brief The mapping from new ids to the original ids used in input file
+		 */
+		std::vector<NodeId> reverse_node_map;
 
-    return statistics;
-}
+		/**
+		  * @brief The mapping from the original ids used in input file to the new node ids in [0, num_nodes-1]
+		  */
+		std::unordered_map<NodeId, NodeId> node_map;
+
+	};
+
+	/**
+	 * @brief == operator OrderedEdgeList<E>
+	 * @tparam E
+	 * @param e1
+	 * @param e2
+	 * @return
+	 */
+	template<typename E>
+	inline bool operator==(const OrderedEdgeList<E>& e1, const OrderedEdgeList<E>& e2) {
+		return e1.getNumberOfNodes() == e2.getNumberOfNodes() &&
+			e1.getEdges() == e2.getEdges() &&
+			e1.getTimeInterval() == e2.getTimeInterval();
+	}
+
+	/**
+	 * @brief != operator OrderedEdgeList<E>
+	 * @tparam E
+	 * @param e1
+	 * @param e2
+	 * @return
+	 */
+	template<typename E>
+	inline bool operator!=(const OrderedEdgeList<E>& e1, const OrderedEdgeList<E>& e2) {
+		return !(e1 == e2);
+	}
+
+
+	// todo add edge, remove edge
+	/**
+	 * @brief Computes the basic statistics of a temporal graph
+	 * @tparam E The edge type
+	 * @param tgs The temporal graph
+	 * @return The basic statistics
+	 */
+	template<typename E>
+	TemporalGraphStatistics get_statistics(OrderedEdgeList<E> const& tgs) {
+		TemporalGraphStatistics statistics{};
+		statistics.minTemporalInDegree = inf;
+		statistics.minTemporalOutDegree = inf;
+		statistics.maxTemporalInDegree = 0;
+		statistics.maxTemporalOutDegree = 0;
+		statistics.maximalTimeStamp = 0;
+		statistics.minimalTimeStamp = inf;
+		statistics.maximalTransitionTime = 0;
+		statistics.minimalTransitionTime = inf;
+
+		std::vector<long> inDegree(tgs.getNumberOfNodes(), 0);// counter list for in degrees
+		std::vector<long> outDegree(tgs.getNumberOfNodes(), 0);
+		std::unordered_set<Time> times;
+		std::unordered_set<Time> transition_times;
+		std::set<std::pair<NodeId, NodeId>> static_edges;
+
+		for (auto& e : tgs.getEdges()) {
+			inDegree[e.v]++;
+			outDegree[e.u]++;
+			times.insert(e.t);
+			transition_times.insert(e.tt);
+			static_edges.insert({ e.u, e.v });
+
+			if (statistics.maximalTimeStamp < e.t) statistics.maximalTimeStamp = e.t;
+			if (statistics.minimalTimeStamp > e.t) statistics.minimalTimeStamp = e.t;
+			if (statistics.maximalTransitionTime < e.tt) statistics.maximalTransitionTime = e.tt;
+			if (statistics.minimalTransitionTime > e.tt) statistics.minimalTransitionTime = e.tt;
+		}
+
+		for (size_t nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
+			if (statistics.minTemporalInDegree > inDegree[nid]) statistics.minTemporalInDegree = inDegree[nid];
+			if (statistics.minTemporalOutDegree > outDegree[nid]) statistics.minTemporalOutDegree = outDegree[nid];
+			if (statistics.maxTemporalInDegree < inDegree[nid])  statistics.maxTemporalInDegree = inDegree[nid];
+			if (statistics.maxTemporalOutDegree < outDegree[nid])  statistics.maxTemporalOutDegree = outDegree[nid];
+		}
+
+		statistics.numberOfNodes = tgs.getNumberOfNodes();
+		statistics.numberOfEdges = tgs.getEdges().size();
+		statistics.numberOfStaticEdges = static_edges.size();
+		statistics.numberOfTimeStamps = times.size();
+		statistics.numberOfTransitionTimes = transition_times.size();
+
+		return statistics;
+	}
+
+	/**
+	 * @brief Computes some rank statistics of a temporal graph:
+	 * src_arrival_rank
+	 * dst_arrival_rank
+	 * src_degree
+	 * dst_degree
+	 * @tparam E The edge type
+	 * @param tgs The temporal graph
+	 * @return The rank statistics
+	 */
+	template<typename E>
+	std::vector<E> get_node_statistics(OrderedEdgeList<E> const& tgs) {
+		std::vector<E> edges = selectionSort(tgs, tgs.getNumberOfEdges());
+		return edges;
+	}
+
+
+
+	template<typename E>
+	std::vector<E> selectionSort(OrderedEdgeList<E> const& tgs, int n)// n == #Elements
+	{
+		int i, j, min_idx;
+		std::vector<E> edges = tgs.getEdges();
+
+		// One by one move boundary of
+		// unsorted subarray
+		for (i = 0; i < n - 1; i++) {
+
+			// Find the minimum element in
+			// unsorted array
+			min_idx = i;
+			for (j = i + 1; j < n; j++) {
+				if (edges[j].v < edges[min_idx].v)
+					min_idx = j;
+			}
+
+			// Swap the found minimum element
+			// with the first element
+			if (min_idx != i)
+				swap(edges, min_idx, i);
+		}
+		return edges;
+	}
+
+	template<typename E>
+	void swap(std::vector<E> arr, int ind1, int ind2) {
+		E temp = arr[ind1];
+
+		arr[ind1] = arr[ind2];
+		arr[ind2] = temp;
+
+	}
 
 } // tglib
 
@@ -3237,8 +3290,8 @@ namespace tglib {
  * @param edges The aggregated graph as edge list.
  * @return Vector of core numbers.
  */
-std::vector<uint> compute_kcores(std::vector<StaticWeightedEdge> const &edges) {
-    std::map<uint, std::vector<StaticWeightedEdge>> g;
+std::vector<int> compute_kcores(std::vector<StaticWeightedEdge> const &edges) {
+    std::map<int, std::vector<StaticWeightedEdge>> g;
 
     NodeId mxnid = 0;
     for (auto &e : edges) {
@@ -3247,8 +3300,8 @@ std::vector<uint> compute_kcores(std::vector<StaticWeightedEdge> const &edges) {
         if (e.v > mxnid) mxnid = e.v;
     }
 
-    std::set<std::pair<uint, NodeId>, std::less<>> degrees;
-    std::vector<uint> c(mxnid+1, 0);
+    std::set<std::pair<int, NodeId>, std::less<>> degrees;
+    std::vector<int> c(mxnid+1, 0);
 //    std::vector<uint> c(g.size(), 0);
     for (auto &p : g) {
         degrees.insert({p.second.size(), p.first});
@@ -3291,7 +3344,7 @@ std::vector<uint> compute_kcores(std::vector<StaticWeightedEdge> const &edges) {
  * @return The (k,h)-core numbers.
  */
 template<typename E>
-std::vector<uint> compute_khcores(OrderedEdgeList<E> const &tgs, uint h) {
+std::vector<int> compute_khcores(OrderedEdgeList<E> const &tgs, int h) {
     auto g = to_aggregated_edge_list<E>(tgs);
     std::vector<StaticWeightedEdge> edges;
     for (auto &e : g) {
@@ -3505,7 +3558,7 @@ std::vector<double> temporal_closeness(tglib::OrderedEdgeList<E> const &tgs,
     std::vector<double> closeness_values(tgs.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tgs, timeInterval, closeness_values, distanceType)
-    for (size_t i = 0; i < tgs.getNumberOfNodes(); ++i) {
+    for (long long i = 0; i < tgs.getNumberOfNodes(); ++i) {
         auto c = temporal_closeness(tgs, i, timeInterval, distanceType);
         closeness_values[i] = c;
     }
@@ -3540,7 +3593,7 @@ std::vector<double> temporal_closeness(tglib::IncidentLists<N, E>&tg, tglib::Tim
     std::vector<double> closeness(tg.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tg, ti, closeness, distanceType)
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
         closeness[nid] = temporal_closeness(tg, (NodeId)nid, ti, distanceType);
     }
 
@@ -3559,7 +3612,7 @@ std::vector<double> run_temporal_closeness(TempGraph const& tg, tglib::Distance_
     std::vector<double> closeness(tg.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tg, closeness, distanceType)
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
         closeness[nid] = temporal_closeness(tg, nid, tg.getTimeInterval(), distanceType);
     }
 
@@ -3709,7 +3762,7 @@ computeCentrality(OrderedEdgeList<E> const &tgs, std::vector<std::map<Time, doub
     std::vector<double> centrality(tgs.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(centrality, tgs, ifct, ofct)
-    for (size_t nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
 
         auto init = ifct[nid].begin();
         auto outit = ofct[nid].begin();
@@ -3815,7 +3868,7 @@ double temporal_efficiency(TempGraph const& tg, tglib::TimeInterval timeInterval
     std::vector<double> closeness(tg.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tg, closeness, distanceType, timeInterval)
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
         closeness[nid] = temporal_closeness(tg, nid, timeInterval, distanceType);
     }
 
@@ -3899,7 +3952,7 @@ Time temporal_diameter(TempGraph const &tg, tglib::TimeInterval timeInterval, tg
     std::vector<Time> ecc(tg.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tg, ecc, distanceType, timeInterval)
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
         ecc[nid] = temporal_eccentricity(tg, nid, timeInterval, distanceType);
     }
 

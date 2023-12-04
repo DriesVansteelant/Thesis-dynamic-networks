@@ -5,6 +5,7 @@
  * for full license details.
  */
 
+#include <sstream>
 #include <pybind11/pybind11.h>
 #include "../../algorithms/TemporalReachability.h"
 

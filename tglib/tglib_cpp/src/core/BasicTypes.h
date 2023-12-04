@@ -12,10 +12,10 @@
 #ifndef TGLIB_BASICTYPES_H
 #define TGLIB_BASICTYPES_H
 
+#include <string>
 #include <cstdint>
 #include <limits>
 #include <utility>
-#include <string>
 #include <tuple>
 
 

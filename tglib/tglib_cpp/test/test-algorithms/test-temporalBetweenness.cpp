@@ -5,9 +5,9 @@
  * for full license details.
  */
 
+#include <iostream>
 #include <catch2/catch_test_macros.hpp>
 #include <algorithm>
-#include <iostream>
 #include "../../src/algorithms/TemporalBetweenness.h"
 #include "../../src/util/InputOutput.h"
 #include "../TemporalGraphsInstances.h"

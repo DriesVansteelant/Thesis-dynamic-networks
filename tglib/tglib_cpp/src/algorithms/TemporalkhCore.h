@@ -26,8 +26,8 @@ namespace tglib {
  * @param edges The aggregated graph as edge list.
  * @return Vector of core numbers.
  */
-std::vector<uint> compute_kcores(std::vector<StaticWeightedEdge> const &edges) {
-    std::map<uint, std::vector<StaticWeightedEdge>> g;
+std::vector<int> compute_kcores(std::vector<StaticWeightedEdge> const &edges) {
+    std::map<int, std::vector<StaticWeightedEdge>> g;
 
     NodeId mxnid = 0;
     for (auto &e : edges) {
@@ -36,8 +36,8 @@ std::vector<uint> compute_kcores(std::vector<StaticWeightedEdge> const &edges) {
         if (e.v > mxnid) mxnid = e.v;
     }
 
-    std::set<std::pair<uint, NodeId>, std::less<>> degrees;
-    std::vector<uint> c(mxnid+1, 0);
+    std::set<std::pair<int, NodeId>, std::less<>> degrees;
+    std::vector<int> c(mxnid+1, 0);
 //    std::vector<uint> c(g.size(), 0);
     for (auto &p : g) {
         degrees.insert({p.second.size(), p.first});
@@ -80,7 +80,7 @@ std::vector<uint> compute_kcores(std::vector<StaticWeightedEdge> const &edges) {
  * @return The (k,h)-core numbers.
  */
 template<typename E>
-std::vector<uint> compute_khcores(OrderedEdgeList<E> const &tgs, uint h) {
+std::vector<int> compute_khcores(OrderedEdgeList<E> const &tgs, int h) {
     auto g = to_aggregated_edge_list<E>(tgs);
     std::vector<StaticWeightedEdge> edges;
     for (auto &e : g) {

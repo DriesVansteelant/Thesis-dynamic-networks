@@ -79,7 +79,7 @@ computeCentrality(OrderedEdgeList<E> const &tgs, std::vector<std::map<Time, doub
     std::vector<double> centrality(tgs.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(centrality, tgs, ifct, ofct)
-    for (size_t nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
 
         auto init = ifct[nid].begin();
         auto outit = ofct[nid].begin();

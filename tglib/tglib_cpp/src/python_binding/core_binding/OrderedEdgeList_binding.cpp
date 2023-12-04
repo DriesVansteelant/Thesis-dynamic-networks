@@ -11,9 +11,10 @@
  *
  */
 
+#include <sstream>
+#include <pybind11/stl.h>
 #include <pybind11/pybind11.h>
 #include <pybind11/detail/common.h>
-#include <pybind11/stl.h>
 #include "../../core/OrderedEdgeList.h"
 #include "../python_binding.h"
 
@@ -42,7 +43,10 @@ void bind_OrderedEdgeList(pybind11::module_ &m) {
             ;
 
     m.def("get_statistics",
-          pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_statistics<TemporalEdge>));
+        pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_statistics<TemporalEdge>));
+
+    m.def("get_node_statistics",
+        pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_node_statistics<TemporalEdge>));
 
 }
 

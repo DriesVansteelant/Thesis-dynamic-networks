@@ -202,7 +202,7 @@ std::vector<double> temporal_closeness(tglib::OrderedEdgeList<E> const &tgs,
     std::vector<double> closeness_values(tgs.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tgs, timeInterval, closeness_values, distanceType)
-    for (size_t i = 0; i < tgs.getNumberOfNodes(); ++i) {
+    for (long long i = 0; i < tgs.getNumberOfNodes(); ++i) {
         auto c = temporal_closeness(tgs, i, timeInterval, distanceType);
         closeness_values[i] = c;
     }
@@ -237,7 +237,7 @@ std::vector<double> temporal_closeness(tglib::IncidentLists<N, E>&tg, tglib::Tim
     std::vector<double> closeness(tg.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tg, ti, closeness, distanceType)
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
         closeness[nid] = temporal_closeness(tg, (NodeId)nid, ti, distanceType);
     }
 
@@ -256,7 +256,7 @@ std::vector<double> run_temporal_closeness(TempGraph const& tg, tglib::Distance_
     std::vector<double> closeness(tg.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tg, closeness, distanceType)
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
         closeness[nid] = temporal_closeness(tg, nid, tg.getTimeInterval(), distanceType);
     }
 

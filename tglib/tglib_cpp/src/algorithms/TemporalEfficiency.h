@@ -40,7 +40,7 @@ double temporal_efficiency(TempGraph const& tg, tglib::TimeInterval timeInterval
     std::vector<double> closeness(tg.getNumberOfNodes(), 0);
 
 #pragma omp parallel for default(none) shared(tg, closeness, distanceType, timeInterval)
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+    for (long long nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
         closeness[nid] = temporal_closeness(tg, nid, timeInterval, distanceType);
     }
 

@@ -4,7 +4,7 @@
 # See file LICENSE.md or go to https://gitlab.com/tgpublic/tglib
 # for full license details.
 
-cmake_minimum_required(VERSION 3.4...3.18)
+cmake_minimum_required(VERSION 3.6...3.18)
 project(tglib)
 
 set(PYTHON_BINDING_SOURCES
@@ -34,6 +34,9 @@ set(PYTHON_BINDING_SOURCES
         algorithms_binding/TemporalkhCore_binding.cpp
 
         util_binding/InputOutput_binding.cpp
+
+
         )
 
+# find_package(pybind11 REQUIRED)
 pybind11_add_module(pytglib ${PYTHON_BINDING_SOURCES})

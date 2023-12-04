@@ -11,6 +11,11 @@
  *
  */
 
+#pragma once
+#include <sstream>
+#include <string>
+#include <cmath>
+
 #include <pybind11/pybind11.h>
 #include <pybind11/stl_bind.h>
 
@@ -26,7 +31,7 @@ void bind_BasicTypes(pybind11::module_ &m) {
     pybind11::bind_vector<std::vector<double>>(m, "VectorDouble");
     pybind11::bind_vector<std::vector<Time>>(m, "VectorTime");
     pybind11::bind_vector<std::vector<NodeId>>(m, "VectorNodeId");
-    pybind11::bind_vector<std::vector<uint>>(m, "VectorUnsignedInt");
+    //pybind11::bind_vector<std::vector<int>>(m, "VectorUnsignedInt");
     pybind11::bind_vector<std::vector<TemporalEdge>>(m, "VectorTemporalEdge");
     pybind11::bind_vector<std::vector<StaticWeightedEdge>>(m, "VectorStaticWeightedEdge");
     pybind11::bind_map<std::map<std::pair<NodeId, NodeId>, double>>(m, "MapPairNodeIdsDouble");

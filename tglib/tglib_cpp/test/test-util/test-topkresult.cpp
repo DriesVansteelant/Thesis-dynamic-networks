@@ -5,8 +5,8 @@
  * for full license details.
  */
 
-#include <catch2/catch_test_macros.hpp>
 #include <iostream>
+#include <catch2/catch_test_macros.hpp>
 #include <algorithm>
 #include "../../src/util/TopkResult.h"
 

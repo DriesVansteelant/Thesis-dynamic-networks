@@ -5,12 +5,12 @@
  * for full license details.
  */
 
+#include <iostream>
 #include "catch2/catch_test_macros.hpp"
 #include "../TemporalGraphsInstances.h"
 #include "../../src/algorithms/TemporalDistances.h"
 #include "../../src/core/Transformations.h"
 #include <algorithm>
-#include <iostream>
 
 using namespace tglib;
 
