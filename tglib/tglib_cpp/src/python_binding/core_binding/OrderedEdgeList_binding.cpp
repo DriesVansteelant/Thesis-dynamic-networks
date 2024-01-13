@@ -45,8 +45,8 @@ void bind_OrderedEdgeList(pybind11::module_ &m) {
     m.def("get_statistics",
         pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_statistics<TemporalEdge>));
 
-    m.def("get_node_statistics",
-        pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_node_statistics<TemporalEdge>));
+    m.def("get_degrees",
+        pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_degrees<TemporalEdge>));
 
 }
 

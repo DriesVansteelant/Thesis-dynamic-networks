@@ -12,12 +12,17 @@
 #ifndef CPP_TEMPORALGRAPHSTREAM_H
 #define CPP_TEMPORALGRAPHSTREAM_H
 
+#include <string>
+#include <iostream>
+
 #include <limits>
 #include <utility>
 #include <vector>
 #include <string>
+#include <map>
 #include <unordered_set>
 #include <unordered_map>
+#include <algorithm> 
 #include <set>
 #include "BasicTypes.h"
 
@@ -222,59 +227,113 @@ namespace tglib {
 
 		return statistics;
 	}
+	/*
+	template<typename E>
+	bool edgeComp(E first, E second) {
+		return first.t < second.t;
+	}
+	*/
+
+
+	inline bool comparePaires(std::pair<NodeId, int> e1, std::pair<NodeId, int> e2) {
+		return e1.second < e2.second;
+	}
+
+	inline bool compareInDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+		return e1["in_degree"] < e2["in_degree"];
+	}
+	inline bool compareOutDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+		return e1["out_degree"] < e2["out_degree"];
+	}
 
 	/**
-	 * @brief Computes some rank statistics of a temporal graph:
-	 * src_arrival_rank
-	 * dst_arrival_rank
-	 * src_degree
-	 * dst_degree
+	 * @brief return vector of nodeIds and in degrees
 	 * @tparam E The edge type
 	 * @param tgs The temporal graph
 	 * @return The rank statistics
 	 */
 	template<typename E>
-	std::vector<E> get_node_statistics(OrderedEdgeList<E> const& tgs) {
-		std::vector<E> edges = selectionSort(tgs, tgs.getNumberOfEdges());
-		return edges;
-	}
+	std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
+		std::map<NodeId, std::pair<int, int>> degrees;
 
 
-
-	template<typename E>
-	std::vector<E> selectionSort(OrderedEdgeList<E> const& tgs, int n)// n == #Elements
-	{
-		int i, j, min_idx;
-		std::vector<E> edges = tgs.getEdges();
-
-		// One by one move boundary of
-		// unsorted subarray
-		for (i = 0; i < n - 1; i++) {
-
-			// Find the minimum element in
-			// unsorted array
-			min_idx = i;
-			for (j = i + 1; j < n; j++) {
-				if (edges[j].v < edges[min_idx].v)
-					min_idx = j;
-			}
-
-			// Swap the found minimum element
-			// with the first element
-			if (min_idx != i)
-				swap(edges, min_idx, i);
+		std::vector<NodeId> nodes = tgs.getReverseNodeMap();
+		for (auto& it : nodes) {
+			degrees[it] = std::pair<int, int>(0, 0);
 		}
-		return edges;
+		for (auto& e : tgs.getEdges()) {
+			degrees[e.v].first++;
+			degrees[e.u].second++;
+		}
+
+		std::vector< std::map<std::string, int>> degreeVector;
+		for (auto& e : degrees) {
+			/*std::map<std::string, int> theMap;
+			theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
+			//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
+
+			degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
+		}
+
+		std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
+		int i = 0;
+		for (int e = 0; e < degreeVector.size(); e++) {
+			degreeVector[e].insert({ "in_degree_rank", i });
+			if (e > 0) {
+				if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
+					i++;
+				}
+			}
+		}
+
+		std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
+		i = 0;
+		for (int e = 0; e < degreeVector.size(); e++) {
+			degreeVector[e].insert({ "out_degree_rank", i });
+			if (e > 0) {
+				if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
+					i++;
+				}
+			}
+		}
+
+		return degreeVector;
 	}
 
-	template<typename E>
+	//template<typename E>
+	//std::vector<E> selectionSort(OrderedEdgeList<E> const& tgs, int n)// n == #Elements
+	//{
+	//	int i, j, min_idx;
+	//	std::vector<E> edges = tgs.getEdges();
+
+	//	// One by one move boundary of
+	//	// unsorted subarray
+	//	for (i = 0; i < n - 1; i++) {
+
+	//		// Find the minimum element in
+	//		// unsorted array
+	//		min_idx = i;
+	//		for (j = i + 1; j < n; j++) {
+	//			if (edges[j].v < edges[min_idx].v)
+	//				min_idx = j;
+	//		}
+
+	//		// Swap the found minimum element
+	//		// with the first element
+	//		if (min_idx != i)
+	//			swap(edges, min_idx, i);
+	//	}
+	//	return edges;
+	//}
+
+	/*template<typename E>
 	void swap(std::vector<E> arr, int ind1, int ind2) {
 		E temp = arr[ind1];
 
 		arr[ind1] = arr[ind2];
 		arr[ind2] = temp;
 
-	}
+	 } */
 
 } // tglib
 

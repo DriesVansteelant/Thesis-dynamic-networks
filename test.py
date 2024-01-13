@@ -10,7 +10,7 @@ import time
 
 
 
-from benchmark_tglib import BenchmarkTGLib as btgl
+from benchmark.benchmark_tglib import BenchmarkTGLib as btgl
 
 btgl.do_benchmark('la', 'di', 3)
 

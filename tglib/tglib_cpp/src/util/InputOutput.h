@@ -12,6 +12,9 @@
 #ifndef TGLIB_INPUTOUTPUT_H
 #define TGLIB_INPUTOUTPUT_H
 
+// #include "stdafx.h"
+#include <string>
+#include <iostream>
 
 #include <fstream>
 #include <sstream>
@@ -74,7 +77,7 @@ inline std::vector<Time> split_string(const std::string& s, char delim) {
         std::string substr;
         getline(ss, substr, delim);
         if (!substr.empty())
-            result.push_back(stoi(substr));
+            result.push_back(stoll(substr));
     }
     return result;
 }
@@ -95,6 +98,7 @@ tglib::OrderedEdgeList<E> load_ordered_edge_list(const std::string &filename, bo
         throw std::runtime_error("Could not open file " + filename);
     }
 
+
     std::string line;
 
     std::vector<E> edges;
@@ -103,6 +107,7 @@ tglib::OrderedEdgeList<E> load_ordered_edge_list(const std::string &filename, bo
     NodeIdManager nidman;
     while (getline(fs, line)) {
         if (line.empty()) continue;
+
         std::vector<Time> l = split_string(line, ' ');
 
         if (l.size() < 3) continue;
