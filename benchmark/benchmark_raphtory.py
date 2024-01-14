@@ -32,8 +32,9 @@ class BenchmarkRaphtory():
 
 # Get statistcs (maybe: avg degree + see tglib)
         start = time.time()
-        num_nodes = g.count_vertices()
+        num_nodes = g.count_nodes()
         num_edges = g.count_edges()
+        num_temp_edges = g.count_temporal_edges()
         min_in_deg = algo.min_in_degree(g)
         max_in_deg = algo.max_in_degree(g)
         min_out_deg = algo.min_out_degree(g)
@@ -43,6 +44,7 @@ class BenchmarkRaphtory():
         end = time.time()
         print(f"num_nodes: {num_nodes}")
         print(f"num_edges: {num_edges}")
+        print(f"num_temp_edges: {num_temp_edges}")
         print(f"min_in_deg: {min_in_deg}")
         print(f"max_in_deg: {max_in_deg}")
         print(f"min_out_deg: {min_out_deg}")
@@ -50,6 +52,10 @@ class BenchmarkRaphtory():
         print(f"min_ts: {min_ts}")
         print(f"max_ts: {max_ts}")
 
+
+        results["num_nodes"] = num_nodes
+        results["num_edges"] = num_edges
+        results["num_temporal_edges"] = num_temp_edges
         results["stats"] = end-start
         print(f"Time to get stats: {end - start}")
 
@@ -84,7 +90,7 @@ class BenchmarkRaphtory():
 
         return results
 
-# inPath = "../Code/Data/tgbl-wiki_edgelist_final.txt"
+# inPath = "../Code/Data/enron_h.txt"
 # res = BenchmarkRaphtory.do_benchmark(inPath)
 # print(res)
 # inPath = "tgbl-review_edgelist_final.txt"

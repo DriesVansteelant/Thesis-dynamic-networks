@@ -126,7 +126,7 @@ class BenchmarkDyNetX():
 
         # statsFile.close()
 
-# inPath = "../Code/Data/tgbl-wiki_edgelist_final.txt"
+# inPath = "../Code/Data/enron.txt"
 # res = BenchmarkDyNetX.do_benchmark(inPath,5)
 # print(res)
 # inPath = "tgbl-review_edgelist_final.txt"
