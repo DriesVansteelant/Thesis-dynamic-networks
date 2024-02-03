@@ -116,7 +116,10 @@ namespace tglib {
 			return node_map;
 		}
 
-
+		const std::vector<std::map<std::string, int>> getDegreeList() {
+			OrderedEdgeList<E> const& tgs = *this;
+			return get_degrees(tgs);
+		}
 
 	private:
 
@@ -145,6 +148,79 @@ namespace tglib {
 		  */
 		std::unordered_map<NodeId, NodeId> node_map;
 
+
+
+		static bool comparePaires(std::pair<NodeId, int> e1, std::pair<NodeId, int> e2) {
+			return e1.second < e2.second;
+		}
+
+		static bool compareInDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+			return e1["in_degree"] < e2["in_degree"];
+		}
+		static bool compareOutDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+			return e1["out_degree"] < e2["out_degree"];
+		}
+
+		/**
+		 * @brief return vector of nodeIds and in degrees
+		 * @tparam E The edge type
+		 * @param tgs The temporal graph
+		 * @return The rank statistics
+		 */
+		template<typename E>
+		std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
+			//std::cout << "JOEPIE van op de nieuwe PC!!!\n";
+			std::map<NodeId, std::pair<int, int>> degrees;
+
+
+			std::vector<NodeId> nodes = tgs.getReverseNodeMap();
+			for (auto& it : nodes) {
+				degrees[it] = std::pair<int, int>(0, 0);
+			}
+			for (auto& e : tgs.getEdges()) {
+				degrees[e.v].first++;
+				degrees[e.u].second++;
+			}
+
+			std::vector< std::map<std::string, int>> degreeVector;
+			for (auto& e : degrees) {
+				/*std::map<std::string, int> theMap;
+				theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
+				//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
+
+				degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
+			}
+
+			std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
+
+			int i = 0;
+			for (int e = 0; e < degreeVector.size(); e++) {
+				if (e > 0) {
+					if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
+						i++;
+						std::cout << "switch want: " << degreeVector[e]["in_degree"] << " > " << degreeVector[e - 1]["in_degree"] << "\n";
+					}
+				}
+				if (i <= 150) {
+
+					std::cout << "indegree: " << degreeVector[e]["in_degree"] << ", rank: " << i << ", node: " << degreeVector[e]["node_id"] << "\n";
+				}
+				degreeVector[e].insert({ "in_degree_rank", i });
+			}
+
+			std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
+			i = 1;
+			for (int e = 0; e < degreeVector.size(); e++) {
+				if (e > 0) {
+					if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
+						i++;
+					}
+				}
+				degreeVector[e].insert({ "out_degree_rank", i });
+			}
+
+			return degreeVector;
+		}
 	};
 
 	/**
@@ -235,70 +311,71 @@ namespace tglib {
 	*/
 
 
-	inline bool comparePaires(std::pair<NodeId, int> e1, std::pair<NodeId, int> e2) {
-		return e1.second < e2.second;
-	}
+	//inline bool comparePaires(std::pair<NodeId, int> e1, std::pair<NodeId, int> e2) {
+	//	return e1.second < e2.second;
+	//}
 
-	inline bool compareInDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
-		return e1["in_degree"] < e2["in_degree"];
-	}
-	inline bool compareOutDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
-		return e1["out_degree"] < e2["out_degree"];
-	}
+	//inline bool compareInDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+	//	return e1["in_degree"] < e2["in_degree"];
+	//}
+	//inline bool compareOutDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+	//	return e1["out_degree"] < e2["out_degree"];
+	//}
 
-	/**
-	 * @brief return vector of nodeIds and in degrees
-	 * @tparam E The edge type
-	 * @param tgs The temporal graph
-	 * @return The rank statistics
-	 */
-	template<typename E>
-	std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
-		std::map<NodeId, std::pair<int, int>> degrees;
+	///**
+	// * @brief return vector of nodeIds and in degrees
+	// * @tparam E The edge type
+	// * @param tgs The temporal graph
+	// * @return The rank statistics
+	// */
+	//template<typename E>
+	//std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
+	//	std::cout << "JOEPIE van op de nieuwe PC!!!";
+	//	std::map<NodeId, std::pair<int, int>> degrees;
 
 
-		std::vector<NodeId> nodes = tgs.getReverseNodeMap();
-		for (auto& it : nodes) {
-			degrees[it] = std::pair<int, int>(0, 0);
-		}
-		for (auto& e : tgs.getEdges()) {
-			degrees[e.v].first++;
-			degrees[e.u].second++;
-		}
+	//	std::vector<NodeId> nodes = tgs.getReverseNodeMap();
+	//	for (auto& it : nodes) {
+	//		degrees[it] = std::pair<int, int>(0, 0);
+	//	}
+	//	for (auto& e : tgs.getEdges()) {
+	//		degrees[e.v].first++;
+	//		degrees[e.u].second++;
+	//	}
 
-		std::vector< std::map<std::string, int>> degreeVector;
-		for (auto& e : degrees) {
-			/*std::map<std::string, int> theMap;
-			theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
-			//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
+	//	std::vector< std::map<std::string, int>> degreeVector;
+	//	for (auto& e : degrees) {
+	//		/*std::map<std::string, int> theMap;
+	//		theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
+	//		//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
 
-			degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
-		}
+	//		degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
+	//	}
 
-		std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
-		int i = 0;
-		for (int e = 0; e < degreeVector.size(); e++) {
-			degreeVector[e].insert({ "in_degree_rank", i });
-			if (e > 0) {
-				if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
-					i++;
-				}
-			}
-		}
+	//	std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
+	//	int i = 0;
+	//	for (int e = 0; e < degreeVector.size(); e++) {
+	//		degreeVector[e].insert({ "in_degree_rank", i });
+	//		if (e > 0) {
+	//			if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
+	//				i++;
+	//			}
+	//		}
+	//	}
 
-		std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
-		i = 0;
-		for (int e = 0; e < degreeVector.size(); e++) {
-			degreeVector[e].insert({ "out_degree_rank", i });
-			if (e > 0) {
-				if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
-					i++;
-				}
-			}
-		}
+	//	std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
+	//	i = 0;
+	//	for (int e = 0; e < degreeVector.size(); e++) {
+	//		degreeVector[e].insert({ "out_degree_rank", i });
+	//		if (e > 0) {
+	//			if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
+	//				i++;
+	//			}
+	//		}
+	//	}
 
-		return degreeVector;
-	}
+	//	return degreeVector;
+	//}
 
 	//template<typename E>
 	//std::vector<E> selectionSort(OrderedEdgeList<E> const& tgs, int n)// n == #Elements

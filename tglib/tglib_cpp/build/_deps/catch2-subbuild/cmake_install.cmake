@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild
+# Install script for directory: C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

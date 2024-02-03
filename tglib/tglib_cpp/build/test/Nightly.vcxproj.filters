@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\CMakeFiles\ac40e8da39064106b560651e644fa805\Nightly.rule">
+    <CustomBuild Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\CMakeFiles\ca244cfc491f7caed71fb9d4e7c5109f\Nightly.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\Nightly" />
+    <None Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\Nightly" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{9185DACA-3B65-3A87-B25D-C0CC9FDE17C5}</UniqueIdentifier>
+      <UniqueIdentifier>{8179F045-54A8-32B3-B1CD-FE752B72DC7D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

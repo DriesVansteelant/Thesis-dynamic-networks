@@ -22,9 +22,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B65EDF30-B8A0-33F8-9013-BB9C0AC65DD8}</ProjectGuid>
+    <ProjectGuid>{CC90E2EF-2285-3300-8549-170CE887CFAE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>custom-main-tests</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">custom-main-tests.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">custom-main-tests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">custom-main-tests.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">custom-main-tests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">custom-main-tests.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">custom-main-tests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">custom-main-tests.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">custom-main-tests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -105,10 +105,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -118,7 +118,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=custom-main-tests -D TEST_EXECUTABLE=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Debug/custom-main-tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=custom-main-tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D CTEST_FILE=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake -P C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/extras/CatchAddTests.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=custom-main-tests -D TEST_EXECUTABLE=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Debug/custom-main-tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=custom-main-tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D CTEST_FILE=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake -P C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/extras/CatchAddTests.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,8 +133,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Debug/custom-main-tests.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Debug/custom-main-tests.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Debug/custom-main-tests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Debug/custom-main-tests.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -143,7 +143,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -162,10 +162,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -175,7 +175,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=custom-main-tests -D TEST_EXECUTABLE=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Release/custom-main-tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=custom-main-tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D CTEST_FILE=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake -P C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/extras/CatchAddTests.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=custom-main-tests -D TEST_EXECUTABLE=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Release/custom-main-tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=custom-main-tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D CTEST_FILE=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake -P C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/extras/CatchAddTests.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -190,8 +190,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Release/custom-main-tests.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Release/custom-main-tests.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Release/custom-main-tests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/Release/custom-main-tests.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -200,7 +200,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -219,10 +219,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -232,7 +232,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=custom-main-tests -D TEST_EXECUTABLE=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/MinSizeRel/custom-main-tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=custom-main-tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D CTEST_FILE=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake -P C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/extras/CatchAddTests.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=custom-main-tests -D TEST_EXECUTABLE=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/MinSizeRel/custom-main-tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=custom-main-tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D CTEST_FILE=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake -P C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/extras/CatchAddTests.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -247,8 +247,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/MinSizeRel/custom-main-tests.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/MinSizeRel/custom-main-tests.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/MinSizeRel/custom-main-tests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/MinSizeRel/custom-main-tests.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -257,7 +257,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -275,10 +275,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -288,7 +288,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=custom-main-tests -D TEST_EXECUTABLE=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/RelWithDebInfo/custom-main-tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=custom-main-tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D CTEST_FILE=C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake -P C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/extras/CatchAddTests.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=custom-main-tests -D TEST_EXECUTABLE=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/RelWithDebInfo/custom-main-tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=custom-main-tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D CTEST_FILE=C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/custom-main-tests_tests-b12d07c.cmake -P C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/extras/CatchAddTests.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -303,8 +303,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/RelWithDebInfo/custom-main-tests.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/RelWithDebInfo/custom-main-tests.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/RelWithDebInfo/custom-main-tests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/RelWithDebInfo/custom-main-tests.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -312,11 +312,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -324,12 +324,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.27\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -337,12 +337,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.27\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -350,12 +350,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.27\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -363,46 +363,47 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.27\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-burstiness.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-main.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\TemporalGraphsInstances.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalDistances.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalDiameter.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalPaths.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalCloseness.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalClosenessApproximation.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalBetweenness.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-topologicalOverlap.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalClusteringCoefficient.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-topkTemporalCloseness.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalEfficiency.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalKatz.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalPageRank.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalTemporalWalkCentrality.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalkhCore.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-core\test-basictypes.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-core\test-transformations.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-util\test-topkresult.cpp" />
-    <ClCompile Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-util\test-inputOutput.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-timing\test-timing.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-main.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\TemporalGraphsInstances.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalDistances.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalDiameter.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalPaths.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalCloseness.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalClosenessApproximation.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-burstiness.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalBetweenness.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-topologicalOverlap.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalClusteringCoefficient.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-topkTemporalCloseness.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalEfficiency.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalKatz.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalPageRank.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalTemporalWalkCentrality.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-algorithms\test-temporalkhCore.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-core\test-basictypes.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-core\test-transformations.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-util\test-topkresult.cpp" />
+    <ClCompile Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\test-util\test-inputOutput.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\ZERO_CHECK.vcxproj">
-      <Project>{5C251B4E-6FDF-31AB-88A9-55242AB119B4}</Project>
+    <ProjectReference Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\ZERO_CHECK.vcxproj">
+      <Project>{C1F2C974-3EC5-3971-B0A4-07FBA34AC411}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-build\src\Catch2.vcxproj">
+    <ProjectReference Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-build\src\Catch2.vcxproj">
       <Project>{8d538cbe-01bf-4a2e-a98a-6c368fdf13d7}</Project>
       <Name>Catch2</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-build\src\Catch2WithMain.vcxproj">
+    <ProjectReference Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-build\src\Catch2WithMain.vcxproj">
       <Project>{8bd3552a-2cfb-4a59-ab15-2031b97ada1e}</Project>
       <Name>Catch2WithMain</Name>
     </ProjectReference>

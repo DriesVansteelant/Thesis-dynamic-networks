@@ -32,21 +32,21 @@ void bind_OrderedEdgeList(pybind11::module_ &m) {
             .def("__str__", &to_string)
             ;
 
-    pybind11::class_<OrderedEdgeList<TemporalEdge>>(m, "OrderedEdgeList")
+    pybind11::class_<OrderedEdgeList<TemporalEdge>>(m, "OrderedEdgeList") //TODO?: UniqueEdges? (D)
             .def(pybind11::init<>())
             .def("getNumberOfNodes", &OrderedEdgeList<TemporalEdge>::getNumberOfNodes, "returns the number of nodes")
             .def("getNumberOfEdges", &OrderedEdgeList<TemporalEdge>::getNumberOfEdges, "returns the number of nodes")
             .def("getTimeInterval", &OrderedEdgeList<TemporalEdge>::getTimeInterval, "returns the time interval spanned by the temporal graph")
             .def("getEdges", &OrderedEdgeList<TemporalEdge>::getEdges)
             .def("getReverseNodeMap", &OrderedEdgeList<TemporalEdge>::getReverseNodeMap)
-            .def("getNodeMap", &OrderedEdgeList<TemporalEdge>::getNodeMap)
+            .def("get_degrees", &OrderedEdgeList<TemporalEdge>::getDegreeList)
             ;
 
     m.def("get_statistics",
         pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_statistics<TemporalEdge>));
 
-    m.def("get_degrees",
-        pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_degrees<TemporalEdge>));
+    //m.def("get_degrees",
+    //    pybind11::overload_cast<OrderedEdgeList<TemporalEdge> const&>(&get_degreeList<TemporalEdge>));
 
 }
 

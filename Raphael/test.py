@@ -31,12 +31,10 @@ def tgl_get_degrees():
     degrees = tgl.get_degrees(g)
     end = time.time()
 
-    return degrees
-
-    # for d in degrees:
-    #     print(d)
-    # print('TGLib time: ' + str(end - start))
-    # print(degrees.keys())
+# for d in degrees:
+#     print(d)
+# print('TGLib time: ' + str(end - start))
+# print(degrees.keys())
 
 @profile
 def pandas_get_degrees():

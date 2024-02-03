@@ -276,13 +276,19 @@ struct TemporalGraphStatistics {
 #ifndef CPP_TEMPORALGRAPHSTREAM_H
 #define CPP_TEMPORALGRAPHSTREAM_H
 
+#include <string>
+#include <iostream>
+
 #include <limits>
 #include <utility>
 #include <vector>
 #include <string>
+#include <map>
 #include <unordered_set>
 #include <unordered_map>
+#include <algorithm> 
 #include <set>
+#include "BasicTypes.h"
 
 
 namespace tglib {
@@ -374,7 +380,10 @@ namespace tglib {
 			return node_map;
 		}
 
-
+		const std::vector<std::map<std::string, int>> getDegreeList() {
+			OrderedEdgeList<E> const& tgs = *this;
+			return get_degrees(tgs);
+		}
 
 	private:
 
@@ -403,6 +412,74 @@ namespace tglib {
 		  */
 		std::unordered_map<NodeId, NodeId> node_map;
 
+
+
+		static bool comparePaires(std::pair<NodeId, int> e1, std::pair<NodeId, int> e2) {
+			return e1.second < e2.second;
+		}
+
+		static bool compareInDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+			return e1["in_degree"] < e2["in_degree"];
+		}
+		static bool compareOutDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+			return e1["out_degree"] < e2["out_degree"];
+		}
+
+		/**
+		 * @brief return vector of nodeIds and in degrees
+		 * @tparam E The edge type
+		 * @param tgs The temporal graph
+		 * @return The rank statistics
+		 */
+		template<typename E>
+		std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
+			std::cout << "JOEPIE van op de nieuwe PC!!!";
+			std::map<NodeId, std::pair<int, int>> degrees;
+
+
+			std::vector<NodeId> nodes = tgs.getReverseNodeMap();
+			for (auto& it : nodes) {
+				degrees[it] = std::pair<int, int>(0, 0);
+			}
+			for (auto& e : tgs.getEdges()) {
+				degrees[e.v].first++;
+				degrees[e.u].second++;
+			}
+
+			std::vector< std::map<std::string, int>> degreeVector;
+			for (auto& e : degrees) {
+				/*std::map<std::string, int> theMap;
+				theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
+				//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
+
+				degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
+			}
+
+			std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
+			
+			int i = 0;
+			for (int e = 0; e < degreeVector.size(); e++) {
+				degreeVector[e].insert({ "in_degree_rank", i });
+				if (e > 0) {
+					if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
+						i++;
+					}
+				}
+			}
+
+			std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
+			i = 0;
+			for (int e = 0; e < degreeVector.size(); e++) {
+				degreeVector[e].insert({ "out_degree_rank", i });
+				if (e > 0) {
+					if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
+						i++;
+					}
+				}
+			}
+
+			return degreeVector;
+		}
 	};
 
 	/**
@@ -485,59 +562,114 @@ namespace tglib {
 
 		return statistics;
 	}
-
-	/**
-	 * @brief Computes some rank statistics of a temporal graph:
-	 * src_arrival_rank
-	 * dst_arrival_rank
-	 * src_degree
-	 * dst_degree
-	 * @tparam E The edge type
-	 * @param tgs The temporal graph
-	 * @return The rank statistics
-	 */
+	/*
 	template<typename E>
-	std::vector<E> get_node_statistics(OrderedEdgeList<E> const& tgs) {
-		std::vector<E> edges = selectionSort(tgs, tgs.getNumberOfEdges());
-		return edges;
+	bool edgeComp(E first, E second) {
+		return first.t < second.t;
 	}
+	*/
 
 
+	//inline bool comparePaires(std::pair<NodeId, int> e1, std::pair<NodeId, int> e2) {
+	//	return e1.second < e2.second;
+	//}
 
-	template<typename E>
-	std::vector<E> selectionSort(OrderedEdgeList<E> const& tgs, int n)// n == #Elements
-	{
-		int i, j, min_idx;
-		std::vector<E> edges = tgs.getEdges();
+	//inline bool compareInDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+	//	return e1["in_degree"] < e2["in_degree"];
+	//}
+	//inline bool compareOutDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
+	//	return e1["out_degree"] < e2["out_degree"];
+	//}
 
-		// One by one move boundary of
-		// unsorted subarray
-		for (i = 0; i < n - 1; i++) {
+	///**
+	// * @brief return vector of nodeIds and in degrees
+	// * @tparam E The edge type
+	// * @param tgs The temporal graph
+	// * @return The rank statistics
+	// */
+	//template<typename E>
+	//std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
+	//	std::cout << "JOEPIE van op de nieuwe PC!!!";
+	//	std::map<NodeId, std::pair<int, int>> degrees;
 
-			// Find the minimum element in
-			// unsorted array
-			min_idx = i;
-			for (j = i + 1; j < n; j++) {
-				if (edges[j].v < edges[min_idx].v)
-					min_idx = j;
-			}
 
-			// Swap the found minimum element
-			// with the first element
-			if (min_idx != i)
-				swap(edges, min_idx, i);
-		}
-		return edges;
-	}
+	//	std::vector<NodeId> nodes = tgs.getReverseNodeMap();
+	//	for (auto& it : nodes) {
+	//		degrees[it] = std::pair<int, int>(0, 0);
+	//	}
+	//	for (auto& e : tgs.getEdges()) {
+	//		degrees[e.v].first++;
+	//		degrees[e.u].second++;
+	//	}
 
-	template<typename E>
+	//	std::vector< std::map<std::string, int>> degreeVector;
+	//	for (auto& e : degrees) {
+	//		/*std::map<std::string, int> theMap;
+	//		theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
+	//		//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
+
+	//		degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
+	//	}
+
+	//	std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
+	//	int i = 0;
+	//	for (int e = 0; e < degreeVector.size(); e++) {
+	//		degreeVector[e].insert({ "in_degree_rank", i });
+	//		if (e > 0) {
+	//			if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
+	//				i++;
+	//			}
+	//		}
+	//	}
+
+	//	std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
+	//	i = 0;
+	//	for (int e = 0; e < degreeVector.size(); e++) {
+	//		degreeVector[e].insert({ "out_degree_rank", i });
+	//		if (e > 0) {
+	//			if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
+	//				i++;
+	//			}
+	//		}
+	//	}
+
+	//	return degreeVector;
+	//}
+
+	//template<typename E>
+	//std::vector<E> selectionSort(OrderedEdgeList<E> const& tgs, int n)// n == #Elements
+	//{
+	//	int i, j, min_idx;
+	//	std::vector<E> edges = tgs.getEdges();
+
+	//	// One by one move boundary of
+	//	// unsorted subarray
+	//	for (i = 0; i < n - 1; i++) {
+
+	//		// Find the minimum element in
+	//		// unsorted array
+	//		min_idx = i;
+	//		for (j = i + 1; j < n; j++) {
+	//			if (edges[j].v < edges[min_idx].v)
+	//				min_idx = j;
+	//		}
+
+	//		// Swap the found minimum element
+	//		// with the first element
+	//		if (min_idx != i)
+	//			swap(edges, min_idx, i);
+	//	}
+	//	return edges;
+	//}
+
+	/*template<typename E>
 	void swap(std::vector<E> arr, int ind1, int ind2) {
 		E temp = arr[ind1];
 
 		arr[ind1] = arr[ind2];
 		arr[ind2] = temp;
 
-	}
+	 } */
 
 } // tglib
 
@@ -556,6 +688,7 @@ namespace tglib {
 #ifndef TGLIB_AGGREGATEDGRAPH_H
 #define TGLIB_AGGREGATEDGRAPH_H
 
+#include "BasicTypes.h"
 
 namespace tglib {
 
@@ -597,6 +730,7 @@ struct StaticWeightedEdge {
 #define TGLIB_INCIDENTLISTS_H
 
 
+#include "OrderedEdgeList.h"
 
 
 namespace tglib {
@@ -762,6 +896,7 @@ private:
 #define TGLIB_TRSGRAPH_H
 
 #include <vector>
+#include "BasicTypes.h"
 
 
 namespace tglib {
@@ -866,6 +1001,7 @@ struct TRSGraph {
 #define TGLIB_DIRECTEDLINEGRAPH_H
 
 #include <vector>
+#include "BasicTypes.h"
 
 namespace tglib {
 
@@ -971,6 +1107,7 @@ struct DirectedLineGraph {
 #ifndef TGLIB_AGGREGATEDGRAPH_H
 #define TGLIB_AGGREGATEDGRAPH_H
 
+#include "BasicTypes.h"
 
 namespace tglib {
 
@@ -1013,6 +1150,11 @@ struct StaticWeightedEdge {
 
 #include <map>
 #include <algorithm>
+#include "OrderedEdgeList.h"
+#include "IncidentLists.h"
+#include "TRSGraph.h"
+#include "DirectedLineGraph.h"
+#include "AggregatedGraph.h"
 #include <cassert>
 #include <cmath>
 
@@ -1390,6 +1532,7 @@ OrderedEdgeList<E> make_undirected(tglib::OrderedEdgeList<E> const &tgs) {
 #include <memory>
 #include <set>
 #include <queue>
+#include "../core/OrderedEdgeList.h"
 
 
 namespace tglib {
@@ -1663,6 +1806,7 @@ private:
 
 #include <set>
 #include <memory>
+#include "../core/OrderedEdgeList.h"
 
 
 namespace tglib {
@@ -1881,6 +2025,9 @@ void get_mean_std(std::vector<T> &values, double &mean, double &stdev) {
 #include <stack>
 #include <queue>
 #include <map>
+#include "../core/DirectedLineGraph.h"
+#include "../core/OrderedEdgeList.h"
+#include "../core/Transformations.h"
 
 namespace tglib {
 
@@ -1985,6 +2132,8 @@ std::vector<double> temporal_edge_betweenness(tglib::OrderedEdgeList<E> const &t
 #ifndef TGLIB_TEMPORALCLUSTERINGCOEFFICIENT_H
 #define TGLIB_TEMPORALCLUSTERINGCOEFFICIENT_H
 
+#include "../core/BasicTypes.h"
+#include "../core/IncidentLists.h"
 
 namespace tglib {
 
@@ -2108,6 +2257,7 @@ std::vector<double> temporal_clustering_coefficient(IncidentLists<N, E> const& t
 
 #include <vector>
 #include <map>
+#include "../core/OrderedEdgeList.h"
 
 namespace tglib {
 
@@ -2187,6 +2337,7 @@ std::vector<double> temporal_katz_centrality(OrderedEdgeList<E> const &tgs, doub
 #define TGLIB_TEMPORALPAGERANK_H
 
 #include <vector>
+#include "../core/OrderedEdgeList.h"
 
 
 namespace tglib {
@@ -2249,6 +2400,8 @@ std::vector<double> temporal_pagerank(OrderedEdgeList<E> const &tgs, double alph
 #define TGLIB_BURSTINESS_H
 
 
+#include "../core/OrderedEdgeList.h"
+#include "../util/UtilFunctions.h"
 #include <map>
 
 namespace tglib {
@@ -2391,6 +2544,11 @@ node_burstiness(tglib::OrderedEdgeList<E> const &tgs,
 #include <vector>
 #include <list>
 #include <memory>
+#include "../core/BasicTypes.h"
+#include "../core/OrderedEdgeList.h"
+#include "../core/TRSGraph.h"
+#include "../core/IncidentLists.h"
+#include "../util/LabelPQ.h"
 
 namespace tglib {
 
@@ -3281,6 +3439,9 @@ minimum_transition_times(tglib::TRSGraph const &trs, tglib::NodeId nid, tglib::T
 #include <vector>
 #include <map>
 #include <set>
+#include "../core/AggregatedGraph.h"
+#include "../core/OrderedEdgeList.h"
+#include "../core/Transformations.h"
 
 namespace tglib {
 
@@ -3373,6 +3534,10 @@ std::vector<int> compute_khcores(OrderedEdgeList<E> const &tgs, int h) {
 #define TGLIB_TEMPORALCLOSENESS_H
 
 
+#include "../core/OrderedEdgeList.h"
+#include "../core/IncidentLists.h"
+#include "../core/TRSGraph.h"
+#include "../algorithms/TemporalDistances.h"
 
 namespace tglib {
 
@@ -3636,6 +3801,10 @@ std::vector<double> run_temporal_closeness(TempGraph const& tg, tglib::Distance_
 #ifndef TGLIB_TEMPORALCLOSENESSAPPROXIMATION_H
 #define TGLIB_TEMPORALCLOSENESSAPPROXIMATION_H
 
+#include "../core/OrderedEdgeList.h"
+#include "../core/IncidentLists.h"
+#include "../core/TRSGraph.h"
+#include "../algorithms/TemporalDistances.h"
 
 namespace tglib {
 
@@ -3698,6 +3867,7 @@ std::vector<double> temporal_closeness_aproximation(tglib::IncidentLists<N, E> &
 
 
 #include <map>
+#include "../core/OrderedEdgeList.h"
 
 namespace tglib {
 
@@ -3843,6 +4013,8 @@ std::vector<double> temporal_walk_centrality(tglib::OrderedEdgeList<E> const &tg
 #define TGLIB_TEMPORALEFFICIENCY_H
 
 #include <vector>
+#include "../core/BasicTypes.h"
+#include "../algorithms/TemporalCloseness.h"
 
 /**
  * @brief Computes the temporal efficiency [1] for the temporal graph.
@@ -3894,6 +4066,8 @@ double temporal_efficiency(TempGraph const& tg, tglib::TimeInterval timeInterval
 #define TGLIB_TEMPORALDIAMETER_H
 
 #include <vector>
+#include "../core/BasicTypes.h"
+#include "TemporalDistances.h"
 
 namespace tglib {
 
@@ -3986,6 +4160,8 @@ Time temporal_diameter(TempGraph const &tg, tglib::TimeInterval timeInterval, tg
 
 #include <complex>
 #include <algorithm>
+#include "../core/BasicTypes.h"
+#include "../core/IncidentLists.h"
 
 namespace tglib {
 
@@ -4066,6 +4242,11 @@ double topological_overlap(IncidentLists<N, E> const& tg, NodeId nid, TimeInterv
 #ifndef TGLIB_REACHABILITY_H
 #define TGLIB_REACHABILITY_H
 
+#include "../core/BasicTypes.h"
+#include "../core/OrderedEdgeList.h"
+#include "../core/TRSGraph.h"
+#include "../core/IncidentLists.h"
+#include "../util/LabelPQ.h"
 
 namespace tglib {
 
@@ -4120,11 +4301,18 @@ return reachable;
 #ifndef TGLIB_INPUTOUTPUT_H
 #define TGLIB_INPUTOUTPUT_H
 
+// #include "stdafx.h"
+#include <string>
+#include <iostream>
 
 #include <fstream>
 #include <sstream>
 #include <unordered_map>
 #include <algorithm>
+#include "../core/OrderedEdgeList.h"
+#include "../core/IncidentLists.h"
+#include "../core/TRSGraph.h"
+#include "../core/Transformations.h"
 
 
 namespace tglib {
@@ -4178,7 +4366,7 @@ inline std::vector<Time> split_string(const std::string& s, char delim) {
         std::string substr;
         getline(ss, substr, delim);
         if (!substr.empty())
-            result.push_back(stoi(substr));
+            result.push_back(stoll(substr));
     }
     return result;
 }
@@ -4199,6 +4387,7 @@ tglib::OrderedEdgeList<E> load_ordered_edge_list(const std::string &filename, bo
         throw std::runtime_error("Could not open file " + filename);
     }
 
+
     std::string line;
 
     std::vector<E> edges;
@@ -4207,6 +4396,7 @@ tglib::OrderedEdgeList<E> load_ordered_edge_list(const std::string &filename, bo
     NodeIdManager nidman;
     while (getline(fs, line)) {
         if (line.empty()) continue;
+
         std::vector<Time> l = split_string(line, ' ');
 
         if (l.size() < 3) continue;

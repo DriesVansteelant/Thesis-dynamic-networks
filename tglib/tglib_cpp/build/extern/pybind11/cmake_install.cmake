@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/extern/pybind11
+# Install script for directory: C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/extern/pybind11
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/src
+# Install script for directory: C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/python_binding/cmake_install.cmake")
+  include("C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/python_binding/cmake_install.cmake")
 endif()
 

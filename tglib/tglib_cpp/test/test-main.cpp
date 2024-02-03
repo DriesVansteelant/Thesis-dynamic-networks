@@ -5,4 +5,14 @@
  * for full license details.
  */
 
+#include <iostream>
 #define CATCH_CONFIG_MAIN
+
+
+	/*
+int main(int argc, char* argv[]) {
+	std::cout << "test-main: main!";
+
+	return 1;
+}
+	*/

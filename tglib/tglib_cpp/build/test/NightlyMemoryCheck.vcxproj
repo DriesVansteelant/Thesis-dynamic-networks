@@ -22,9 +22,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9B005881-C272-33EE-8D47-447742873536}</ProjectGuid>
+    <ProjectGuid>{34EB03FF-8C8B-3457-A10F-75C5C2559E0F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>NightlyMemoryCheck</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -105,7 +105,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\CMakeFiles\ac40e8da39064106b560651e644fa805\NightlyMemoryCheck.rule">
+    <CustomBuild Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\CMakeFiles\ca244cfc491f7caed71fb9d4e7c5109f\NightlyMemoryCheck.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\ctest.exe" -C Debug -D NightlyMemoryCheck
@@ -117,7 +117,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
@@ -131,7 +131,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
@@ -145,7 +145,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
@@ -159,17 +159,17 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\test\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\test\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -177,12 +177,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.27\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -190,12 +190,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.27\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -203,12 +203,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.27\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/test/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -216,18 +216,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.27\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\extras\Catch.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck">
+    <None Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\test\CMakeFiles\NightlyMemoryCheck">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\ZERO_CHECK.vcxproj">
-      <Project>{5C251B4E-6FDF-31AB-88A9-55242AB119B4}</Project>
+    <ProjectReference Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\ZERO_CHECK.vcxproj">
+      <Project>{C1F2C974-3EC5-3971-B0A4-07FBA34AC411}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

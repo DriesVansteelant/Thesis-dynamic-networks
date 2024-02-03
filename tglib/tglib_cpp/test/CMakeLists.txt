@@ -18,7 +18,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 set(TEST_SOURCES
-        test-algorithms/test-burstiness.cpp
+        test-timing/test-timing.cpp
         test-main.cpp TemporalGraphsInstances.cpp)
 
 add_executable(custom-main-tests ${TEST_SOURCES})
@@ -26,6 +26,7 @@ add_executable(custom-main-tests ${TEST_SOURCES})
 add_subdirectory(test-algorithms)
 add_subdirectory(test-core)
 add_subdirectory(test-util)
+add_subdirectory(test-timing)
 
 target_link_libraries(custom-main-tests PRIVATE Catch2::Catch2WithMain)
 

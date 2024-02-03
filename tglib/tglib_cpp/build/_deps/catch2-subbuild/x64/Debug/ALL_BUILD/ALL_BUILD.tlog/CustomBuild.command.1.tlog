@@ -1,6 +1,6 @@
-^C:\USERS\DRIES\DOCUMENTS\SCHOOL\THESIS\THESIS-DYNAMIC-NETWORKS\TGLIB\TGLIB_CPP\BUILD\_DEPS\CATCH2-SUBBUILD\CMAKELISTS.TXT
+^C:\USERS\DRIES\DOCUMENTS\GITHUB\THESIS-DYNAMIC-NETWORKS\TGLIB\TGLIB_CPP\BUILD\_DEPS\CATCH2-SUBBUILD\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild -BC:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild --check-stamp-file C:/Users/dries/Documents/school/Thesis/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild --check-stamp-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

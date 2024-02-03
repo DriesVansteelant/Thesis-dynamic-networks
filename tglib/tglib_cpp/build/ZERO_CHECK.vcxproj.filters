@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\dries\Documents\school\Thesis\Thesis-dynamic-networks\tglib\tglib_cpp\build\CMakeFiles\643ba36cd12d9f53e604577d329e4956\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\CMakeFiles\1d488b8ed03efe277b3fe9a5faa62aee\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{9185DACA-3B65-3A87-B25D-C0CC9FDE17C5}</UniqueIdentifier>
+      <UniqueIdentifier>{8179F045-54A8-32B3-B1CD-FE752B72DC7D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
