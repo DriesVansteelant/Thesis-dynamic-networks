@@ -32,8 +32,9 @@ class BenchmarkRaphtory():
 
 # Get statistcs (maybe: avg degree + see tglib)
         start = time.time()
-        num_nodes = g.count_vertices()
+        num_nodes = g.count_nodes()
         num_edges = g.count_edges()
+        num_interactions = g.count_temporal_edges()
         min_in_deg = algo.min_in_degree(g)
         max_in_deg = algo.max_in_degree(g)
         min_out_deg = algo.min_out_degree(g)
@@ -52,7 +53,9 @@ class BenchmarkRaphtory():
 
         results["stats"] = end-start
         print(f"Time to get stats: {end - start}")
-
+        results["num_nodes"] = num_nodes
+        results["num_edges"] = num_edges
+        results["num_interactions"] = num_interactions
 # Paths
         """..."""
         # algo.single_source_shortest_path(g,g.vertex(2265))

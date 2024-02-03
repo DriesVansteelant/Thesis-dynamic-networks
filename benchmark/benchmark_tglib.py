@@ -44,9 +44,13 @@ class TGBLibBenchmark():
         # for i in stats2:
         #         print(i)
 
-# Paths
+# To incidents
+        start = time.time()
         incidents = tgl.to_incident_lists(g)
+        end = time.time()
 
+        results["to_incidents"] = end-start
+# Paths
         # from_nodes = [2265, 2265, 2267, 7560, 7241, 2186, 2176, 2174, 2164, 2157, 1723, 1716]
         # to_nodes =   [980, 973, 992, 341, 993, 979, 988, 948, 995, 981, 271, 995]
 

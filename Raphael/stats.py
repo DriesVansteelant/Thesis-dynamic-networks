@@ -6,7 +6,9 @@ from matplotlib import pyplot as plt
 from pairing import SzudzikPair
 # from shared_utils import minmaxscale
 
+from line_profiler import profile, LineProfiler
 
+@profile
 def collect_node_statistics(df):
     """An in-place function that adds the following columns to the dataframe:
     - src_arrival_rank: the arrival rank of the source node
@@ -41,7 +43,7 @@ def collect_node_statistics(df):
     df["dst_degree"] = df_dup.loc["i", "node_degree"].values
     # return df
 
-
+@profile
 def collect_edge_statistics(df):
     df["edge_key"] = SzudzikPair.encode(df.u, df.i)
 
