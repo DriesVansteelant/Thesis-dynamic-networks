@@ -1,0 +1,10 @@
+﻿  Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/src/tracy/CMakeLists.txt
+  TracyClient.cpp
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\tracy\common/TracySystem.cpp(118,18): warning C4820: 'tracy::THREADNAME_INFO': '4' bytes padding added after data member 'tracy::THREADNAME_INFO::dwType'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\tracy\common/TracySystem.cpp(142,141): warning C4191: 'type cast': unsafe conversion from 'FARPROC' to 't_SetThreadDescription'
+          Calling this function through the result pointer may cause your program to fail
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\tracy\common/TracySystem.cpp(234,140): warning C4191: 'type cast': unsafe conversion from 'FARPROC' to 't_GetThreadDescription'
+          Calling this function through the result pointer may cause your program to fail
+  Generating code
+  Finished generating code
+  tracy.vcxproj -> C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\tracy\Release\tracy.cp310-win_amd64.pyd

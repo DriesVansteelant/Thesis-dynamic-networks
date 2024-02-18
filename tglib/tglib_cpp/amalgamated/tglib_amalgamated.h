@@ -276,6 +276,10 @@ struct TemporalGraphStatistics {
 #ifndef CPP_TEMPORALGRAPHSTREAM_H
 #define CPP_TEMPORALGRAPHSTREAM_H
 
+
+#define TRACY_ENABLE
+
+
 #include <string>
 #include <iostream>
 
@@ -385,6 +389,11 @@ namespace tglib {
 			return get_degrees(tgs);
 		}
 
+		const TemporalGraphStatistics getStats() {
+			OrderedEdgeList<E> const& tgs = *this;
+			return get_statistics(tgs);
+		}
+
 	private:
 
 		/**
@@ -433,7 +442,6 @@ namespace tglib {
 		 */
 		template<typename E>
 		std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
-			std::cout << "JOEPIE van op de nieuwe PC!!!";
 			std::map<NodeId, std::pair<int, int>> degrees;
 
 
@@ -448,34 +456,37 @@ namespace tglib {
 
 			std::vector< std::map<std::string, int>> degreeVector;
 			for (auto& e : degrees) {
-				/*std::map<std::string, int> theMap;
-				theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
-				//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
-
 				degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
 			}
 
 			std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
-			
-			int i = 0;
+
+			int actual_rank = 0;
+			int rank = 1;
 			for (int e = 0; e < degreeVector.size(); e++) {
-				degreeVector[e].insert({ "in_degree_rank", i });
+				rank++;
 				if (e > 0) {
 					if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
-						i++;
+						actual_rank = rank;
+						//std::cout << "switch want: " << degreeVector[e]["in_degree"] << " > " << degreeVector[e - 1]["in_degree"] << "\n";
 					}
 				}
+				//if (rank <= 150) {
+
+					//std::cout << "indegree: " << degreeVector[e]["in_degree"] << ", rank: " << rank << ", actual_rank: " << actual_rank << ", node: " << degreeVector[e]["node_id"] << "\n";
+				//}
+				degreeVector[e].insert({ "in_degree_rank", actual_rank });
 			}
 
 			std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
-			i = 0;
+			int i = 1;
 			for (int e = 0; e < degreeVector.size(); e++) {
-				degreeVector[e].insert({ "out_degree_rank", i });
 				if (e > 0) {
 					if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
 						i++;
 					}
 				}
+				degreeVector[e].insert({ "out_degree_rank", i });
 			}
 
 			return degreeVector;

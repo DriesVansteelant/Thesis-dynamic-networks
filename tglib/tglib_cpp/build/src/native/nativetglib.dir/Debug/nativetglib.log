@@ -1,0 +1,214 @@
+﻿  Main.cpp
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1793,22): warning C4820: '___itt_domain': '4' bytes padding added after data member '___itt_domain::flags'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1800,17): warning C4820: '___itt_domain': '4' bytes padding added after data member '___itt_domain::extra1'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1802,1): warning C5220: '___itt_domain::flags': a non-static data member with a volatile qualified type no longer implies
+           that compiler generated copy/move constructors and copy/move assignment operators are not trivial
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1792): message : see declaration of '___itt_domain::flags'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1988,17): warning C4820: '___itt_string_handle': '4' bytes padding added after data member '___itt_string_handle::extra1'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(2730,17): warning C4820: '___itt_clock_domain': '4' bytes padding added after data member '___itt_clock_domain::extra1'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(3819,17): warning C4820: '___itt_section_info': '4' bytes padding added after data member '___itt_section_info::type'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(3836,23): warning C4820: '___itt_module_object': '4' bytes padding added after data member '___itt_module_object::version'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(3838,28): warning C4820: '___itt_module_object': '4' bytes padding added after data member '___itt_module_object::module_type'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(3920,17): warning C4820: '___itt_histogram': '4' bytes padding added after data member '___itt_histogram::extra1'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(4140,16): warning C4820: '___itt_context_metadata': '4' bytes padding added after data member '___itt_context_metadata::type'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(4153,27): warning C4820: '___itt_counter_metadata': '4' bytes padding added after data member '___itt_counter_metadata::type'
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(4161,17): warning C4820: '___itt_counter_metadata': '4' bytes padding added after data member '___itt_counter_metadata::extra1'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(8,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(9,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(10,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/TRSGraph.h(59,16): warning C4820: 'tglib::TRSNode': '4' bytes padding added after data member 'tglib::TRSNode::nid'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(11,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(23,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(24,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(25,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(26,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\DirectedLineGraph.h(55,13): warning C4820: 'tglib::DLEdge': '4' bytes padding added after data member 'tglib::DLEdge::tg_w'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\DirectedLineGraph.h(75,19): warning C4820: 'tglib::DLNode': '4' bytes padding added after data member 'tglib::DLNode::id'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(65,1): warning C4820: 'tglib::NodeIdManager': '4' bytes padding added after data member 'tglib::NodeIdManager::nid'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(12,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(13,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(15,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(16,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(14,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(16,10): warning C4464: relative include path contains '..'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(37,1): warning C4820: 'tglib::TGNodeT<tglib::TemporalEdge>': '4' bytes padding added after data member 'tglib::TGNodeT<tglib::TemporalEdge>::id'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(52): message : see reference to class template instantiation 'tglib::TGNodeT<tglib::TemporalEdge>' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(196,26): warning C4100: 'argv': unreferenced formal parameter
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(196,14): warning C4100: 'argc': unreferenced formal parameter
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(115,40): warning C4244: 'argument': conversion from '_Ty' to 'tglib::NodeId', possible loss of data
+          with
+          [
+              _Ty=tglib::Time
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(174): message : see reference to function template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge> tglib::load_ordered_edge_list<tglib::TemporalEdge>(const std::string &,bool)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(116,40): warning C4244: 'argument': conversion from '_Ty' to 'tglib::NodeId', possible loss of data
+          with
+          [
+              _Ty=tglib::Time
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(140,1): warning C4365: 'argument': conversion from 'tglib::NodeId' to 'size_t', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(75,1): warning C4305: 'argument': truncation from 'const __int64' to 'const _Ty'
+          with
+          [
+              _Ty=long
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(175): message : see reference to function template instantiation 'tglib::TRSGraph tglib::to_trs_graph<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(75,67): warning C4309: 'argument': truncation of constant value
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(76,1): warning C4305: 'argument': truncation from 'const __int64' to 'const _Ty'
+          with
+          [
+              _Ty=long
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(76,65): warning C4309: 'argument': truncation of constant value
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(77,1): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(77,1): warning C4365: '=': conversion from 'size_t' to 'long', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(89,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(90,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(91,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(120,1): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=long
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(120,1): warning C4365: '=': conversion from 'unsigned __int64' to '_Ty', signed/unsigned mismatch
+          with
+          [
+              _Ty=long
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(126,1): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=long
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(126,1): warning C4365: '=': conversion from 'unsigned __int64' to '_Ty', signed/unsigned mismatch
+          with
+          [
+              _Ty=long
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(133,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(134,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(138,1): warning C4365: 'argument': conversion from 'tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(38,1): warning C4267: 'argument': conversion from 'size_t' to 'tglib::NodeId', possible loss of data
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(51): message : see reference to function template instantiation 'tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> tglib::to_incident_lists<tglib::TGNode,tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(38,1): warning C4365: 'argument': conversion from 'size_t' to 'tglib::NodeId', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(101,1): warning C4365: 'argument': conversion from 'const int' to 'size_t', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(52): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_clustering_coefficient<tglib::TGNode,tglib::TemporalEdge>(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(40,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(63): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_pagerank<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &,double,double,double)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(42,53): warning C5219: implicit conversion from 'unsigned __int64' to 'double', possible loss of data
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(51,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(52,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(53,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(54,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(269,1): warning C4305: '=': truncation from 'const __int64' to 'long'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(130): message : see reference to function template instantiation 'tglib::TemporalGraphStatistics tglib::get_statistics<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(128): message : while compiling class template member function 'const tglib::TemporalGraphStatistics tglib::OrderedEdgeList<tglib::TemporalEdge>::getStats(void)'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(46): message : see reference to function template instantiation 'const tglib::TemporalGraphStatistics tglib::OrderedEdgeList<tglib::TemporalEdge>::getStats(void)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(174): message : see reference to class template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge>' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(269,36): warning C4309: '=': truncation of constant value
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(270,1): warning C4305: '=': truncation from 'const __int64' to 'long'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(270,37): warning C4309: '=': truncation of constant value
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(285,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(286,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(202,22): warning C4388: '<': signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(125): message : see reference to function template instantiation 'std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::get_degrees<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(125): message : see reference to function template instantiation 'std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::get_degrees<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(123): message : while compiling class template member function 'const std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::getDegreeList(void)'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(69): message : see reference to function template instantiation 'const std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::getDegreeList(void)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(205,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(214,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(219,22): warning C4388: '<': signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(221,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(225,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(69,1): warning C4365: 'argument': conversion from 'tglib::NodeId' to 'size_t', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(68): message : while compiling class template member function 'tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>::IncidentLists(tglib::NodeId,const std::vector<E,std::allocator<E>> &)'
+          with
+          [
+              E=tglib::TemporalEdge
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(38): message : see reference to function template instantiation 'tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>::IncidentLists(tglib::NodeId,const std::vector<E,std::allocator<E>> &)' being compiled
+          with
+          [
+              E=tglib::TemporalEdge
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(51): message : see reference to class template instantiation 'tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(71,1): warning C4365: 'argument': conversion from '_Ty2' to 'const unsigned __int64', signed/unsigned mismatch
+          with
+          [
+              _Ty2=tglib::NodeId
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(65): message : while compiling class template member function 'tglib::OrderedEdgeList<tglib::TemporalEdge>::OrderedEdgeList(size_t,std::vector<E,std::allocator<E>>,tglib::TimeInterval,std::unordered_map<tglib::NodeId,tglib::NodeId,std::hash<int>,std::equal_to<tglib::NodeId>,std::allocator<std::pair<const tglib::NodeId,tglib::NodeId>>>)'
+          with
+          [
+              E=tglib::TemporalEdge
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(140): message : see reference to function template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge>::OrderedEdgeList(size_t,std::vector<E,std::allocator<E>>,tglib::TimeInterval,std::unordered_map<tglib::NodeId,tglib::NodeId,std::hash<int>,std::equal_to<tglib::NodeId>,std::allocator<std::pair<const tglib::NodeId,tglib::NodeId>>>)' being compiled
+          with
+          [
+              E=tglib::TemporalEdge
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(154,1): warning C4365: 'argument': conversion from 'tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(153): message : while compiling class template member function 'void tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>::addEdge(E)'
+          with
+          [
+              E=tglib::TemporalEdge
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(72): message : see reference to function template instantiation 'void tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>::addEdge(E)' being compiled
+          with
+          [
+              E=tglib::TemporalEdge
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(144,1): warning C4267: '=': conversion from 'size_t' to 'tglib::NodeId', possible loss of data
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(141): message : while compiling class template member function 'void tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>::addNodes(size_t)'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(69): message : see reference to function template instantiation 'void tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>::addNodes(size_t)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(144,1): warning C4365: '=': conversion from 'size_t' to 'tglib::NodeId', signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(186,48): warning C4267: 'initializing': conversion from 'size_t' to '_Ty1', possible loss of data
+          with
+          [
+              _Ty1=tglib::NodeId
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(96): message : see reference to function template instantiation 'std::pair<tglib::NodeId,tglib::Time>::pair<size_t&,_Ty&,0>(_Other1,_Other2) noexcept' being compiled
+          with
+          [
+              _Ty=tglib::Time,
+              _Other1=size_t &,
+              _Other2=tglib::Time &
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(96): message : see reference to function template instantiation 'std::pair<tglib::NodeId,tglib::Time>::pair<size_t&,_Ty&,0>(_Other1,_Other2) noexcept' being compiled
+          with
+          [
+              _Ty=tglib::Time,
+              _Other1=size_t &,
+              _Other2=tglib::Time &
+          ]
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(175): message : see reference to function template instantiation 'tglib::TRSGraph tglib::to_trs_graph<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(186,48): warning C4365: 'initializing': conversion from 'size_t' to '_Ty1', signed/unsigned mismatch
+          with
+          [
+              _Ty1=tglib::NodeId
+          ]
+C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1903,28): warning C4514: '__itt_id_make': unreferenced inline function has been removed
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/BasicTypes.h(117,22): warning C4514: 'tglib::operator <<': unreferenced inline function has been removed
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/BasicTypes.h(143,13): warning C4514: 'tglib::operator >': unreferenced inline function has been removed
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/BasicTypes.h(163,13): warning C4514: 'tglib::operator !=': unreferenced inline function has been removed
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/BasicTypes.h(240,31): warning C4514: 'tglib::TemporalGraphStatistics::toString': unreferenced inline function has been removed
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(173,24): warning C4514: 'tglib::load_TRS': unreferenced inline function has been removed
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(91): message : index 'nid' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(297): message : index 'nid' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(225): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(219): message : index '' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(225): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(221): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(220): message : index 'e' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(221): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(214): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(202): message : index '' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(214): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(205): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(204): message : index 'e' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(205): message : feeds call on this line
+  nativetglib.vcxproj -> C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\native\Debug\nativetglib.exe

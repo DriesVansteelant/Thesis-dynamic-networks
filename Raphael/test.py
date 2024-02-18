@@ -24,17 +24,13 @@ inPath = '../Code/Data/enron.csv'
 inPathTG = '../Code/Data/enron.txt'
 
 @profile
-def tgl_get_degrees():
+def tgl_get_cc():
     start = time.time()
     directed = True
     g = tgl.load_ordered_edge_list(inPathTG, directed)
-    degrees = tgl.get_degrees(g)
+    incidents = tgl.to_incident_lists(g)
+    cc = tgl.temporal_clustering_coefficient(incidents, g.getTimeInterval())
     end = time.time()
-
-# for d in degrees:
-#     print(d)
-# print('TGLib time: ' + str(end - start))
-# print(degrees.keys())
 
 @profile
 def pandas_get_degrees():
@@ -47,25 +43,24 @@ def pandas_get_degrees():
     # collect_edge_statistics(edges_df)
     end = time.time()
 
-    # print('pandas time: ' + str((end - start)))
-
-    # edges_df.to_excel('rapha.xlsx', sheet_name='enron')
-
-    # print(edges_df)
+    print('pandas time: ' + str((end - start)))
 
 
-@profile
+
+# @profile
 def main():    
     # numbers = [random.randint(1,100) for i in range(1000)]
     lp = LineProfiler()
-    lp_wrapper = lp(tgl_get_degrees)
+    lp_wrapper = lp(tgl_get_cc)
     lp_wrapper()
     lp.print_stats()
 
     
-    lp_wrapper = lp(pandas_get_degrees)
-    lp_wrapper()
-    lp.print_stats()
+    # lp_wrapper = lp(pandas_get_degrees)
+    # lp_wrapper()
+    # lp.print_stats()
+    # tgl_get_degrees()
+    # pandas_get_degrees()
 
 
 if __name__ == '__main__':

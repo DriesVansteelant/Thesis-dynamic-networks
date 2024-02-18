@@ -1,4 +1,5 @@
-﻿  catch_main.cpp
+﻿  Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/_deps/catch2-src/src/CMakeLists.txt
+  catch_main.cpp
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..\catch2/internal/catch_clara.hpp(104,34): warning C4820: 'Catch::Clara::Detail::Token': '4' bytes padding added after data member 'Catch::Clara::Detail::Token::type'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..\catch2/internal/catch_clara.hpp(164,13): warning C4820: 'Catch::Clara::Detail::ResultBase': '4' bytes padding added after data member 'Catch::Clara::Detail::ResultBase::m_type'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\_deps\catch2-src\src\catch2\..\catch2/internal/catch_clara.hpp(209,1): warning C4623: 'Catch::Clara::Detail::ResultValueBase<void>': default constructor was implicitly defined as deleted

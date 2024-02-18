@@ -1,0 +1,104 @@
+47 [22284] INFO perfrun.launcher <> - Launcher main begin
+50 [22284] INFO perfrun.launcher <> - MessageCatalogInit finished
+50 [22284] INFO perfrun.launcher <> - Launcher instance created
+50 [22284] INFO perfrun.launcher <> - argc = 7; cmdline = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\amplxe-runss.exe --ui-output-format xml --ui-output-fd 936 --option-file C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\config\runss.options 
+59 [22284] INFO perfrun.launcher <> - New signal handler callback was added
+91 [22284] INFO perfrun.launcher <> - create msngr2::ICliToolContext
+91 [22284] INFO perfrun.launcher <> - create file finder object
+91 [22284] INFO perfrun.launcher <> - create a result directory: pattern = C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps pid = 4294967295
+94 [22284] INFO perfrun.launcher <> - create data directory = C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\data.0
+94 [22284] INFO perfrun.launcher <> - Creating the master collection flag
+99 [22284] INFO perfrun.launcher <> - Done creating the master collection flag
+99 [25860] INFO perfrun.launcher <> - plugin [remoteplug] was disabled because it doesn't support the given collection type.
+99 [25860] INFO perfrun.sdk <> - Allocating TMU :C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\data.0\systemcollector-16580-DRIES-PC.sc
+100 [25860] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+101 [25860] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+101 [25860] INFO perfrun.launcher <> - plugin [gpu] was disabled because it doesn't support the given collection type.
+101 [25860] INFO perfrun.launcher <> - plugin [etw.kernel] was disabled because it doesn't support the given collection type.
+102 [25860] INFO perfrun.launcher <> - plugin [etw.dx] was disabled because it doesn't support the given collection type.
+102 [25860] INFO perfrun.launcher <> - plugin [etw.wsa] was disabled because it doesn't support the given collection type.
+102 [25860] INFO perfrun.mrte <> - system-wide mode is 0
+102 [25860] INFO perfrun.mrte <> - Getting  mrte profiling environment ...
+157 [25860] INFO perfrun.mrte <> - INTEL_MRTE_DATA_DIR=C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\data.0
+157 [25860] INFO perfrun.mrte <> - INTEL_MRTE_HOST_NAME=DRIES-PC
+157 [25860] INFO perfrun.mrte <> - JAVA_TOOL_OPTIONS=-agentlib:amplxe_tpssmrte_javaprof_1.0
+157 [25860] INFO perfrun.mrte <> - PATH=C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\runtime;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\CMake\bin;C:\Program Files\Git\cmd;C:\Users\dries\AppData\Local\Microsoft\WindowsApps;C:\Users\dries\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dries\AppData\Local\GitHubDesktop\bin;C:\Users\dries\AppData\Local\Programs\Python\Python310;C:\Users\dries\AppData\Local\Programs\Python\Python310\scripts;
+157 [25860] INFO perfrun.mrte <> - COR_ENABLE_PROFILING=1
+157 [25860] INFO perfrun.mrte <> - COR_PROFILER={AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+157 [25860] INFO perfrun.mrte <> - COMPLUS_ProfAPI_ProfilerCompatibilitySetting=EnableV2Profiler
+157 [25860] INFO perfrun.mrte <> - CORECLR_ENABLE_PROFILING=1
+157 [25860] INFO perfrun.mrte <> - CORECLR_PROFILER={AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+157 [25860] INFO perfrun.mrte <> - CORECLR_PROFILER_PATH=C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64/amplxe_samplingmrte_clrprof_1.0.dll
+157 [25860] INFO perfrun.mrte <> - INTEL_MRTE_PROFILER_MODE=mixed
+157 [25860] INFO perfrun.mrte <> - Data directory: C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\data.0
+157 [25860] INFO perfrun.mrte <> - Mrte plugin is initialized
+157 [25860] INFO perfrun.launcher <> - plugin [emon] was disabled because it doesn't support the given collection type.
+157 [25860] INFO perfrun.launcher <> - plugin [cuscol] was disabled because it doesn't support the given collection type.
+157 [25860] INFO perfrun.launcher <> - plugin [stdsrc] was disabled because it doesn't support the given collection type.
+157 [25860] INFO perfrun.launcher <> - plugin [sep] was disabled because it doesn't support the given collection type.
+157 [25860] INFO perfrun.launcher <> - plugin [vtsspp] was disabled because it doesn't support the given collection type.
+157 [25860] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+157 [25860] INFO perfrun.launcher <> - plugin [aoclprofile] was disabled because it doesn't support the given collection type.
+157 [25860] INFO perfrun.tpss <> - initialize tpss controller
+157 [25860] INFO perfrun.tpss <> - configure collection mode: value = cpu:counters:nostack
+157 [25860] INFO perfrun.tpss <> - configure collection mode: value = cpu:nostack
+157 [25860] INFO perfrun.tpss <> - default obj-size-min=1024
+157 [25860] INFO perfrun.tpss <> - default hash-table-size=0
+158 [25860] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+158 [25860] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+158 [25860] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+158 [25860] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+158 [25860] INFO perfrun.launcher <> - plugin [power] was disabled because it doesn't support the given collection type.
+158 [25860] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+158 [25860] INFO perfrun.launcher <> - plugin [ipmwatch] was disabled because it doesn't support the given collection type.
+158 [25860] INFO perfrun.launcher <> - plugin [os_counters] was disabled because it doesn't support the given collection type.
+158 [25860] INFO perfrun.launcher <> - plugin [l0_metrics] was disabled because it doesn't support the given collection type.
+158 [22284] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\runtime;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\CMake\bin;C:\Program Files\Git\cmd;C:\Users\dries\AppData\Local\Microsoft\WindowsApps;C:\Users\dries\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dries\AppData\Local\GitHubDesktop\bin;C:\Users\dries\AppData\Local\Programs\Python\Python310;C:\Users\dries\AppData\Local\Programs\Python\Python310\scripts;
+158 [22284] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY32 = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin32\runtime\ittnotify_collector.dll
+158 [22284] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY64 = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\runtime\ittnotify_collector.dll
+158 [22284] INFO perfrun.launcher <> - set environment variable: INTEL_ITTNOTIFY_GROUPS = 
+158 [22284] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER32 = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin32\runtime\ittnotify_collector.dll
+158 [22284] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER64 = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\runtime\ittnotify_collector.dll
+158 [22284] INFO perfrun.launcher <> - set environment variable: ENABLE_JITPROFILING = 1
+158 [22284] INFO perfrun.launcher <> - set environment variable: CL_CONFIG_USE_VTUNE = True
+158 [22284] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES = 0
+158 [22284] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES_MODE = 0
+158 [22284] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_DATA_DIR = C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\data.0
+158 [22284] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_HOST_NAME = DRIES-PC
+158 [22284] INFO perfrun.launcher <> - set environment variable: JAVA_TOOL_OPTIONS = -agentlib:amplxe_tpssmrte_javaprof_1.0
+159 [22284] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\runtime;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\CMake\bin;C:\Program Files\Git\cmd;C:\Users\dries\AppData\Local\Microsoft\WindowsApps;C:\Users\dries\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dries\AppData\Local\GitHubDesktop\bin;C:\Users\dries\AppData\Local\Programs\Python\Python310;C:\Users\dries\AppData\Local\Programs\Python\Python310\scripts;
+159 [22284] INFO perfrun.launcher <> - set environment variable: COR_ENABLE_PROFILING = 1
+159 [22284] INFO perfrun.launcher <> - set environment variable: COR_PROFILER = {AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+159 [22284] INFO perfrun.launcher <> - set environment variable: COMPLUS_ProfAPI_ProfilerCompatibilitySetting = EnableV2Profiler
+159 [22284] INFO perfrun.launcher <> - set environment variable: CORECLR_ENABLE_PROFILING = 1
+159 [22284] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER = {AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+159 [22284] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER_PATH = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64/amplxe_samplingmrte_clrprof_1.0.dll
+159 [22284] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_PROFILER_MODE = mixed
+159 [22284] INFO perfrun.launcher <> - RpcServer: run RPC server to handle requests
+164 [22284] INFO perfrun.sdk <> - IProcessUtil: the given executable 'C:\Users\dries\AppData\Local\Programs\Python\Python310\python.exe' is valid.
+164 [22284] INFO perfrun.launcher <> - Launcher: command line to start before modification = C:\Users\dries\AppData\Local\Programs\Python\Python310\python.exe C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\benchmark\benchmark_tglib.py
+166 [22284] INFO perfrun.launcher <> - Launcher: command line to start after modification = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\pin.exe -error_file C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\data.0\pinerr.tpsslog -detach_reattach -probe -follow_execv -p32 C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin32\pin.exe -p64 C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\pin.exe -t64 C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin64\tpsstool.dll -t C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\bin32\tpsstool.dll -server_name tpss_ipc.16580 -prd_dir C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0 -- C:\Users\dries\AppData\Local\Programs\Python\Python310\python.exe C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\benchmark\benchmark_tglib.py
+166 [22284] INFO perfrun.launcher <> - ProcessCreator object was created
+169 [22284] INFO perfrun.launcher <> - Launcher: the process was started in suspend mode
+170 [25860] INFO perfrun.itt <> - start itt controller for pid #23748
+170 [25860] INFO perfrun.tpss <> - start tpss controller for pid #23748
+235 [22284] INFO perfrun.launcher <> - Launcher: all plugins were started
+235 [22284] INFO perfrun.launcher <> - DirectoryMonitor object was created
+235 [22284] INFO perfrun.launcher <> - DirectoryMonitor: a callback was added
+235 [22284] INFO perfrun.launcher <> - DirectoryMonitor was started with pingTime = 1000
+235 [22284] INFO perfrun.launcher <> - DeadlineTimer is going to be constructed
+236 [22284] INFO perfrun.launcher <> - DeadlineTimer: a callback was added
+242 [22284] INFO perfrun.launcher <> - Launcher: resume the profiled application and  wait its termination or stop command
+14270 [22284] INFO perfrun.launcher <> - Launcher: the profiled application was terminated  with exit code = 0
+14296 [25860] INFO perfrun.itt <> - detach itt controller
+14296 [25860] INFO perfrun.itt <> - detach itt controller done
+14296 [25860] INFO perfrun.tpss <> - stop tpss controller
+14299 [25860] INFO perfrun.sdk <> - De-allocating TMU: C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\data.0\systemcollector-16580-DRIES-PC.sc
+14323 [25860] INFO perfrun.system <> - closed the system trace file: C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps\data.0\systemcollector-16580-DRIES-PC.sc
+14323 [22284] INFO perfrun.launcher <> - Launcher: all plugins were stopped.
+14323 [22284] INFO perfrun.launcher <> - DeadlineTimer is going to be destroyed
+14323 [22284] INFO perfrun.launcher <> - DeadlineTimer was destroyed
+14324 [22284] INFO perfrun.launcher <> - DirectoryMonitor object was destroyed
+14324 [22284] WARN perfrun.launcher <> - Stop command is ignored because it is received when collection is already stopped, at file: vcs\perfrun1\launcher\src\command_handler.cpp:226
+14326 [22284] INFO perfrun.launcher <> - Application exit code: 0
+14326 [22284] INFO perfrun.launcher <> - Exit code: 0

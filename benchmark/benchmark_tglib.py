@@ -14,13 +14,19 @@ import numpy as np
 import random
 
 
+from line_profiler import profile, LineProfiler
+
+
+@profile
 class TGBLibBenchmark():
+    @profile
     def do_benchmark(inPath, pathsSize, do_paths = True):
         results = {}
         
 # Load Graph
         start = time.time()
         directed = True
+        
         g = tgl.load_ordered_edge_list(inPath, directed)
         end = time.time()
 
@@ -54,7 +60,7 @@ class TGBLibBenchmark():
         # from_nodes = [2265, 2265, 2267, 7560, 7241, 2186, 2176, 2174, 2164, 2157, 1723, 1716]
         # to_nodes =   [980, 973, 992, 341, 993, 979, 988, 948, 995, 981, 271, 995]
 
-        nodes = g.getNodeMap()
+        nodes = g.getReverseNodeMap()
         from_nodes = np.random.choice(list(nodes), size=pathsSize)
         to_nodes = np.random.choice(list(nodes), size=pathsSize)
 
@@ -97,7 +103,38 @@ class TGBLibBenchmark():
         # print(np.random.choice(paths, size=20))
         return results
     
-# TGBLibBenchmark.do_benchmark("../Code/Data/enron.txt", 10, do_paths = True)
+    @profile
+    def profile(): 
+        TGBLibBenchmark.do_benchmark("C:/Users/dries/Documents/GitHub/Code/Data/Flights.txt", 10, do_paths = False)
+
+# folder = "C:/Users/dries/Documents/GitHub/Code/Data/"
+
+# files = ['enron', 'SocialEvo', 'wikipedia', 'UNvote', 'CanParl', 'reddit',  'lastfm', 'Flights', 'tgbl-review']
+
+
+# for file in files:    
+#         path = folder+file+'.txt'
+
+#         res = TGBLibBenchmark.do_benchmark(path, 0, do_paths=false)
+
+# TGBLibBenchmark.do_benchmark("C:/Users/dries/Documents/GitHub/Code/Data/Flights.txt", 10, do_paths = False)
 
 
 
+def main():    
+        # numbers = [random.randint(1,100) for i in range(1000)]
+        lp = LineProfiler()
+        lp_wrapper = lp(TGBLibBenchmark.profile)
+        lp_wrapper()
+        lp.print_stats()
+
+
+        # lp_wrapper = lp(pandas_get_degrees)
+        # lp_wrapper()
+        # lp.print_stats()
+        # tgl_get_degrees()
+        # pandas_get_degrees()
+
+
+if __name__ == '__main__':
+        main()

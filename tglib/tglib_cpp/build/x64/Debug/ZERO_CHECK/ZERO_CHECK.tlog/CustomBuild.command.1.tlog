@@ -1,0 +1,10 @@
+^C:\USERS\DRIES\DOCUMENTS\GITHUB\THESIS-DYNAMIC-NETWORKS\TGLIB\TGLIB_CPP\BUILD\CMAKEFILES\1D488B8ED03EFE277B3FE9A5FAA62AEE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp -BC:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/tglib.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

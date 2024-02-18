@@ -1,0 +1,16 @@
+-r
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Intel® VTune™ Profiler Results\pytglib\r000ps
+--stack-stitching
+--data-limit-mb=1000
+--disk-space-limit=0
+--mrte-type=java,dotnet
+--stack-unwind-limit=8388608
+--itt-config=frame
+--stackwalk=offline
+--mrte-mode=auto
+--type=cpu:counters:nostack
+--type=cpu:nostack
+--interval=100
+--
+C:\Users\dries\AppData\Local\Programs\Python\Python310\python.exe
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\benchmark\benchmark_tglib.py

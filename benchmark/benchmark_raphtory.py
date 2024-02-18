@@ -34,6 +34,8 @@ class BenchmarkRaphtory():
         start = time.time()
         num_nodes = g.count_nodes()
         num_edges = g.count_edges()
+        num_interactions = g.count_temporal_edges()
+
         num_temp_edges = g.count_temporal_edges()
         min_in_deg = algo.min_in_degree(g)
         max_in_deg = algo.max_in_degree(g)
@@ -95,6 +97,6 @@ class BenchmarkRaphtory():
 # inPath = "../Code/Data/enron_h.txt"
 # res = BenchmarkRaphtory.do_benchmark(inPath)
 # print(res)
-# inPath = "tgbl-review_edgelist_final.txt"
-# res = BenchmarkRaphtory.do_benchmark(inPath)
+inPath = "C:/Users/dries/Documents/GitHub/Code/Data/Flights_h.txt"
+BenchmarkRaphtory.do_benchmark(inPath)
 # print(res)

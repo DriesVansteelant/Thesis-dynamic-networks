@@ -2,6 +2,7 @@ C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/CM
 C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/CMakeFiles/ZERO_CHECK.dir
 C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/extern/pybind11/CMakeFiles/ALL_BUILD.dir
 C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/python_binding/CMakeFiles/pytglib.dir
+C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/native/CMakeFiles/nativetglib.dir
 C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/custom-main-tests.dir
 C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/Experimental.dir
 C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/test/CMakeFiles/Nightly.dir

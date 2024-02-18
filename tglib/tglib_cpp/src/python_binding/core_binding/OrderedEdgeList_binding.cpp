@@ -32,7 +32,7 @@ void bind_OrderedEdgeList(pybind11::module_ &m) {
             .def("__str__", &to_string)
             ;
 
-    pybind11::class_<OrderedEdgeList<TemporalEdge>>(m, "OrderedEdgeList") //TODO?: UniqueEdges? (D)
+    pybind11::class_<OrderedEdgeList<TemporalEdge>>(m, "OrderedEdgeList") 
             .def(pybind11::init<>())
             .def("getNumberOfNodes", &OrderedEdgeList<TemporalEdge>::getNumberOfNodes, "returns the number of nodes")
             .def("getNumberOfEdges", &OrderedEdgeList<TemporalEdge>::getNumberOfEdges, "returns the number of nodes")

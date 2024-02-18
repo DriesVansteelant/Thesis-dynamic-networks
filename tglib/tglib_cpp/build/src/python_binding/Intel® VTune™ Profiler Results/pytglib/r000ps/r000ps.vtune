@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <rdmgr>
+  <timestamp type="u64_t">1707553662</timestamp>
+  <hostname>DRIES-PC</hostname>
+  <os>windows</os>
+  <product>Intel® VTune™ Profiler 2024.0.1</product>
+  <buildNumber type="s32_t">627177</buildNumber>
+  <logicalCPUCount type="s32_t">28</logicalCPUCount>
+  <physicalCoreCount type="s32_t">20</physicalCoreCount>
+  <processorPackageCount type="s32_t">1</processorPackageCount>
+  <CPUFrequency type="s64_t">2112000000</CPUFrequency>
+  <CPUFamily type="s32_t">6</CPUFamily>
+  <CPUModel type="s32_t">183</CPUModel>
+  <CPUStepping type="s32_t">1</CPUStepping>
+  <CPUBrandName>Intel(R) Core(TM) i7-14700</CPUBrandName>
+  <isa>avx2</isa>
+  <collectionTimeBegin type="u64_t">1707553663</collectionTimeBegin>
+  <collectionTimeEnd type="u64_t">1707553677</collectionTimeEnd>
+  <variables>
+   <at>ps</at>
+  </variables>
+ </rdmgr>
+</root>

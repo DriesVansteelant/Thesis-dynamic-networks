@@ -44,6 +44,7 @@ set(TO_DOCUMENT
         PARENT_SCOPE)
 
         add_subdirectory(python_binding)
+        add_subdirectory(native)
         # add_subdirectory(algorithms)
         # add_subdirectory(core)
         # add_subdirectory(util)

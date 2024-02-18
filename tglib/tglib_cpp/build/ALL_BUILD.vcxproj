@@ -185,6 +185,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{CC90E2EF-2285-3300-8549-170CE887CFAE}</Project>
       <Name>custom-main-tests</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\native\nativetglib.vcxproj">
+      <Project>{20B53FBB-0F67-3DC6-AB36-B1ACA58835A8}</Project>
+      <Name>nativetglib</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\pytglib.vcxproj">
       <Project>{DDD6AB04-9D44-3B2F-AF21-E3EF6E9A259B}</Project>
       <Name>pytglib</Name>
