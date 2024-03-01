@@ -1,4 +1,5 @@
-﻿  Main.cpp
+﻿  Building Custom Rule C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/src/native/CMakeLists.txt
+  Main.cpp
 C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1793,22): warning C4820: '___itt_domain': '4' bytes padding added after data member '___itt_domain::flags'
 C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1800,17): warning C4820: '___itt_domain': '4' bytes padding added after data member '___itt_domain::extra1'
 C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1802,1): warning C5220: '___itt_domain::flags': a non-static data member with a volatile qualified type no longer implies
@@ -196,9 +197,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\nati
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(91): message : index 'nid' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(297): message : index 'nid' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(225): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(219): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(225): message : feeds call on this line
@@ -211,4 +209,8 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(205): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(204): message : index 'e' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(205): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(297): message : index 'nid' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): message : feeds call on this line
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/PROFILE' specification
   nativetglib.vcxproj -> C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\native\Debug\nativetglib.exe

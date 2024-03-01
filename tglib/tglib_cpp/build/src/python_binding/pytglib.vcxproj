@@ -125,6 +125,7 @@
       <ImportLibrary>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/python_binding/Debug/pytglib.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/python_binding/Debug/pytglib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
+      <Profile>true</Profile>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>

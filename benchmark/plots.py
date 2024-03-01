@@ -117,3 +117,56 @@ class BasicPlots:
         fig.savefig('plots/' + title + '.png', format='png')
         plt.show()
 
+from vtune import allData, cc_plot, cc_plot_sorted, cc_datasets, some_cc_datasets, some_cc_plot_sorted, stats_datasets, stats_plot_sorted, some_stats_plot_sorted, some_stats_datasets
+
+class VtunePlots:
+    def vtune_plot_clusteringCoefficient(all = True):
+        if(all):
+            sets = cc_datasets
+            plot = cc_plot_sorted
+        else:
+            sets = some_cc_datasets
+            plot = some_cc_plot_sorted
+
+        width = 0.5
+
+        fig, ax = plt.subplots()
+        bottom = np.zeros(len(sets))
+
+        for boolean, weight_count in plot.items():
+            p = ax.bar(sets, weight_count, width, label=boolean, bottom=bottom)
+            bottom += weight_count
+
+        ax.set_title("clustering coefficient")
+        ax.legend()
+        plt.xticks(rotation=45)
+        # ax.set_yscale('log')
+
+        plt.show()
+        
+    def vtune_plot_stats(all=True):
+        if(all):
+            sets = stats_datasets
+            plot = stats_plot_sorted
+        else:
+            sets = some_stats_datasets
+            plot = some_stats_plot_sorted
+
+        width = 0.5
+
+        fig, ax = plt.subplots()
+        bottom = np.zeros(len(sets))
+
+        for boolean, weight_count in plot.items():
+            p = ax.bar(sets, weight_count, width, label=boolean, bottom=bottom)
+            bottom += weight_count
+
+        ax.set_title("get statistics")
+        ax.legend()
+        plt.xticks(rotation=45)
+        # ax.set_yscale('log')
+
+        plt.show()
+
+VtunePlots.vtune_plot_clusteringCoefficient(True)
+# VtunePlots.vtune_plot_stats()

@@ -35,7 +35,7 @@ def tgl_get_cc():
 @profile
 def pandas_get_degrees():
     start = time.time()
-    edges_df = pd.read_csv(inPath, delimiter=",")
+    edges_df = pd.read_csv(inPath, delimiter=",") 
 
     # print(edges_df)
 

@@ -1700,6 +1700,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\BasicTypes.h(240,31): warning C4514: 'tglib::TemporalGraphStatistics::toString': unreferenced inline function has been removed
   Generating Code...
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalWalkCentrality.h(85): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalWalkCentrality.h(79): message : index 'nid' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalWalkCentrality.h(85): message : feeds call on this line
@@ -1718,9 +1721,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1081): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): message : feeds call on this line
@@ -1803,6 +1803,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -1839,9 +1842,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
@@ -1924,12 +1924,12 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
@@ -1964,9 +1964,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -2003,6 +2000,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(715): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): message : feeds call on this line
@@ -2080,17 +2080,18 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(715): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(44): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : index '$S68' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(44): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(44): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : index '$S71' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(44): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : index '$S70' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(44): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : index '$S68' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(44): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : index '$S67' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : index '$S70' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h(40): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalDistances.h(172): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalDistances.h(171): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalDistances.h(172): message : feeds call on this line
@@ -2106,16 +2107,24 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1081): message : index '' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): message : index 'right' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): message : index 'left' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -2152,15 +2161,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1081): message : index '' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
@@ -2174,9 +2174,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algo
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(91): message : index 'nid' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(421): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(419): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(421): message : feeds call on this line
@@ -2189,6 +2186,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1081): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): message : feeds call on this line
@@ -2201,9 +2201,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -2240,6 +2237,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(715): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): message : feeds call on this line
@@ -2283,9 +2283,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -2322,6 +2319,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
@@ -2386,15 +2386,15 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(773): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(769): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(773): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
@@ -2432,6 +2432,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -2465,9 +2468,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
@@ -2569,6 +2569,12 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algo
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalDiameter.h(72): message : index '$S70' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalDiameter.h(72): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): message : index 'right' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): message : index 'left' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(421): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(419): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(421): message : feeds call on this line
@@ -2581,18 +2587,18 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): message : index 'right' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(223): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): message : index 'left' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\LabelPQ.h(220): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1081): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -2623,15 +2629,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(773): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(769): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(773): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(771): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
@@ -2644,15 +2644,15 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(715): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(67): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(65): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(67): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(121): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(119): message : index 'nid' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(121): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(126): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(124): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(126): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(67): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(65): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\Burstiness.h(67): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(421): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(419): message : index 'arg_index' range checked by comparison on this line
@@ -2702,9 +2702,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(824): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(823): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(824): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(803): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(799): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(803): message : feeds call on this line
@@ -2717,6 +2714,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
@@ -2900,14 +2900,17 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(205): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(204): message : index 'e' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(205): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1432): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1430): message : index 'a' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1432): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2333): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\class.h(703): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\class.h(702): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\class.h(703): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(421): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(419): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(421): message : feeds call on this line
@@ -2920,9 +2923,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
@@ -3083,10 +3083,10 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1331): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1328): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1331): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1432): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1430): message : index 'a' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1432): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\class.h(703): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\class.h(702): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\class.h(703): message : feeds call on this line
@@ -3096,28 +3096,34 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(419): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(419): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(419): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2333): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(410): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(410): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : index 'arg_index' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(409): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2333): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1081): message : index '' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(715): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1081): message : index '' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -3154,12 +3160,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pytypes.h(2317): warning C4868: compiler may not enforce left-to-right evaluation order in braced initializer list
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1112): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1111): message : index '' range checked by comparison on this line
@@ -3444,6 +3444,12 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1081): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1087): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1068): message : index 'ti' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(1075): message : feeds call on this line
@@ -3465,15 +3471,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(828): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(823): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(828): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1224): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(824): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(823): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(824): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1218): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\cast.h(1219): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(803): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(799): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(803): message : feeds call on this line
@@ -3544,9 +3544,6 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(803): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(799): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(803): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(773): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(769): message : index 'args_copied' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(773): message : feeds call on this line
@@ -3556,6 +3553,9 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(113): message : index 'i' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(114): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
@@ -3626,11 +3626,12 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\p
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(942): message : index 'i' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\pybind11.h(943): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(715): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\type_caster_base.h(716): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : index 'n' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\extern\pybind11\include\pybind11\detail\common.h(469): message : feeds call on this line
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/PROFILE' specification
      Creating library C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/python_binding/Debug/pytglib.lib and object C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/python_binding/Debug/pytglib.exp
   pytglib.vcxproj -> C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\python_binding\Debug\pytglib.cp310-win_amd64.pyd

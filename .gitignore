@@ -2,3 +2,4 @@
 *.ipch
 *.csv
 *.opendb
+./tglib/tglib_cpp/build
