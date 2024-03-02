@@ -117,16 +117,20 @@ class BasicPlots:
         fig.savefig('plots/' + title + '.png', format='png')
         plt.show()
 
-from vtune import allData, cc_plot, cc_plot_sorted, cc_datasets, some_cc_datasets, some_cc_plot_sorted, stats_datasets, stats_plot_sorted, some_stats_plot_sorted, some_stats_datasets
+from vtune import allData, cc_plot, cc_plot_sorted, cc_datasets, some_cc_datasets, some_cc_plot_sorted, stats_datasets, stats_plot_sorted, some_stats_plot_sorted, some_stats_datasets,cc_relative_plot
 
 class VtunePlots:
-    def vtune_plot_clusteringCoefficient(all = True):
-        if(all):
+    def vtune_plot_clusteringCoefficient(all = True, rel=False):
+        if(all and not rel):
             sets = cc_datasets
             plot = cc_plot_sorted
-        else:
+        elif(not all and not rel):
             sets = some_cc_datasets
             plot = some_cc_plot_sorted
+        elif(all and rel):
+            sets = cc_datasets
+            plot = cc_relative_plot
+
 
         width = 0.5
 
@@ -168,5 +172,5 @@ class VtunePlots:
 
         plt.show()
 
-VtunePlots.vtune_plot_clusteringCoefficient(True)
+VtunePlots.vtune_plot_clusteringCoefficient(True, True)
 # VtunePlots.vtune_plot_stats()

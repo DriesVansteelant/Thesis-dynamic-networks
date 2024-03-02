@@ -1,7 +1,7 @@
 import numpy as np
 
-test_CanParl = {
-    "test_clustering_coefficient": {
+CanParl = {
+    "clustering_coefficient": {
         "temporal_clustering_coefficient": {
             "tree_end": 0.548,
             "tree_find": 2.063,
@@ -18,7 +18,7 @@ test_CanParl = {
         },
         "to_incident_lists": 0.016,
     },
-    "test_load_time": {
+    "load_time": {
         "load_ordered_edge_list": {
             "basic_ifstream": 0.015,
             "std_get_inline": 0.119,
@@ -29,7 +29,7 @@ test_CanParl = {
             "splitString": 0.741,
         }
     },
-    "test_degree_list": {
+    "degree_list": {
         "get_degrees": {
             "eh vector destructor iterator": 0,
             "tree_insert": 0,
@@ -42,7 +42,7 @@ test_CanParl = {
             "vector_push_back": 0.016,
         }
     },
-    "test_get_stats": {
+    "get_stats": {
         "get_statistics": {
             "hash_insert": 0.079,
             "tree_insert": 0.158,
@@ -53,14 +53,14 @@ test_CanParl = {
             "unordered_set": 0,
         }
     },
-    "test_pageRank": {-1},
+    "pageRank": {-1},
 }
 
 
 # =======================================================
 
-test_Flights = {
-    "test_clustering_coefficient": {
+Flights = {
+    "clustering_coefficient": {
         "temporal_clustering_coefficient": {
             "tree_end": 32.36,
             "tree_find": 131.265,
@@ -77,7 +77,7 @@ test_Flights = {
         },
         "to_incident_lists": 0,
     },
-    "test_load_time": {
+    "load_time": {
         "load_ordered_edge_list": {
             "basic_ifstream": 0,
             "std_get_inline": 3.329,
@@ -88,7 +88,7 @@ test_Flights = {
             "splitString": 18.379,
         }
     },
-    "test_degree_list": {
+    "degree_list": {
         "get_degrees": {
             "eh vector destructor iterator": 0,
             "tree_insert": 0.47,
@@ -101,7 +101,7 @@ test_Flights = {
             "vector_push_back": 0.0,
         }
     },
-    "test_get_stats": {
+    "get_stats": {
         "get_statistics": {
             "hash_insert": 1.264,
             "tree_insert": 4.49,
@@ -112,7 +112,7 @@ test_Flights = {
             "unordered_set": 0,
         }
     },
-    "test_pageRank": {
+    "pageRank": {
         "temporal_page_rank": {
             "vector_op_get": 0.063,
             "vector_at": 0.015,
@@ -122,8 +122,8 @@ test_Flights = {
 
 # =======================================================
 
-test_SocialEvo = {
-    "test_clustering_coefficient": {
+SocialEvo = {
+    "clustering_coefficient": {
         "temporal_clustering_coefficient": {
             "tree_end": 10.082,
             "tree_find": 37.551,
@@ -140,7 +140,7 @@ test_SocialEvo = {
         },
         "to_incident_lists": 0.393,
     },
-    "test_load_time": {
+    "load_time": {
         "load_ordered_edge_list": {
             "basic_ifstream": 0,
             "std_get_inline": 3.871,
@@ -151,7 +151,7 @@ test_SocialEvo = {
             "splitString": 20.333,
         }
     },
-    "test_degree_list": {
+    "degree_list": {
         "get_degrees": {
             "eh_vector_destructor_iterator": 0,
             "tree_insert": 0,
@@ -164,7 +164,7 @@ test_SocialEvo = {
             "vector_pushback": 0,
         }
     },
-    "test_get_stats": {
+    "get_stats": {
         "get_statistics": {
             "hash_insert": 2.22,
             "tree_insert": 3.146,
@@ -175,13 +175,13 @@ test_SocialEvo = {
             "set_alloc": 0.155,
         }
     },
-    "test_pageRank": {"temporal_page_rank": {"vector_op_get": 0.047, "vector_at": 0}},
+    "pageRank": {"temporal_page_rank": {"vector_op_get": 0.047, "vector_at": 0}},
 }
 
 # =======================================================
 
-test_enron = {
-    "test_clustering_coefficient": {
+enron = {
+    "clustering_coefficient": {
         "temporal_clustering_coefficient": {
             "tree_end": 0.267,
             "tree_find": 0.732,
@@ -198,7 +198,7 @@ test_enron = {
         },
         "to_incident_lists": 0.031,
     },
-    "test_load_time": {
+    "load_time": {
         "load_ordered_edge_list": {
             "basic_ifstream": 0,
             "std_get_inline": 0.264,
@@ -209,7 +209,7 @@ test_enron = {
             "splitString": 1.211,
         }
     },
-    "test_degree_list": {
+    "degree_list": {
         "get_degrees": {
             "eh_vector_destructor_iterator": 0,
             "tree_insert": 0,
@@ -222,7 +222,7 @@ test_enron = {
             "vector_pushback": 0,
         }
     },
-    "test_get_stats": {
+    "get_stats": {
         "get_statistics": {
             "hash_insert": 0.095,
             "tree_insert": 0.157,
@@ -233,12 +233,12 @@ test_enron = {
             "set_alloc": 0,
         }
     },
-    "test_pageRank": {"temporal_page_rank" "vector_op_get": 0, "vector_at": 0},
+    "pageRank": {"temporal_page_rank" "vector_op_get": 0, "vector_at": 0},
 }
 # ========================================================
 
-test_lastfm = {
-    "test_clustering_coefficient": {
+lastfm = {
+    "clustering_coefficient": {
         "temporal_clustering_coefficient": {
             "tree_end": 0,
             "tree_find": 0,
@@ -255,7 +255,7 @@ test_lastfm = {
         },
         "to_incident_lists": 0.234,
     },
-    "test_load_time": {
+    "load_time": {
         "load_ordered_edge_list": {
             "basic_ifstream": 0.007,
             "std_get_inline": 2.635,
@@ -266,7 +266,7 @@ test_lastfm = {
             "splitString": 13.064,
         }
     },
-    "test_degree_list": {
+    "degree_list": {
         "get_degrees": {
             "eh_vector_destructor_iterator": 0,
             "tree_insert": 0,
@@ -280,7 +280,7 @@ test_lastfm = {
             "vector_pushback": 0.032,
         }
     },
-    "test_get_stats": {
+    "get_stats": {
         "get_statistics": {
             "hash_insert": 2.57,
             "tree_insert": 2.755,
@@ -291,12 +291,12 @@ test_lastfm = {
             "unordered_set": 0.392,
         }
     },
-    "test_pageRank": {"temporal_page_rank": {"vector_op_get": 0.016, "vector_at": 0}},
+    "pageRank": {"temporal_page_rank": {"vector_op_get": 0.016, "vector_at": 0}},
 }
 # ========================================================
 
-test_reddit = {
-    "test_clustering_coefficient": {
+reddit = {
+    "clustering_coefficient": {
         "temporal_clustering_coefficient": {
             "tree_end": 0,
             "tree_find": 0,
@@ -313,7 +313,7 @@ test_reddit = {
         },
         "to_incident_lists": 0.252,
     },
-    "test_load_time": {
+    "load_time": {
         "load_ordered_edge_list": {
             "basic_ifstream": 0,
             "std_get_inline": 1.398,
@@ -324,7 +324,7 @@ test_reddit = {
             "splitString": 6.805,
         }
     },
-    "test_degree_list": {
+    "degree_list": {
         "get_degrees": {
             "eh_vector_destructor_iterator": 0.016,
             "tree_insert": 0.031,
@@ -337,7 +337,7 @@ test_reddit = {
             "vector_pushback": 0.158,
         }
     },
-    "test_get_stats": {
+    "get_stats": {
         "get_statistics": {
             "hash_insert": 1.274,
             "tree_insert": 1.249,
@@ -348,13 +348,13 @@ test_reddit = {
             "unordered_set": 0.157,
         }
     },
-    "test_pageRank": {"temporal_page_rank	" "vector_op_get": 0.016, "vector_at": 0},
+    "pageRank": {"temporal_page_rank	" "vector_op_get": 0.016, "vector_at": 0},
 }
 
 # ========================================================
 
-test_tgblReview = {
-    "test_clustering_coefficient": {
+tgblReview = {
+    "clustering_coefficient": {
         "temporal_clustering_coefficient": {
             "tree_end": 20.395,
             "tree_find": 62.917,
@@ -371,7 +371,7 @@ test_tgblReview = {
         },
         "to_incident_lists": 4.262,
     },
-    "test_load_time": {
+    "load_time": {
         "load_ordered_edge_list": {
             "basic_ifstream": 0,
             "std_get_inline": 11.748,
@@ -382,7 +382,7 @@ test_tgblReview = {
             "splitString": 51.504,
         }
     },
-    "test_degree_list": {
+    "degree_list": {
         "get_degrees": {
             "eh_vector_destructor_iterator": 0.232,
             "tree_insert": 1.402,
@@ -396,7 +396,7 @@ test_tgblReview = {
             "vector_pushback": 5.687,
         }
     },
-    "test_get_stats": {
+    "get_stats": {
         "get_statistics": {
             "hash_insert": 3.158,
             "tree_insert": 16.099,
@@ -407,18 +407,77 @@ test_tgblReview = {
             "unordered_set": 0,
         }
     },
-    "test_pageRank": {"temporal_page_rank": {"vector_op_get": 0.016, "vector_at": 0}},
+    "pageRank": {"temporal_page_rank": {"vector_op_get": 0.016, "vector_at": 0}},
 }
 
+# ========================================================
+
+wikipedia = {
+    "clustering_coefficient": {
+        "temporal_clustering_coefficient": {
+            "tree_end": 0,
+            "tree_find": 0,
+            "tree_insert": 0.092,
+            "tree_op_equals": 0,
+            "tree_const_iterator": 0,
+            "set_alloc": 0,
+            "tree_op_add": 0,
+            "set_alloc": 0,
+            "vector_unchecked_begin": 0.016,
+            "incidentLists_getNode": 0,
+            "pair": 0,
+            "set": 0.016,
+        },
+        "to_incident_lists": 4.262,
+    },
+    "load_time": {
+        "load_ordered_edge_list": {
+            "basic_ifstream": 0,
+            "std_get_inline": 0.327,
+            "sort": 0.778,
+            "vector_alloc": 0.11,
+            "vector_pushback": 0.016,
+            "getNodeId": 0.155,
+            "splitString": 1.562,
+        }
+    },
+    "degree_list": {
+        "get_degrees": {
+            "eh_vector_destructor_iterator": 0,
+            "tree_insert": 0,
+            "basic_string": 0.031,
+            "basic_string": 0,
+            "map_alloc": 0.03,
+            "map_op_get": 0.016,
+            "map_op_get": 0,
+            "pair_alloc": 0.016,
+            "sort": 1.44,
+            "vector_pushback": 0.156,
+        }
+    },
+    "get_stats": {
+        "get_statistics": {
+            "hash_insert": 0.187,
+            "tree_insert": 0.297,
+            "pair_alloc": 0.031,
+            "pair_alloc2": 0.031,
+            "pair": 0,
+            "set_alloc": 0,
+            "unordered_set": 0.031,
+        }
+    },
+    "pageRank": {"temporal_page_rank": {"vector_op_get": 0.016, "vector_at": 0}},
+}
 
 allData = {
-    "test_CanParl": test_CanParl,
-    "test_Flights": test_Flights,
-    "test_SocialEvo": test_SocialEvo,
-    "test_enron": test_enron,
-    "test_lastfm": test_lastfm,
-    "test_reddit": test_reddit,
-    "test_tgblReview": test_tgblReview
+    "CanParl": CanParl,
+    "Flights": Flights,
+    "SocialEvo": SocialEvo,
+    "enron": enron,
+    "lastfm": lastfm,
+    "reddit": reddit,
+    "tgblReview": tgblReview,
+    "wikipedia":wikipedia
 }
 
 def sum_of_dict(x):
@@ -429,13 +488,14 @@ def sum_list(x):
 # get stats data from allData
 stats = {}
 for dataset in allData:
-    stats[dataset] = allData[dataset]["test_get_stats"]["get_statistics"]
+    stats[dataset] = allData[dataset]["get_stats"]["get_statistics"]
 # get list of function names
-funcs = list(stats['test_CanParl'].keys())
+funcs = list(stats['CanParl'].keys())
 # sort by total run time
 stats_sorted = dict((sorted(stats.items(), key=sum_of_dict)) )
 stats_datasets = list(stats_sorted.keys())
-some_stats_datasets = ['test_CanParl', 'test_enron', 'test_reddit', 'test_lastfm', 'test_SocialEvo', 'test_Flights',]
+some_stats_datasets = ['CanParl', 'enron', 'reddit', 'lastfm', 'SocialEvo', 'Flights',]
+
 # make plottable dict {'functionName': [values]}
 stats_plot = {}
 for func in funcs:
@@ -455,20 +515,34 @@ some_stats_plot_sorted = dict((sorted(some_stats_plot.items(), key=sum_list, rev
 # get cc data from allData
 clustering_coefficients = {}
 for dataset in allData:
-    clustering_coefficients[dataset] = allData[dataset]["test_clustering_coefficient"]["temporal_clustering_coefficient"]
+    clustering_coefficients[dataset] = allData[dataset]["clustering_coefficient"]["temporal_clustering_coefficient"]
+
 # get list of function names
-funcs = list(clustering_coefficients['test_CanParl'].keys())
+funcs = list(clustering_coefficients['CanParl'].keys())
+
 # sort by total run time
 clustering_coefficients_sorted = dict((sorted(clustering_coefficients.items(), key=sum_of_dict)) )
 cc_datasets = list(clustering_coefficients_sorted.keys())
-some_cc_datasets = ['test_reddit', 'test_lastfm', 'test_enron', 'test_CanParl']
+some_cc_datasets = ['reddit', 'lastfm', 'enron', 'CanParl']
+
+# get total runtime
+cc_total = {}
+for ds in cc_datasets:
+    cc_total[ds] = np.sum(list(clustering_coefficients_sorted[ds].values()))
+
+
 # make plottable dict {'functionName': [values]}
 cc_plot = {}
+cc_relative_plot = {}
 for func in funcs:
     cc_plot[func] = []
+    cc_relative_plot[func] = []
     for ds in cc_datasets:
         cc_plot[func].append(clustering_coefficients_sorted[ds][func])
+        cc_relative_plot[func].append(clustering_coefficients_sorted[ds][func]/cc_total[ds])
 cc_plot_sorted = dict((sorted(cc_plot.items(), key=sum_list, reverse=True)) )
+print(cc_relative_plot)
+print(cc_plot)
 
 some_cc_plot = {}
 for func in funcs:
