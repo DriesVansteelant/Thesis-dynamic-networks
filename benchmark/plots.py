@@ -117,18 +117,18 @@ class BasicPlots:
         fig.savefig('plots/' + title + '.png', format='png')
         plt.show()
 
-from vtune import allData, cc_plot, cc_plot_sorted, cc_datasets, some_cc_datasets, some_cc_plot_sorted, stats_datasets, stats_plot_sorted, some_stats_plot_sorted, some_stats_datasets,cc_relative_plot
+from vtune import allData, cc_plot, datasets, cc_plot_sorted, some_cc_datasets, some_cc_plot_sorted, stats_plot_sorted, stats_relative_plot, some_stats_plot_sorted, some_stats_datasets,cc_relative_plot, num_nodes, num_edges, num_interactions
 
 class VtunePlots:
     def vtune_plot_clusteringCoefficient(all = True, rel=False):
         if(all and not rel):
-            sets = cc_datasets
+            sets = [s + '(n: ' + str(num_nodes[s]) + ',\n e: ' + str(num_edges[s]) + ', i: ' + str(num_interactions[s]) +')' for s in datasets]
             plot = cc_plot_sorted
         elif(not all and not rel):
             sets = some_cc_datasets
             plot = some_cc_plot_sorted
         elif(all and rel):
-            sets = cc_datasets
+            sets = [s + '(n: ' + str(num_nodes[s]) + ',\n e: ' + str(num_edges[s]) + ', i: ' + str(num_interactions[s]) +')' for s in datasets]
             plot = cc_relative_plot
 
 
@@ -138,23 +138,32 @@ class VtunePlots:
         bottom = np.zeros(len(sets))
 
         for boolean, weight_count in plot.items():
+            print(boolean)
+            print(weight_count)
+            print(sets)
             p = ax.bar(sets, weight_count, width, label=boolean, bottom=bottom)
             bottom += weight_count
 
-        ax.set_title("clustering coefficient")
-        ax.legend()
-        plt.xticks(rotation=45)
+        ax.set_title("Clustering coefficient")
+        # ax.legend()
+
+        ax.legend(loc='center left', bbox_to_anchor=(1, 0.65))
+        plt.xticks(rotation=90)
         # ax.set_yscale('log')
 
         plt.show()
         
-    def vtune_plot_stats(all=True):
-        if(all):
-            sets = stats_datasets
+    def vtune_plot_stats(all=True, rel = False):
+        if(all and not rel):
+            sets = [s + '(n: ' + str(num_nodes[s]) + ',\n e: ' + str(num_edges[s]) + ', i: ' + str(num_interactions[s]) +')' for s in datasets]
             plot = stats_plot_sorted
-        else:
+        elif(not all and not rel):
             sets = some_stats_datasets
             plot = some_stats_plot_sorted
+        elif(all and rel):
+            sets = [s + '(n: ' + str(num_nodes[s]) + ',\n e: ' + str(num_edges[s]) + ', i: ' + str(num_interactions[s]) +')' for s in datasets]
+            plot = stats_relative_plot
+
 
         width = 0.5
 
@@ -162,15 +171,45 @@ class VtunePlots:
         bottom = np.zeros(len(sets))
 
         for boolean, weight_count in plot.items():
+            print(boolean)
+            print(weight_count)
+            print(sets)
             p = ax.bar(sets, weight_count, width, label=boolean, bottom=bottom)
             bottom += weight_count
 
-        ax.set_title("get statistics")
-        ax.legend()
-        plt.xticks(rotation=45)
+        ax.set_title("Clustering coefficient")
+        # ax.legend()
+
+        ax.legend(loc='center left', bbox_to_anchor=(1, 0.65))
+        plt.xticks(rotation=90)
         # ax.set_yscale('log')
 
         plt.show()
+        # if(all and not rel):
+        #     sets = datasets
+        #     plot = stats_plot_sorted
+        # elif(not all and not rel):
+        #     sets = some_stats_datasets
+        #     plot = some_stats_plot_sorted
+        # elif(all and rel):
+        #     sets = datasets
+        #     plot = stats_relative_plot
+        
+        # width = 0.5
 
-VtunePlots.vtune_plot_clusteringCoefficient(True, True)
-# VtunePlots.vtune_plot_stats()
+        # fig, ax = plt.subplots()
+        # bottom = np.zeros(len(sets))
+
+        # for boolean, weight_count in plot.items():
+        #     p = ax.bar(sets, weight_count, width, label=boolean, bottom=bottom)
+        #     bottom += weight_count
+
+        # ax.set_title("get statistics")
+        # ax.legend()
+        # plt.xticks(rotation=90)
+        # # ax.set_yscale('log')
+
+        # plt.show()
+
+# VtunePlots.vtune_plot_clusteringCoefficient(True, True)
+VtunePlots.vtune_plot_stats(True, True)

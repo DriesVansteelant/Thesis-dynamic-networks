@@ -37,6 +37,20 @@ std::string map_to_string(std::map<std::string, int>& m) {
 	return result;
 }
 
+void print_vector(std::vector<double> vec) {
+	for (auto c : vec) {
+		std::cout << c << ", ";
+	}
+	std::cout << "\n";
+}
+
+void print_node_vector(std::vector<TGNode> vec) {
+	for (auto c : vec) {
+		std::cout << c.id << ", ";
+	}
+	std::cout << "\n========================================\n";
+}
+
 OrderedEdgeList<TemporalEdge> test_load_ime(std::string inPath) {
 	auto tgs = load_ordered_edge_list<TemporalEdge>(inPath);
 	return  tgs;
@@ -48,9 +62,51 @@ TemporalGraphStatistics test_get_stats(OrderedEdgeList<TemporalEdge> tgs) {
 }
 
 std::vector<double> test_clustering_coefficient(OrderedEdgeList<TemporalEdge> tgs) {
-	auto tg = to_incident_lists<TGNode>(tgs);
-	auto cc = temporal_clustering_coefficient(tg, tg.getTimeInterval());
+	std::chrono::time_point<std::chrono::system_clock> start, end;
 
+	start = std::chrono::system_clock::now();
+
+	auto tg = to_incident_lists<TGNode>(tgs);
+	//print_node_vector(tg.getNodes());
+	//tg.sortNodes();
+	//print_node_vector(tg.getNodes());
+
+	end = std::chrono::system_clock::now();
+
+	std::chrono::duration<double> elapsed_seconds1 = end - start;
+
+	std::cout << "load graph time: " << elapsed_seconds1.count() << "s\n";
+
+
+	std::cout << "start cc calc" << "\n";
+
+	start = std::chrono::system_clock::now();
+	auto cc = temporal_clustering_coefficient(tg, tg.getTimeInterval());
+	end = std::chrono::system_clock::now();
+
+	std::chrono::duration<double> elapsed_seconds = end - start;
+
+	std::cout << "regular time: " << elapsed_seconds.count() << "s\n";
+	//print_vector(cc);
+
+	start = std::chrono::system_clock::now();
+	auto cc_multi = temporal_clustering_coefficient_multi(tg, tg.getTimeInterval());
+	end = std::chrono::system_clock::now();
+
+	elapsed_seconds = end - start;
+
+	std::cout << "multi threaded time: " << elapsed_seconds.count() << "s\n";
+	//print_vector(cc);
+
+
+	start = std::chrono::system_clock::now();
+	auto cc_andere_multi = temporal_clustering_coefficient_andere_multi(tg, tg.getTimeInterval());
+	end = std::chrono::system_clock::now();
+
+	elapsed_seconds = end - start;
+
+	std::cout << "multi threaded time: " << elapsed_seconds.count() << "s\n";
+	//print_vector(cc);
 	return cc;
 }
 
@@ -75,104 +131,104 @@ void test_enron() {
 	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/enron.txt";
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 }
 
 void test_SocialEvo() {
 	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/SocialEvo.txt";
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 }
 
 void test_wikipedia() {
 	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/wikipedia.txt";
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 }
 
 void test_UNvote() {
 	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/UNvote.txt";
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 }
 
 void test_CanParl() {
 	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/CanParl.txt";
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 }
 
 void test_reddit() {
 	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/reddit.txt";
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 }
 
 void test_lastfm() {
 	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/lastfm.txt";
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 }
 
 void test_Flights() {
 	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/Flights.txt";
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 }
 
 
@@ -217,25 +273,26 @@ int main(int argc, char* argv[])
 	//__itt_task_end(domain);
 
 
-	std::cout << "test_enron \n" ;
+	std::cout << "test_enron \n";
 	test_enron();
-	std::cout << "test_SocialEvo \n";
-	test_SocialEvo();
-	std::cout << "test_wikipedia \n";
-	test_wikipedia();
-	std::cout << "test_UNvote \n";
-	test_UNvote();
-	std::cout << "test_CanParl \n";
-	test_CanParl();
-	std::cout << "test_reddit \n";
-	test_reddit();
-	std::cout << "test_lastfm \n";
-	test_lastfm();
-	std::cout << "test_Flights \n";
-	test_Flights();
-	std::cout << "test_tgbl_review \n";
-	test_tgbl_review();
-	std::cout << "DONE! \n";
+	//std::cout << "test_SocialEvo \n";
+	//test_SocialEvo();
+	//std::cout << "================================================================================ \n";
+	//std::cout << "test_wikipedia \n";
+	//test_wikipedia();
+	//std::cout << "test_UNvote \n";
+	//test_UNvote();
+	//std::cout << "test_CanParl \n";
+	//test_CanParl();
+	//std::cout << "test_reddit \n";
+	//test_reddit();
+	//std::cout << "test_lastfm \n";
+	//test_lastfm();
+	//std::cout << "test_Flights \n";
+	//test_Flights();
+	//std::cout << "test_tgbl_review \n";
+	//test_tgbl_review();
+	//std::cout << "DONE! \n";
 
 	return 1; // optional return value
 }

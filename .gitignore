@@ -2,4 +2,12 @@
 *.ipch
 *.csv
 *.opendb
-./tglib/tglib_cpp/build
+*.exe
+*.obj
+*.log
+*.pdb
+*.suo
+*.db
+*.tlog
+
+tglib/tglib_cpp/build/
