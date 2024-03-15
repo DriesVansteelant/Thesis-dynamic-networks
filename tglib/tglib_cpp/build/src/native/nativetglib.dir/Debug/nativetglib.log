@@ -24,7 +24,7 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\nati
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(26,10): warning C4464: relative include path contains '..'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\DirectedLineGraph.h(55,13): warning C4820: 'tglib::DLEdge': '4' bytes padding added after data member 'tglib::DLEdge::tg_w'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\DirectedLineGraph.h(75,19): warning C4820: 'tglib::DLNode': '4' bytes padding added after data member 'tglib::DLNode::id'
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(65,1): warning C4820: 'tglib::NodeIdManager': '4' bytes padding added after data member 'tglib::NodeIdManager::nid'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(66,1): warning C4820: 'tglib::NodeIdManager': '4' bytes padding added after data member 'tglib::NodeIdManager::nid'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(12,10): warning C4464: relative include path contains '..'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(13,10): warning C4464: relative include path contains '..'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(15,10): warning C4464: relative include path contains '..'
@@ -126,30 +126,30 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(6584,1): warning C4820: 'Concurrency::details::_RunAnyParam<std::pair<size_t,Concurrency::details::_CancellationTokenState *>>': '7' bytes padding added after data member 'Concurrency::details::_RunAnyParam<std::pair<size_t,Concurrency::details::_CancellationTokenState *>>::_M_fHasExplicitToken'
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(6584,1): warning C4625: 'Concurrency::details::_RunAnyParam<std::pair<size_t,Concurrency::details::_CancellationTokenState *>>': copy constructor was implicitly defined as deleted
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(6584,1): warning C4626: 'Concurrency::details::_RunAnyParam<std::pair<size_t,Concurrency::details::_CancellationTokenState *>>': assignment operator was implicitly defined as deleted
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(37,1): warning C4820: 'tglib::TGNodeT<tglib::TemporalEdge>': '4' bytes padding added after data member 'tglib::TGNodeT<tglib::TemporalEdge>::id'
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(199): message : see reference to class template instantiation 'tglib::TGNodeT<tglib::TemporalEdge>' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(14,10): warning C4464: relative include path contains '..'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(16,10): warning C4464: relative include path contains '..'
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(252,26): warning C4100: 'argv': unreferenced formal parameter
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(252,14): warning C4100: 'argc': unreferenced formal parameter
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(115,40): warning C4244: 'argument': conversion from '_Ty' to 'tglib::NodeId', possible loss of data
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/IncidentLists.h(37,1): warning C4820: 'tglib::TGNodeT<tglib::TemporalEdge>': '4' bytes padding added after data member 'tglib::TGNodeT<tglib::TemporalEdge>::id'
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(48): message : see reference to class template instantiation 'tglib::TGNodeT<tglib::TemporalEdge>' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(243,26): warning C4100: 'argv': unreferenced formal parameter
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(243,14): warning C4100: 'argc': unreferenced formal parameter
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(118,40): warning C4244: 'argument': conversion from '_Ty' to 'tglib::NodeId', possible loss of data
           with
           [
               _Ty=tglib::Time
           ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(174): message : see reference to function template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge> tglib::load_ordered_edge_list<tglib::TemporalEdge>(const std::string &,bool)' being compiled
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(116,40): warning C4244: 'argument': conversion from '_Ty' to 'tglib::NodeId', possible loss of data
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(177): message : see reference to function template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge> tglib::load_ordered_edge_list<tglib::TemporalEdge>(const std::string &,bool)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(119,40): warning C4244: 'argument': conversion from '_Ty' to 'tglib::NodeId', possible loss of data
           with
           [
               _Ty=tglib::Time
           ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(140,1): warning C4365: 'argument': conversion from 'tglib::NodeId' to 'size_t', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(143,1): warning C4365: 'argument': conversion from 'tglib::NodeId' to 'size_t', signed/unsigned mismatch
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(75,1): warning C4305: 'argument': truncation from 'const __int64' to 'const _Ty'
           with
           [
               _Ty=long
           ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(175): message : see reference to function template instantiation 'tglib::TRSGraph tglib::to_trs_graph<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(178): message : see reference to function template instantiation 'tglib::TRSGraph tglib::to_trs_graph<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(75,67): warning C4309: 'argument': truncation of constant value
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(76,1): warning C4305: 'argument': truncation from 'const __int64' to 'const _Ty'
           with
@@ -248,28 +248,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(38,1): warning C4267: 'argument': conversion from 'size_t' to 'tglib::NodeId', possible loss of data
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(69): message : see reference to function template instantiation 'tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> tglib::to_incident_lists<tglib::TGNode,tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\../core/Transformations.h(38,1): warning C4365: 'argument': conversion from 'size_t' to 'tglib::NodeId', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(105,1): warning C4365: 'argument': conversion from 'const int' to 'size_t', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(99,25): warning C4388: '<': signed/unsigned mismatch
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(84): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_clustering_coefficient<tglib::TGNode,tglib::TemporalEdge>(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval)' being compiled
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(172,1): warning C4365: 'initializing': conversion from 'size_t' to '__int64', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(93): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_clustering_coefficient_multi<tglib::TGNode,tglib::TemporalEdge>(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval)' being compiled
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(175,24): warning C4388: '<': signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(178,10): warning C4388: '==': signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(179,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(179,1): warning C4365: '=': conversion from 'size_t' to 'int', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(182,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(182,1): warning C4365: '=': conversion from 'size_t' to 'int', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(170,8): warning C4189: 'timesteps': local variable is initialized but not referenced
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(242,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'size_t', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(103): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_clustering_coefficient_andere_multi<tglib::TGNode,tglib::TemporalEdge>(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval)' being compiled
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(255,1): warning C4365: 'initializing': conversion from 'size_t' to '__int64', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(259,24): warning C4388: '<': signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(262,10): warning C4388: '==': signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(263,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(263,1): warning C4365: '=': conversion from 'size_t' to 'int', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(266,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(266,1): warning C4365: '=': conversion from 'size_t' to 'int', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(102,1): warning C4365: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(109,1): warning C4365: 'argument': conversion from 'const int' to 'size_t', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(118,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(122,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(40,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(119): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_pagerank<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &,double,double,double)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(110): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_pagerank<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &,double,double,double)' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(42,53): warning C5219: implicit conversion from 'unsigned __int64' to 'double', possible loss of data
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(51,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalPageRank.h(52,1): warning C4365: 'argument': conversion from 'const tglib::NodeId' to 'const unsigned __int64', signed/unsigned mismatch
@@ -279,7 +265,7 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\nati
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(130): message : see reference to function template instantiation 'tglib::TemporalGraphStatistics tglib::get_statistics<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(128): message : while compiling class template member function 'const tglib::TemporalGraphStatistics tglib::OrderedEdgeList<tglib::TemporalEdge>::getStats(void)'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(60): message : see reference to function template instantiation 'const tglib::TemporalGraphStatistics tglib::OrderedEdgeList<tglib::TemporalEdge>::getStats(void)' being compiled
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(174): message : see reference to class template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge>' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(177): message : see reference to class template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge>' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(269,36): warning C4309: '=': truncation of constant value
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(270,1): warning C4305: '=': truncation from 'const __int64' to 'long'
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(270,37): warning C4309: '=': truncation of constant value
@@ -289,7 +275,7 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\nati
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(125): message : see reference to function template instantiation 'std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::get_degrees<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(125): message : see reference to function template instantiation 'std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::get_degrees<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(123): message : while compiling class template member function 'const std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::getDegreeList(void)'
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(125): message : see reference to function template instantiation 'const std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::getDegreeList(void)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(116): message : see reference to function template instantiation 'const std::vector<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>,std::allocator<std::map<std::string,int,std::less<std::string>,std::allocator<std::pair<const std::string,int>>>>> tglib::OrderedEdgeList<tglib::TemporalEdge>::getDegreeList(void)' being compiled
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(205,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(214,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/OrderedEdgeList.h(219,22): warning C4388: '<': signed/unsigned mismatch
@@ -317,7 +303,7 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\nati
           [
               E=tglib::TemporalEdge
           ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(140): message : see reference to function template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge>::OrderedEdgeList(size_t,std::vector<E,std::allocator<E>>,tglib::TimeInterval,std::unordered_map<tglib::NodeId,tglib::NodeId,std::hash<int>,std::equal_to<tglib::NodeId>,std::allocator<std::pair<const tglib::NodeId,tglib::NodeId>>>)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(143): message : see reference to function template instantiation 'tglib::OrderedEdgeList<tglib::TemporalEdge>::OrderedEdgeList(size_t,std::vector<E,std::allocator<E>>,tglib::TimeInterval,std::unordered_map<tglib::NodeId,tglib::NodeId,std::hash<int>,std::equal_to<tglib::NodeId>,std::allocator<std::pair<const tglib::NodeId,tglib::NodeId>>>)' being compiled
           with
           [
               E=tglib::TemporalEdge
@@ -356,97 +342,18 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util
               _Other1=size_t &,
               _Other2=tglib::Time &
           ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(175): message : see reference to function template instantiation 'tglib::TRSGraph tglib::to_trs_graph<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(178): message : see reference to function template instantiation 'tglib::TRSGraph tglib::to_trs_graph<tglib::TemporalEdge>(const tglib::OrderedEdgeList<tglib::TemporalEdge> &)' being compiled
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(186,48): warning C4365: 'initializing': conversion from 'size_t' to '_Ty1', signed/unsigned mismatch
           with
           [
               _Ty1=tglib::NodeId
-          ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(144,1): warning C4365: 'argument': conversion from 'const int' to 'size_t', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(185): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::do_cc<N,E>(const tglib::IncidentLists<N,E> &,tglib::TimeInterval,size_t,size_t)' being compiled
-          with
-          [
-              N=tglib::TGNode,
-              E=tglib::TemporalEdge
-          ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(93): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_clustering_coefficient_multi<tglib::TGNode,tglib::TemporalEdge>(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval)' being compiled
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(209,1): warning C4365: 'initializing': conversion from 'tglib::NodeId' to 'size_t', signed/unsigned mismatch
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(269): message : see reference to function template instantiation 'void tglib::count_edges<N,E>(std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>,tglib::TimeInterval,tglib::NodeId,tglib::NodeId,std::vector<double,std::allocator<double>>)' being compiled
-          with
-          [
-              N=tglib::TGNode,
-              E=tglib::TemporalEdge
-          ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\Main.cpp(103): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> tglib::temporal_clustering_coefficient_andere_multi<tglib::TGNode,tglib::TemporalEdge>(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval)' being compiled
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(209,35): warning C4388: '<': signed/unsigned mismatch
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(1534,98): warning C4244: 'argument': conversion from 'unsigned __int64' to 'tglib::NodeId', possible loss of data
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\thread(51): message : see reference to function template instantiation 'void std::invoke<void(__cdecl *)(std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>,tglib::TimeInterval,tglib::NodeId,tglib::NodeId,std::vector<double,std::allocator<double>>),std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>,std::pair<tglib::Time,tglib::Time>,unsigned __int64,int,std::vector<double,std::allocator<double>>>(_Callable &&,_Ty1 &&,std::pair<tglib::Time,tglib::Time> &&,unsigned __int64 &&,int &&,std::vector<double,std::allocator<double>> &&) noexcept(false)' being compiled
-          with
-          [
-              _Callable=void (__cdecl *)(std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>,tglib::TimeInterval,tglib::NodeId,tglib::NodeId,std::vector<double,std::allocator<double>>),
-              _Ty1=std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\thread(62): message : see reference to function template instantiation 'unsigned int std::thread::_Invoke<_Tuple,0,1,2,3,4,5>(void *) noexcept' being compiled
-          with
-          [
-              _Tuple=_Tuple
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\thread(66): message : see reference to function template instantiation 'unsigned int (__cdecl *std::thread::_Get_invoke<_Tuple,0,1,2,3,4,5>(std::integer_sequence<size_t,0,1,2,3,4,5>) noexcept)(void *) noexcept' being compiled
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\thread(89): message : see reference to function template instantiation 'void std::thread::_Start<void(__cdecl &)(std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>,tglib::TimeInterval,tglib::NodeId,tglib::NodeId,std::vector<double,std::allocator<double>>),std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>&,tglib::TimeInterval&,size_t&,tglib::NodeId&,std::vector<double,std::allocator<double>>&>(_Fn,std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>> &,tglib::TimeInterval &,size_t &,tglib::NodeId &,std::vector<double,std::allocator<double>> &)' being compiled
-          with
-          [
-              _Fn=void (__cdecl &)(std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>,tglib::TimeInterval,tglib::NodeId,tglib::NodeId,std::vector<double,std::allocator<double>>)
-          ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(269): message : see reference to function template instantiation 'std::thread::thread<void(__cdecl &)(std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>,tglib::TimeInterval,tglib::NodeId,tglib::NodeId,std::vector<double,std::allocator<double>>),std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>&,tglib::TimeInterval&,size_t&,int&,std::vector<double,std::allocator<double>>&,0>(_Fn,std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>> &,tglib::TimeInterval &,size_t &,int &,std::vector<double,std::allocator<double>> &)' being compiled
-          with
-          [
-              _Fn=void (__cdecl &)(std::vector<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>,std::allocator<std::set<tglib::TGNode,std::less<tglib::TGNode>,std::allocator<tglib::TGNode>>>>,tglib::TimeInterval,tglib::NodeId,tglib::NodeId,std::vector<double,std::allocator<double>>)
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(1532,1): warning C4365: 'argument': conversion from 'unsigned __int64' to 'tglib::NodeId', signed/unsigned mismatch
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(1532,1): warning C4365: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\future(1435): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> std::invoke<std::vector<double,std::allocator<double>>(__cdecl *)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>,std::pair<tglib::Time,tglib::Time>,unsigned __int64,int>(_Callable &&,_Ty1 &&,std::pair<tglib::Time,tglib::Time> &&,unsigned __int64 &&,int &&) noexcept(false)' being compiled
-          with
-          [
-              _Callable=std::vector<double,std::allocator<double>> (__cdecl *)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),
-              _Ty1=std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\future(1441): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> std::_Invoke_stored_explicit<std::vector<double,std::allocator<double>>(__cdecl *)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>,std::pair<tglib::Time,tglib::Time>,unsigned __int64,int,0,1,2,3,4>(std::tuple<std::vector<double,std::allocator<double>> (__cdecl *)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>,std::pair<tglib::Time,tglib::Time>,unsigned __int64,int> &&,std::integer_sequence<size_t,0,1,2,3,4>)' being compiled
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\future(1467): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> std::_Invoke_stored<std::vector<double,std::allocator<double>>(__cdecl *)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>,std::pair<tglib::Time,tglib::Time>,unsigned __int64,int>(std::tuple<std::vector<double,std::allocator<double>> (__cdecl *)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>,std::pair<tglib::Time,tglib::Time>,unsigned __int64,int> &&)' being compiled
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\future(1467): message : while compiling class template member function 'std::vector<double,std::allocator<double>> std::_Fake_no_copy_callable_adapter<_Fty,_Ty,tglib::TimeInterval &,size_t &,tglib::NodeId &>::operator ()(void)'
-          with
-          [
-              _Fty=std::vector<double,std::allocator<double>> (__cdecl &)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),
-              _Ty=std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(1524): message : see reference to function template instantiation 'std::vector<double,std::allocator<double>> std::_Fake_no_copy_callable_adapter<_Fty,_Ty,tglib::TimeInterval &,size_t &,tglib::NodeId &>::operator ()(void)' being compiled
-          with
-          [
-              _Fty=std::vector<double,std::allocator<double>> (__cdecl &)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),
-              _Ty=std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\future(1489): message : see reference to class template instantiation 'std::_Fake_no_copy_callable_adapter<_Fty,_Ty,tglib::TimeInterval &,size_t &,tglib::NodeId &>' being compiled
-          with
-          [
-              _Fty=std::vector<double,std::allocator<double>> (__cdecl &)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),
-              _Ty=std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\future(1501): message : see reference to function template instantiation 'std::future<std::vector<double,std::allocator<double>>> std::async<std::vector<double,std::allocator<double>>(__cdecl &)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),_Ty,tglib::TimeInterval&,size_t&,tglib::NodeId&>(std::launch,_Fty,_Ty &&,tglib::TimeInterval &,size_t &,tglib::NodeId &)' being compiled
-          with
-          [
-              _Ty=std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>,
-              _Fty=std::vector<double,std::allocator<double>> (__cdecl &)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t)
-          ]
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(185): message : see reference to function template instantiation 'std::future<std::vector<double,std::allocator<double>>> std::async<std::vector<double,std::allocator<double>>(__cdecl &)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t),std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>>,tglib::TimeInterval&,size_t&,int&>(_Fty,std::reference_wrapper<const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge>> &&,tglib::TimeInterval &,size_t &,int &)' being compiled
-          with
-          [
-              _Fty=std::vector<double,std::allocator<double>> (__cdecl &)(const tglib::IncidentLists<tglib::TGNode,tglib::TemporalEdge> &,tglib::TimeInterval,size_t,size_t)
           ]
 C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include\ittnotify.h(1903,28): warning C4514: '__itt_id_make': unreferenced inline function has been removed
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/BasicTypes.h(117,22): warning C4514: 'tglib::operator <<': unreferenced inline function has been removed
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/BasicTypes.h(143,13): warning C4514: 'tglib::operator >': unreferenced inline function has been removed
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/BasicTypes.h(163,13): warning C4514: 'tglib::operator !=': unreferenced inline function has been removed
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../core/BasicTypes.h(240,31): warning C4514: 'tglib::TemporalGraphStatistics::toString': unreferenced inline function has been removed
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(173,24): warning C4514: 'tglib::load_TRS': unreferenced inline function has been removed
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../util/InputOutput.h(176,24): warning C4514: 'tglib::load_TRS': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\pplinterface.h(173,5): warning C4514: 'Concurrency::task_canceled::task_canceled': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\pplinterface.h(197,5): warning C4514: 'Concurrency::details::_Interruption_exception::_Interruption_exception': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\pplinterface.h(201,5): warning C4514: 'Concurrency::details::_Interruption_exception::_Interruption_exception': unreferenced inline function has been removed
@@ -481,6 +388,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(673,29): warning C4514: 'Concurrency::details::_ResultHolder<std::vector<bool,std::allocator<bool>>>::Get': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(987,38): warning C4514: 'Concurrency::task_continuation_context::get_current_winrt_context': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1048,38): warning C4514: 'Concurrency::task_continuation_context::use_synchronous_execution': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1113,5): warning C4514: 'Concurrency::task_options::task_options': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1125,5): warning C4514: 'Concurrency::task_options::task_options': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1137,5): warning C4514: 'Concurrency::task_options::task_options': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1149,5): warning C4514: 'Concurrency::task_options::task_options': unreferenced inline function has been removed
@@ -490,6 +398,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1219,10): warning C4514: 'Concurrency::task_options::set_continuation_context': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1296,33): warning C4514: 'Concurrency::details::_ThenImplOptions::_CreateOptions': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1346,9): warning C4514: 'Concurrency::details::_ContinuationTaskHandleBase::_ContinuationTaskHandleBase': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1373,14): warning C4514: 'Concurrency::details::_TaskEventLogger::_LogTaskExecutionStarted': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1395,9): warning C4514: 'Concurrency::details::_TaskWorkItemRAIILogger::_TaskWorkItemRAIILogger': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1400,10): warning C4514: 'Concurrency::details::_TaskWorkItemRAIILogger::~_TaskWorkItemRAIILogger': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(1689,14): warning C4514: 'Concurrency::details::_Task_impl_base::_IsCreated': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(2709,10): warning C4514: 'Concurrency::task_completion_event<void>::set_exception': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(2719,10): warning C4514: 'Concurrency::task_completion_event<void>::_Cancel': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(2728,10): warning C4514: 'Concurrency::task_completion_event<void>::_Cancel': unreferenced inline function has been removed
@@ -498,8 +410,12 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(2755,10): warning C4514: 'Concurrency::task_completion_event<void>::_IsTriggered': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(2767,10): warning C4514: 'Concurrency::task_completion_event<void>::_RegisterTask': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(2885,17): warning C4514: 'Concurrency::_Continuation_func_transformer<void,void>::_Perform': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(2907,17): warning C4514: 'Concurrency::_Init_func_transformer<void>::_Perform': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(3977,5): warning C4514: 'Concurrency::task<void>::task': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(4052,5): warning C4514: 'Concurrency::task<void>::task': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(4092,11): warning C4514: 'Concurrency::task<void>::operator =': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(4112,11): warning C4514: 'Concurrency::task<void>::operator =': unreferenced inline function has been removed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(4217,17): warning C4514: 'Concurrency::task<void>::wait': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(4231,10): warning C4514: 'Concurrency::task<void>::get': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(4245,10): warning C4514: 'Concurrency::task<void>::is_done': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(4256,19): warning C4514: 'Concurrency::task<void>::scheduler': unreferenced inline function has been removed
@@ -517,13 +433,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(6086,14): warning C4514: 'Concurrency::details::_RunAllParam<Concurrency::details::_Unit_type>::_Resize': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(6096,17): warning C4514: 'Concurrency::details::_JoinAllTokens_Add': unreferenced inline function has been removed
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(7057,19): warning C4514: 'Concurrency::task_from_result': unreferenced inline function has been removed
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\native\../algorithms/TemporalClusteringCoefficient.h(202,14): warning C4514: 'tglib::operator ==': unreferenced inline function has been removed
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(240): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(238): message : index 'nid' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(240): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(98): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(95): message : index 'nid' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(98): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(297): message : index 'nid' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): message : feeds call on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(225): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(219): message : index '' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(225): message : feeds call on this line
@@ -536,17 +448,11 @@ C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(205): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(204): message : index 'e' range checked by comparison on this line
 C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(205): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(297): message : index 'nid' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\core\OrderedEdgeList.h(301): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(137): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(134): message : index 'nid' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(137): message : feeds call on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(212): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(209): message : index 'nid' range checked by comparison on this line
-C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(212): message : feeds call on this line
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(200): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(196): message : index '_CaptureFrames' range checked by comparison on this line
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ppltasks.h(200): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(102): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): message : index 'nid' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(102): message : feeds call on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): message : index '$S45' range checked by comparison on this line
+C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalClusteringCoefficient.h(94): message : feeds call on this line
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/PROFILE' specification
   nativetglib.vcxproj -> C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\build\src\native\Debug\nativetglib.exe

@@ -62,51 +62,65 @@ TemporalGraphStatistics test_get_stats(OrderedEdgeList<TemporalEdge> tgs) {
 }
 
 std::vector<double> test_clustering_coefficient(OrderedEdgeList<TemporalEdge> tgs) {
+	std::map<std::string, std::vector<double>> result_set;
+	//result_set.insert("single_thread", new std::vector<float>());
 	std::chrono::time_point<std::chrono::system_clock> start, end;
 
 	start = std::chrono::system_clock::now();
 
 	auto tg = to_incident_lists<TGNode>(tgs);
-	//print_node_vector(tg.getNodes());
-	//tg.sortNodes();
-	//print_node_vector(tg.getNodes());
 
 	end = std::chrono::system_clock::now();
 
 	std::chrono::duration<double> elapsed_seconds1 = end - start;
 
-	std::cout << "load graph time: " << elapsed_seconds1.count() << "s\n";
+	//std::cout << "load graph time: " << elapsed_seconds1.count() << "s\n";
 
 
-	std::cout << "start cc calc" << "\n";
+	//std::cout << "start cc calc" << "\n";
 
 	start = std::chrono::system_clock::now();
 	auto cc = temporal_clustering_coefficient(tg, tg.getTimeInterval());
 	end = std::chrono::system_clock::now();
 
 	std::chrono::duration<double> elapsed_seconds = end - start;
-
-	std::cout << "regular time: " << elapsed_seconds.count() << "s\n";
+	result_set["single_thread"].push_back(elapsed_seconds.count());
+	//std::cout << "regular time: " << elapsed_seconds.count() << "s\n";
 	//print_vector(cc);
 
-	start = std::chrono::system_clock::now();
-	auto cc_multi = temporal_clustering_coefficient_multi(tg, tg.getTimeInterval());
-	end = std::chrono::system_clock::now();
+	int thr_list[] = { 1, 2, 4, 8, 16 };
+	for (auto numThr : thr_list) {
 
-	elapsed_seconds = end - start;
+		start = std::chrono::system_clock::now();
+		auto cc_multi = temporal_clustering_coefficient_multi(tg, tg.getTimeInterval(), numThr);
+		end = std::chrono::system_clock::now();
 
-	std::cout << "multi threaded time: " << elapsed_seconds.count() << "s\n";
+		elapsed_seconds = end - start;
+
+		result_set["multi_thread"].push_back(elapsed_seconds.count());
+		//std::cout << "multi threaded time: " << elapsed_seconds.count() << "s\n";
+
+		start = std::chrono::system_clock::now();
+		auto open_mp_multi = temporal_clustering_coefficient_open_mp(tg, tg.getTimeInterval(), numThr);
+		end = std::chrono::system_clock::now();
+
+		elapsed_seconds = end - start;
+
+		result_set["open_mp_multi_thread"].push_back(elapsed_seconds.count());
+		//std::cout << "openMp time: " << elapsed_seconds.count() << "s\n";
+	}
+	std::cout << "single_thread: ";
+	print_vector(result_set["single_thread"]);
+	std::cout << "\n";
+	std::cout << "multi_thread: ";
+	print_vector(result_set["multi_thread"]);
+	std::cout << "\n";
+	std::cout << "open_mp_multi_thread: ";
+	print_vector(result_set["open_mp_multi_thread"]);
+	std::cout << "\n";
 	//print_vector(cc);
 
-
-	start = std::chrono::system_clock::now();
-	auto cc_andere_multi = temporal_clustering_coefficient_andere_multi(tg, tg.getTimeInterval());
-	end = std::chrono::system_clock::now();
-
-	elapsed_seconds = end - start;
-
-	std::cout << "multi threaded time: " << elapsed_seconds.count() << "s\n";
-	//print_vector(cc);
+	std::cout << "==================================================================================\n";
 	return cc;
 }
 
@@ -237,13 +251,13 @@ void test_tgbl_review() {
 
 	auto tgs = test_load_ime(inPath);
 
-	test_get_stats(tgs);
+	//test_get_stats(tgs);
 
 	test_clustering_coefficient(tgs);
 
-	test_page_rank(tgs);
+	//test_page_rank(tgs);
 
-	test_degree_list(tgs);
+	//test_degree_list(tgs);
 
 }
 
@@ -272,27 +286,30 @@ int main(int argc, char* argv[])
 	//auto cc = test_clustering_coefficient(tgs);
 	//__itt_task_end(domain);
 
+	//for (int i = 0; i < 1000; i++) {
+
 
 	std::cout << "test_enron \n";
 	test_enron();
-	//std::cout << "test_SocialEvo \n";
-	//test_SocialEvo();
+	std::cout << "test_SocialEvo \n";
+	test_SocialEvo();
 	//std::cout << "================================================================================ \n";
-	//std::cout << "test_wikipedia \n";
-	//test_wikipedia();
-	//std::cout << "test_UNvote \n";
-	//test_UNvote();
-	//std::cout << "test_CanParl \n";
-	//test_CanParl();
-	//std::cout << "test_reddit \n";
-	//test_reddit();
-	//std::cout << "test_lastfm \n";
-	//test_lastfm();
-	//std::cout << "test_Flights \n";
-	//test_Flights();
-	//std::cout << "test_tgbl_review \n";
-	//test_tgbl_review();
-	//std::cout << "DONE! \n";
+	std::cout << "test_wikipedia \n";
+	test_wikipedia();
+	std::cout << "test_UNvote \n";
+	test_UNvote();
+	std::cout << "test_CanParl \n";
+	test_CanParl();
+	std::cout << "test_reddit \n";
+	test_reddit();
+	std::cout << "test_lastfm \n";
+	test_lastfm();
+	std::cout << "test_Flights \n";
+	test_Flights();
+	std::cout << "test_tgbl_review \n";
+	test_tgbl_review();
+	std::cout << "DONE! \n";
+	//}
 
 	return 1; // optional return value
 }
