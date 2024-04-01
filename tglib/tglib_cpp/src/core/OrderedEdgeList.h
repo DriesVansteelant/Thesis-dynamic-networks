@@ -28,6 +28,7 @@
 #include <unordered_map>
 #include <algorithm> 
 #include <set>
+#include <omp.h>
 #include "BasicTypes.h"
 
 
@@ -128,6 +129,10 @@ namespace tglib {
 		const TemporalGraphStatistics getStats() {
 			OrderedEdgeList<E> const& tgs = *this;
 			return get_statistics(tgs);
+		}
+		const TemporalGraphStatistics getStatsOmp(int num_threads) {
+			OrderedEdgeList<E> const& tgs = *this;
+			return get_statistics_omp(tgs, num_threads);
 		}
 
 	private:
@@ -281,17 +286,28 @@ namespace tglib {
 		std::unordered_set<Time> transition_times;
 		std::set<std::pair<NodeId, NodeId>> static_edges;
 
-		for (auto& e : tgs.getEdges()) {
+		auto edgeVect = tgs.getEdges();
+
+		for (int i = 0; i < edgeVect.size(); i++) {
+			auto& e = edgeVect[i];
 			inDegree[e.v]++;
 			outDegree[e.u]++;
 			times.insert(e.t);
 			transition_times.insert(e.tt);
 			static_edges.insert({ e.u, e.v });
 
-			if (statistics.maximalTimeStamp < e.t) statistics.maximalTimeStamp = e.t;
-			if (statistics.minimalTimeStamp > e.t) statistics.minimalTimeStamp = e.t;
-			if (statistics.maximalTransitionTime < e.tt) statistics.maximalTransitionTime = e.tt;
-			if (statistics.minimalTransitionTime > e.tt) statistics.minimalTransitionTime = e.tt;
+			if (statistics.maximalTimeStamp < e.t) {
+				statistics.maximalTimeStamp = e.t;
+			}
+			if (statistics.minimalTimeStamp > e.t) {
+				statistics.minimalTimeStamp = e.t;
+			}
+			if (statistics.maximalTransitionTime < e.tt) {
+				statistics.maximalTransitionTime = e.tt;
+			}
+			if (statistics.minimalTransitionTime > e.tt) {
+				statistics.minimalTransitionTime = e.tt;
+			}
 		}
 
 		for (size_t nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
@@ -309,114 +325,82 @@ namespace tglib {
 
 		return statistics;
 	}
-	/*
+	
 	template<typename E>
-	bool edgeComp(E first, E second) {
-		return first.t < second.t;
+	TemporalGraphStatistics get_statistics_omp(OrderedEdgeList<E> const& tgs, int num_threads) {
+		TemporalGraphStatistics statistics{};
+		statistics.minTemporalInDegree = inf;
+		statistics.minTemporalOutDegree = inf;
+		statistics.maxTemporalInDegree = 0;
+		statistics.maxTemporalOutDegree = 0;
+		statistics.maximalTimeStamp = 0;
+		statistics.minimalTimeStamp = inf;
+		statistics.maximalTransitionTime = 0;
+		statistics.minimalTransitionTime = inf;
+
+		std::vector<long> inDegree(tgs.getNumberOfNodes(), 0);// counter list for in degrees
+		std::vector<long> outDegree(tgs.getNumberOfNodes(), 0);
+		std::unordered_set<Time> times;
+		std::unordered_set<Time> transition_times;
+		std::set<std::pair<NodeId, NodeId>> static_edges;
+
+		auto edgeVect = tgs.getEdges();
+
+		omp_set_num_threads(num_threads);
+		omp_lock_t setTtLock;
+		omp_init_lock(&setTtLock);
+		omp_lock_t setTsLock;
+		omp_init_lock(&setTsLock);
+		omp_lock_t insertLock;
+		omp_init_lock(&insertLock);
+#pragma omp parallel for
+		for (int i = 0; i < edgeVect.size(); i++) {
+			auto& e = edgeVect[i];
+			inDegree[e.v]++;
+			outDegree[e.u]++;
+			omp_set_lock(&insertLock);
+			times.insert(e.t);
+			transition_times.insert(e.tt);
+			static_edges.insert({ e.u, e.v });
+			omp_unset_lock(&insertLock);
+
+			if (statistics.maximalTimeStamp < e.t) {
+				omp_set_lock(&setTsLock);
+				statistics.maximalTimeStamp = e.t;
+				omp_unset_lock(&setTsLock);
+			}
+			if (statistics.minimalTimeStamp > e.t) {
+				omp_set_lock(&setTsLock);
+				statistics.minimalTimeStamp = e.t;
+				omp_unset_lock(&setTsLock);
+			}
+			if (statistics.maximalTransitionTime < e.tt) {
+				omp_set_lock(&setTtLock);
+				statistics.maximalTransitionTime = e.tt;
+				omp_unset_lock(&setTtLock);
+			}
+			if (statistics.minimalTransitionTime > e.tt) {
+				omp_set_lock(&setTtLock);
+				statistics.minimalTransitionTime = e.tt;
+				omp_unset_lock(&setTtLock);
+			}
+		}
+
+		for (size_t nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
+			if (statistics.minTemporalInDegree > inDegree[nid]) statistics.minTemporalInDegree = inDegree[nid];
+			if (statistics.minTemporalOutDegree > outDegree[nid]) statistics.minTemporalOutDegree = outDegree[nid];
+			if (statistics.maxTemporalInDegree < inDegree[nid])  statistics.maxTemporalInDegree = inDegree[nid];
+			if (statistics.maxTemporalOutDegree < outDegree[nid])  statistics.maxTemporalOutDegree = outDegree[nid];
+		}
+
+		statistics.numberOfNodes = tgs.getNumberOfNodes();
+		statistics.numberOfEdges = tgs.getEdges().size();
+		statistics.numberOfStaticEdges = static_edges.size();
+		statistics.numberOfTimeStamps = times.size();
+		statistics.numberOfTransitionTimes = transition_times.size();
+
+		return statistics;
 	}
-	*/
-
-
-	//inline bool comparePaires(std::pair<NodeId, int> e1, std::pair<NodeId, int> e2) {
-	//	return e1.second < e2.second;
-	//}
-
-	//inline bool compareInDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
-	//	return e1["in_degree"] < e2["in_degree"];
-	//}
-	//inline bool compareOutDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
-	//	return e1["out_degree"] < e2["out_degree"];
-	//}
-
-	///**
-	// * @brief return vector of nodeIds and in degrees
-	// * @tparam E The edge type
-	// * @param tgs The temporal graph
-	// * @return The rank statistics
-	// */
-	//template<typename E>
-	//std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
-	//	std::cout << "JOEPIE van op de nieuwe PC!!!";
-	//	std::map<NodeId, std::pair<int, int>> degrees;
-
-
-	//	std::vector<NodeId> nodes = tgs.getReverseNodeMap();
-	//	for (auto& it : nodes) {
-	//		degrees[it] = std::pair<int, int>(0, 0);
-	//	}
-	//	for (auto& e : tgs.getEdges()) {
-	//		degrees[e.v].first++;
-	//		degrees[e.u].second++;
-	//	}
-
-	//	std::vector< std::map<std::string, int>> degreeVector;
-	//	for (auto& e : degrees) {
-	//		/*std::map<std::string, int> theMap;
-	//		theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
-	//		//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
-
-	//		degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
-	//	}
-
-	//	std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
-	//	int i = 0;
-	//	for (int e = 0; e < degreeVector.size(); e++) {
-	//		degreeVector[e].insert({ "in_degree_rank", i });
-	//		if (e > 0) {
-	//			if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
-	//				i++;
-	//			}
-	//		}
-	//	}
-
-	//	std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
-	//	i = 0;
-	//	for (int e = 0; e < degreeVector.size(); e++) {
-	//		degreeVector[e].insert({ "out_degree_rank", i });
-	//		if (e > 0) {
-	//			if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
-	//				i++;
-	//			}
-	//		}
-	//	}
-
-	//	return degreeVector;
-	//}
-
-	//template<typename E>
-	//std::vector<E> selectionSort(OrderedEdgeList<E> const& tgs, int n)// n == #Elements
-	//{
-	//	int i, j, min_idx;
-	//	std::vector<E> edges = tgs.getEdges();
-
-	//	// One by one move boundary of
-	//	// unsorted subarray
-	//	for (i = 0; i < n - 1; i++) {
-
-	//		// Find the minimum element in
-	//		// unsorted array
-	//		min_idx = i;
-	//		for (j = i + 1; j < n; j++) {
-	//			if (edges[j].v < edges[min_idx].v)
-	//				min_idx = j;
-	//		}
-
-	//		// Swap the found minimum element
-	//		// with the first element
-	//		if (min_idx != i)
-	//			swap(edges, min_idx, i);
-	//	}
-	//	return edges;
-	//}
-
-	/*template<typename E>
-	void swap(std::vector<E> arr, int ind1, int ind2) {
-		E temp = arr[ind1];
-
-		arr[ind1] = arr[ind2];
-		arr[ind2] = temp;
-
-	 } */
 
 } // tglib
 

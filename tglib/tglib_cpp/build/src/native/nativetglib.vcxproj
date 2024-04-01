@@ -101,7 +101,6 @@
       <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
@@ -116,14 +115,13 @@
     </Midl>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\lib64;C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\lib32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/native/Debug/nativetglib.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/dries/Documents/GitHub/Thesis-dynamic-networks/tglib/tglib_cpp/build/src/native/Debug/nativetglib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Profile>true</Profile>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -146,7 +144,6 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\include</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
@@ -161,7 +158,7 @@
     </Midl>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\lib64;C:\Program Files (x86)\Intel\oneAPI\vtune\2024.0\sdk\lib32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -339,7 +336,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalWalkCentrality.h" />
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalEfficiency.h" />
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalDiameter.h" />
+    <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalPaths.h" />
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TopologicalOverlap.h" />
+    <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TopkTemporalCloseness.h" />
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalReachability.h" />
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\util\InputOutput.h" />
   </ItemGroup>

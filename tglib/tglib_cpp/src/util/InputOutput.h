@@ -114,8 +114,8 @@ namespace tglib {
 		TimeInterval ti{ inf, 0 };
 
 		NodeIdManager nidman;
-		omp_set_num_threads(1);
-#pragma omp parallel for
+		//		omp_set_num_threads(1);
+		//#pragma omp parallel for
 		for (i = 0; i < numLines; ++i) {
 			//while (getline(fs, line)) {
 			line = lineVector[i];
@@ -128,6 +128,7 @@ namespace tglib {
 			NodeId u = nidman.getNodeId(l[0]);
 			NodeId v = nidman.getNodeId(l[1]);
 
+
 			Time t = l[2];
 
 			Time tt = 1; // todo optional argument
@@ -139,6 +140,84 @@ namespace tglib {
 				edges.push_back({ v, u, t, tt });
 			}
 
+			if (t < ti.first) {
+				ti.first = t;
+			}
+
+			if (t + tt > ti.second) {
+				ti.second = t + tt;
+			}
+		}
+		fs.close();
+		sort(edges.begin(), edges.end());
+
+		OrderedEdgeList<E> tgs(nidman.nid, edges, ti, nidman.nidmap);
+
+		return tgs;
+	}
+
+	template<typename E>
+	tglib::OrderedEdgeList<E> load_ordered_edge_list_omp(const std::string& filename, bool directed, int num_threads) {
+		std::ifstream fs;
+		fs.open(filename);
+		auto opened_file = fs.is_open();
+
+		if (!opened_file) {
+			throw std::runtime_error("Could not open file " + filename);
+		}
+
+		std::string line;
+		auto numLines = 0;
+		long long i;
+		std::vector<std::string> lineVector;
+		for (i = 0; getline(fs, line); ++i) {
+			numLines++;
+			lineVector.push_back(line);
+		}
+
+
+		std::vector<E> edges;
+		TimeInterval ti{ inf, 0 };
+
+		NodeIdManager nidman;
+
+		omp_set_num_threads(num_threads);
+		omp_lock_t getNodesLock;
+		omp_init_lock(&getNodesLock);
+		omp_lock_t getLineLock;
+		omp_init_lock(&getLineLock);
+
+#pragma omp parallel for shared(ti)
+		for (i = 0; i < numLines; ++i) {
+			omp_set_lock(&getLineLock);
+			std::string line = lineVector[i];
+			if (line.empty()) continue;
+
+			std::vector<Time> l = split_string(line, ' ');
+			omp_unset_lock(&getLineLock);
+
+			if (l.size() < 3) continue;
+			NodeId u;
+			NodeId v;
+
+#pragma omp critical
+			{
+				u = nidman.getNodeId(l[0]);
+				v = nidman.getNodeId(l[1]);
+			}
+
+			Time t = l[2];
+
+			Time tt = 1; // todo optional argument
+			if (l.size() >= 4)
+				tt = l[3];
+
+#pragma omp critical
+			edges.push_back({ u, v, t, tt });
+			if (!directed) {
+#pragma omp critical
+				edges.push_back({ v, u, t, tt });
+			}
 			if (t < ti.first) {
 				ti.first = t;
 			}

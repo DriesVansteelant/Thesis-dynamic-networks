@@ -177,7 +177,7 @@ class VtunePlots:
             p = ax.bar(sets, weight_count, width, label=boolean, bottom=bottom)
             bottom += weight_count
 
-        ax.set_title("Clustering coefficient")
+        ax.set_title("")
         # ax.legend()
 
         ax.legend(loc='center left', bbox_to_anchor=(1, 0.65))
@@ -185,31 +185,39 @@ class VtunePlots:
         # ax.set_yscale('log')
 
         plt.show()
-        # if(all and not rel):
-        #     sets = datasets
-        #     plot = stats_plot_sorted
-        # elif(not all and not rel):
-        #     sets = some_stats_datasets
-        #     plot = some_stats_plot_sorted
-        # elif(all and rel):
-        #     sets = datasets
-        #     plot = stats_relative_plot
-        
-        # width = 0.5
 
-        # fig, ax = plt.subplots()
-        # bottom = np.zeros(len(sets))
+from cc_multi_threading import multi_thread_test, num_threads
+class multiThreadedPlots:
+    def plot_cc_multi(dataSet):
 
-        # for boolean, weight_count in plot.items():
-        #     p = ax.bar(sets, weight_count, width, label=boolean, bottom=bottom)
-        #     bottom += weight_count
+        fig, ax = plt.subplots()
 
-        # ax.set_title("get statistics")
-        # ax.legend()
-        # plt.xticks(rotation=90)
-        # # ax.set_yscale('log')
+        title = 'Number of threads comparison ' + dataSet
+        color = {'single_thread': '#2ca02c', 'std::thread': '#1f77b4', 'openMP': '#ff7f0e'}
 
-        # plt.show()
+        # sorted_quant = sorted(quant.items(), key=lambda x: x[1])
+        # print(sorted_quant)
+        for struct in multi_thread_test[dataSet]:
+            if(struct != 'single_thread'):
+                ys = multi_thread_test[dataSet][struct]
+                xs = num_threads
+                plt.plot(xs, ys, label = struct, color=color[struct])
+                plt.scatter(xs,ys, color=color[struct])
+
+        # pprint.pprint(sorted_quant)
+
+        ax.set_title(title)
+        # ax.set_xscale('log')
+        # ax.set_yscale('log')
+        ax.set_ylabel('Time (s)')
+        fig.set_figheight(6)
+        fig.set_figwidth(9)
+        plt.legend()
+        fig.savefig('./benchmark/plots/' + title + '.png', format='png')
+        plt.show()
 
 # VtunePlots.vtune_plot_clusteringCoefficient(True, True)
-VtunePlots.vtune_plot_stats(True, True)
+# VtunePlots.vtune_plot_stats(True, True)
+
+for name in multi_thread_test:
+    multiThreadedPlots.plot_cc_multi(name)

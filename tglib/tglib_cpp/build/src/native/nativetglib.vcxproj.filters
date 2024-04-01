@@ -72,7 +72,13 @@
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalDiameter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalPaths.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TopologicalOverlap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TopkTemporalCloseness.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\dries\Documents\GitHub\Thesis-dynamic-networks\tglib\tglib_cpp\src\algorithms\TemporalReachability.h">

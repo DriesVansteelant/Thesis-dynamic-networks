@@ -292,6 +292,7 @@ struct TemporalGraphStatistics {
 #include <unordered_map>
 #include <algorithm> 
 #include <set>
+#include <omp.h>
 #include "BasicTypes.h"
 
 
@@ -392,6 +393,10 @@ namespace tglib {
 		const TemporalGraphStatistics getStats() {
 			OrderedEdgeList<E> const& tgs = *this;
 			return get_statistics(tgs);
+		}
+		const TemporalGraphStatistics getStatsOmp(int num_threads) {
+			OrderedEdgeList<E> const& tgs = *this;
+			return get_statistics_omp(tgs, num_threads);
 		}
 
 	private:
@@ -545,17 +550,28 @@ namespace tglib {
 		std::unordered_set<Time> transition_times;
 		std::set<std::pair<NodeId, NodeId>> static_edges;
 
-		for (auto& e : tgs.getEdges()) {
+		auto edgeVect = tgs.getEdges();
+
+		for (int i = 0; i < edgeVect.size(); i++) {
+			auto& e = edgeVect[i];
 			inDegree[e.v]++;
 			outDegree[e.u]++;
 			times.insert(e.t);
 			transition_times.insert(e.tt);
 			static_edges.insert({ e.u, e.v });
 
-			if (statistics.maximalTimeStamp < e.t) statistics.maximalTimeStamp = e.t;
-			if (statistics.minimalTimeStamp > e.t) statistics.minimalTimeStamp = e.t;
-			if (statistics.maximalTransitionTime < e.tt) statistics.maximalTransitionTime = e.tt;
-			if (statistics.minimalTransitionTime > e.tt) statistics.minimalTransitionTime = e.tt;
+			if (statistics.maximalTimeStamp < e.t) {
+				statistics.maximalTimeStamp = e.t;
+			}
+			if (statistics.minimalTimeStamp > e.t) {
+				statistics.minimalTimeStamp = e.t;
+			}
+			if (statistics.maximalTransitionTime < e.tt) {
+				statistics.maximalTransitionTime = e.tt;
+			}
+			if (statistics.minimalTransitionTime > e.tt) {
+				statistics.minimalTransitionTime = e.tt;
+			}
 		}
 
 		for (size_t nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
@@ -573,114 +589,82 @@ namespace tglib {
 
 		return statistics;
 	}
-	/*
+	
 	template<typename E>
-	bool edgeComp(E first, E second) {
-		return first.t < second.t;
+	TemporalGraphStatistics get_statistics_omp(OrderedEdgeList<E> const& tgs, int num_threads) {
+		TemporalGraphStatistics statistics{};
+		statistics.minTemporalInDegree = inf;
+		statistics.minTemporalOutDegree = inf;
+		statistics.maxTemporalInDegree = 0;
+		statistics.maxTemporalOutDegree = 0;
+		statistics.maximalTimeStamp = 0;
+		statistics.minimalTimeStamp = inf;
+		statistics.maximalTransitionTime = 0;
+		statistics.minimalTransitionTime = inf;
+
+		std::vector<long> inDegree(tgs.getNumberOfNodes(), 0);// counter list for in degrees
+		std::vector<long> outDegree(tgs.getNumberOfNodes(), 0);
+		std::unordered_set<Time> times;
+		std::unordered_set<Time> transition_times;
+		std::set<std::pair<NodeId, NodeId>> static_edges;
+
+		auto edgeVect = tgs.getEdges();
+
+		omp_set_num_threads(num_threads);
+		omp_lock_t setTtLock;
+		omp_init_lock(&setTtLock);
+		omp_lock_t setTsLock;
+		omp_init_lock(&setTsLock);
+		omp_lock_t insertLock;
+		omp_init_lock(&insertLock);
+#pragma omp parallel for
+		for (int i = 0; i < edgeVect.size(); i++) {
+			auto& e = edgeVect[i];
+			inDegree[e.v]++;
+			outDegree[e.u]++;
+			omp_set_lock(&insertLock);
+			times.insert(e.t);
+			transition_times.insert(e.tt);
+			static_edges.insert({ e.u, e.v });
+			omp_unset_lock(&insertLock);
+
+			if (statistics.maximalTimeStamp < e.t) {
+				omp_set_lock(&setTsLock);
+				statistics.maximalTimeStamp = e.t;
+				omp_unset_lock(&setTsLock);
+			}
+			if (statistics.minimalTimeStamp > e.t) {
+				omp_set_lock(&setTsLock);
+				statistics.minimalTimeStamp = e.t;
+				omp_unset_lock(&setTsLock);
+			}
+			if (statistics.maximalTransitionTime < e.tt) {
+				omp_set_lock(&setTtLock);
+				statistics.maximalTransitionTime = e.tt;
+				omp_unset_lock(&setTtLock);
+			}
+			if (statistics.minimalTransitionTime > e.tt) {
+				omp_set_lock(&setTtLock);
+				statistics.minimalTransitionTime = e.tt;
+				omp_unset_lock(&setTtLock);
+			}
+		}
+
+		for (size_t nid = 0; nid < tgs.getNumberOfNodes(); ++nid) {
+			if (statistics.minTemporalInDegree > inDegree[nid]) statistics.minTemporalInDegree = inDegree[nid];
+			if (statistics.minTemporalOutDegree > outDegree[nid]) statistics.minTemporalOutDegree = outDegree[nid];
+			if (statistics.maxTemporalInDegree < inDegree[nid])  statistics.maxTemporalInDegree = inDegree[nid];
+			if (statistics.maxTemporalOutDegree < outDegree[nid])  statistics.maxTemporalOutDegree = outDegree[nid];
+		}
+
+		statistics.numberOfNodes = tgs.getNumberOfNodes();
+		statistics.numberOfEdges = tgs.getEdges().size();
+		statistics.numberOfStaticEdges = static_edges.size();
+		statistics.numberOfTimeStamps = times.size();
+		statistics.numberOfTransitionTimes = transition_times.size();
+
+		return statistics;
 	}
-	*/
-
-
-	//inline bool comparePaires(std::pair<NodeId, int> e1, std::pair<NodeId, int> e2) {
-	//	return e1.second < e2.second;
-	//}
-
-	//inline bool compareInDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
-	//	return e1["in_degree"] < e2["in_degree"];
-	//}
-	//inline bool compareOutDegrees(std::map<std::string, int> e1, std::map<std::string, int>e2) {
-	//	return e1["out_degree"] < e2["out_degree"];
-	//}
-
-	///**
-	// * @brief return vector of nodeIds and in degrees
-	// * @tparam E The edge type
-	// * @param tgs The temporal graph
-	// * @return The rank statistics
-	// */
-	//template<typename E>
-	//std::vector<std::map<std::string, int>> get_degrees(OrderedEdgeList<E> const& tgs) {
-	//	std::cout << "JOEPIE van op de nieuwe PC!!!";
-	//	std::map<NodeId, std::pair<int, int>> degrees;
-
-
-	//	std::vector<NodeId> nodes = tgs.getReverseNodeMap();
-	//	for (auto& it : nodes) {
-	//		degrees[it] = std::pair<int, int>(0, 0);
-	//	}
-	//	for (auto& e : tgs.getEdges()) {
-	//		degrees[e.v].first++;
-	//		degrees[e.u].second++;
-	//	}
-
-	//	std::vector< std::map<std::string, int>> degreeVector;
-	//	for (auto& e : degrees) {
-	//		/*std::map<std::string, int> theMap;
-	//		theMap = { {"in_degree", e.second.first}, {"out_degree", e.second.second } };*/
-	//		//std::map<std::string, int>* temp = new  std::map<std::string, int>({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second}});
-
-	//		degreeVector.push_back({ {"node_id",e.first}, {"in_degree", e.second.first}, {"out_degree", e.second.second} });
-	//	}
-
-	//	std::sort(degreeVector.begin(), degreeVector.end(), compareInDegrees);
-	//	int i = 0;
-	//	for (int e = 0; e < degreeVector.size(); e++) {
-	//		degreeVector[e].insert({ "in_degree_rank", i });
-	//		if (e > 0) {
-	//			if (degreeVector[e]["in_degree"] > degreeVector[e - 1]["in_degree"]) {
-	//				i++;
-	//			}
-	//		}
-	//	}
-
-	//	std::sort(degreeVector.begin(), degreeVector.end(), compareOutDegrees);
-	//	i = 0;
-	//	for (int e = 0; e < degreeVector.size(); e++) {
-	//		degreeVector[e].insert({ "out_degree_rank", i });
-	//		if (e > 0) {
-	//			if (degreeVector[e]["out_degree"] > degreeVector[e - 1]["out_degree"]) {
-	//				i++;
-	//			}
-	//		}
-	//	}
-
-	//	return degreeVector;
-	//}
-
-	//template<typename E>
-	//std::vector<E> selectionSort(OrderedEdgeList<E> const& tgs, int n)// n == #Elements
-	//{
-	//	int i, j, min_idx;
-	//	std::vector<E> edges = tgs.getEdges();
-
-	//	// One by one move boundary of
-	//	// unsorted subarray
-	//	for (i = 0; i < n - 1; i++) {
-
-	//		// Find the minimum element in
-	//		// unsorted array
-	//		min_idx = i;
-	//		for (j = i + 1; j < n; j++) {
-	//			if (edges[j].v < edges[min_idx].v)
-	//				min_idx = j;
-	//		}
-
-	//		// Swap the found minimum element
-	//		// with the first element
-	//		if (min_idx != i)
-	//			swap(edges, min_idx, i);
-	//	}
-	//	return edges;
-	//}
-
-	/*template<typename E>
-	void swap(std::vector<E> arr, int ind1, int ind2) {
-		E temp = arr[ind1];
-
-		arr[ind1] = arr[ind2];
-		arr[ind2] = temp;
-
-	 } */
 
 } // tglib
 
@@ -733,9 +717,9 @@ struct StaticWeightedEdge {
  * for full license details.
  */
 
-/** @file IncidentLists.h
- *  @brief Contains the incident lists representation data structure for temporal graphs
- */
+ /** @file IncidentLists.h
+  *  @brief Contains the incident lists representation data structure for temporal graphs
+  */
 
 #ifndef TGLIB_INCIDENTLISTS_H
 #define TGLIB_INCIDENTLISTS_H
@@ -746,144 +730,151 @@ struct StaticWeightedEdge {
 
 namespace tglib {
 
-/**
- * @brief Node type for incident list representation
- *
- * This is the full generic type that allows using customized edge types, e.g., weighted temporal edges.
- *
- * @tparam E the temporal edge type
- */
-template<typename E>
-struct TGNodeT {
-    /**
-     * @brief The node id.
-     */
-    NodeId id{};
-    /**
-     * @brief The outgoing temporal edges.
-     */
-    std::vector<E> outEdges;
-};
+	/**
+	 * @brief Node type for incident list representation
+	 *
+	 * This is the full generic type that allows using customized edge types, e.g., weighted temporal edges.
+	 *
+	 * @tparam E the temporal edge type
+	 */
+	template<typename E>
+	struct TGNodeT {
+		/**
+		 * @brief The node id.
+		 */
+		NodeId id{};
+		/**
+		 * @brief The outgoing temporal edges.
+		 */
+		std::vector<E> outEdges;
+	};
 
-/**
- * @brief Node type for incident list representation
- *
- * The default type used in the implemented algorithms.
- */
-using TGNode = TGNodeT<TemporalEdge>;
+	/**
+	 * @brief Node type for incident list representation
+	 *
+	 * The default type used in the implemented algorithms.
+	 */
+	using TGNode = TGNodeT<TemporalEdge>;
 
-/**
- * @brief Type for incident list representation of temporal graphs
- *
- * The incident lists representation holds a vector of its nodes.
- * Each node has a vector of the outgoing temporal edges.
- */
-template<typename N, typename E>
-class IncidentLists {
+	/**
+	 * @brief Type for incident list representation of temporal graphs
+	 *
+	 * The incident lists representation holds a vector of its nodes.
+	 * Each node has a vector of the outgoing temporal edges.
+	 */
+	template<typename N, typename E>
+	class IncidentLists {
 
-public:
+	public:
 
-    /**
-     * @ default constructor
-     */
-    IncidentLists() = default;
+		/**
+		 * @ default constructor
+		 */
+		IncidentLists() = default;
 
-    /**
-     * @brief Constructs object from vector of edges
-     * @param numberOfNodes The number of nodes
-     * @param edges The edges
-     */
-    explicit IncidentLists(NodeId numberOfNodes, std::vector<E> const &edges) {
-        addNodes(numberOfNodes);
-        ti = {inf, 0};
-        for (auto &e : edges) {
-            addEdge(e);
-            if (e.t < ti.first) ti.first = e.t;
-            if (e.t + e.tt > ti.second) ti.second = e.t + e.tt;
-        }
-    }
+		/**
+		 * @brief Constructs object from vector of edges
+		 * @param numberOfNodes The number of nodes
+		 * @param edges The edges
+		 */
+		explicit IncidentLists(NodeId numberOfNodes, std::vector<E> const& edges) {
+			addNodes(numberOfNodes);
+			ti = { inf, 0 };
+			for (auto& e : edges) {
+				addEdge(e);
+				if (e.t < ti.first) ti.first = e.t;
+				if (e.t + e.tt > ti.second) ti.second = e.t + e.tt;
+			}
+		}
 
-    /**
-     * @brief Getter for number of nodes
-     * @return The number of nodes
-     */
-    [[nodiscard]] size_t getNumberOfNodes() const {
-        return nodes.size();
-    }
+		/**
+		 * @brief Getter for number of nodes
+		 * @return The number of nodes
+		 */
+		[[nodiscard]] size_t getNumberOfNodes() const {
+			return nodes.size();
+		}
 
-    /**
-     * @brief Getter for number of edges
-     * @return The number of edges
-     */
-    [[nodiscard]] size_t getNumberOfEdges() const {
-        return num_edges;
-    }
+		/**
+		 * @brief Getter for number of edges
+		 * @return The number of edges
+		 */
+		[[nodiscard]] size_t getNumberOfEdges() const {
+			return num_edges;
+		}
 
-    /**
-     * @brief Getter for the time interval
-     * @return The time interval
-     */
-    [[nodiscard]] TimeInterval getTimeInterval() const {
-        return ti;
-    }
+		/**
+		 * @brief Getter for the time interval
+		 * @return The time interval
+		 */
+		[[nodiscard]] TimeInterval getTimeInterval() const {
+			return ti;
+		}
 
-    /**
-     * @brief Getter for a node
-     * @param nid the nodes id
-     * @return The node with node id nid
-     */
-    const N& getNode(size_t nid) const {
-        return nodes[nid];
-    }
+		/**
+		 * @brief Getter for a node
+		 * @param nid the nodes id
+		 * @return The node with node id nid
+		 */
+		const N& getNode(size_t nid) const {
+			return nodes[nid];
+		}
 
-    /**
-     * @brief Getter for all nodes
-     * @return The nodes
-     */
-    const std::vector<N> &getNodes() const {
-        return nodes;
-    }
+		/**
+		 * @brief Getter for all nodes
+		 * @return The nodes
+		 */
+		const std::vector<N>& getNodes() const {
+			return nodes;
+		}
+		//void setNodes(std::vector<N> newNodes) {
+		//	nodes = newNodes;
+		//}
+		//void sortNodes() {
+		//	auto temp = getNodes();
+		//	std::sort(temp.begin(), temp.end(), [](N first, N second) {return  first.outEdges.size() < second.outEdges.size();});
+		//	setNodes(temp);
+		//}
 
 
-private:
+	private:
 
-    /**
-     * @brief The nodes
-     */
-    std::vector<N> nodes;
+		/**
+		 * @brief The nodes
+		 */
+		std::vector<N> nodes;
 
-    /**
-     * @brief The number of edges
-     */
-    EdgeId num_edges{};
+		/**
+		 * @brief The number of edges
+		 */
+		EdgeId num_edges{};
 
-    /**
-     * @brief The time interval spanned by the temporal graph
-     */
-    TimeInterval ti;
+		/**
+		 * @brief The time interval spanned by the temporal graph
+		 */
+		TimeInterval ti;
 
-    /**
-    * @brief Adds num nodes with ids 0 to num-1
-    * @param num the number of nodes to add
-    */
-    void addNodes(size_t num) {
-        for (size_t i = 0; i < num; ++i) {
-            N node;
-            node.id = i;
-            nodes.push_back(node);
-        }
-    }
+		/**
+		* @brief Adds num nodes with ids 0 to num-1
+		* @param num the number of nodes to add
+		*/
+		void addNodes(size_t num) {
+			for (size_t i = 0; i < num; ++i) {
+				N node;
+				node.id = i;
+				nodes.push_back(node);
+			}
+		}
 
-    /**
-     * Adds a new edge
-     * @param e The edge to add
-     */
-    void addEdge(E e) {
-        nodes[e.u].outEdges.push_back(e);
-        num_edges++;
-    }
-
-};
+		/**
+		 * Adds a new edge
+		 * @param e The edge to add
+		 */
+		void addEdge(E e) {
+			nodes[e.u].outEdges.push_back(e);
+			num_edges++;
+		}
+	};
 
 } // tglib
 
@@ -1981,9 +1972,9 @@ private:
  * for full license details.
  */
 
-/** @file UtilFunctions.h
- *  @brief Helpful utility functions
- */
+ /** @file UtilFunctions.h
+  *  @brief Helpful utility functions
+  */
 
 #ifndef TGLIB_UTILFUNCTIONS_H
 #define TGLIB_UTILFUNCTIONS_H
@@ -1994,27 +1985,91 @@ private:
 #include <valarray>
 #include <chrono>
 #include <iostream>
-
+#include <omp.h>
 
 namespace tglib {
 
-/**
- * Computes mean and standard deviation.
- * @tparam T a numerical type
- * @param values vector of numerical values
- * @param mean the mean
- * @param stdev the standard deviation
- */
-template<typename T>
-void get_mean_std(std::vector<T> &values, double &mean, double &stdev) {
-    double sum = std::accumulate(std::begin(values), std::end(values), 0.0);
-    mean = sum / values.size();
-    double accum = 0.0;
-    std::for_each (std::begin(values), std::end(values), [&](const double d) {
-        accum += (d - mean) * (d - mean);
-    });
-    stdev = sqrt(accum / (values.size()));
-}
+	/**
+	 * Computes mean and standard deviation.
+	 * @tparam T a numerical type
+	 * @param values vector of numerical values
+	 * @param mean the mean
+	 * @param stdev the standard deviation
+	 */
+	template<typename T>
+	void get_mean_std(std::vector<T>& values, double& mean, double& stdev) {
+		double sum = std::accumulate(std::begin(values), std::end(values), 0.0);
+		mean = sum / values.size();
+		double accum = 0.0;
+		std::for_each(std::begin(values), std::end(values), [&](const double d) {
+			accum += (d - mean) * (d - mean);
+			});
+		stdev = sqrt(accum / (values.size()));
+	}
+
+	template<typename E>
+	void merge(std::vector<E>& array, int left, int mid, int right) {
+		int n1 = mid - left + 1;
+		int n2 = right - mid;
+
+		std::vector<E> leftArray(n1);
+		std::vector<E> rightArray(n2);
+
+		for (int i = 0; i < n1; ++i) {
+			leftArray[i] = array[left + i];
+		}
+
+		for (int j = 0; j < n2; ++j) {
+			rightArray[j] = array[mid + 1 + j];
+		}
+
+		int i = 0, j = 0, k = left;
+		while (i < n1 && j < n2) {
+			if (leftArray[i] <= rightArray[j]) {
+				array[k] = leftArray[i];
+				++i;
+			}
+			else {
+				array[k] = rightArray[j];
+				++j;
+			}
+			++k;
+		}
+
+		while (i < n1) {
+			array[k] = leftArray[i];
+			++i;
+			++k;
+		}
+
+		while (j < n2) {
+			array[k] = rightArray[j];
+			++j;
+			++k;
+		}
+	}
+
+	template<typename E>
+	void mergeSort(std::vector<E>& array, int left, int right) {
+		if (left < right) {
+			int mid = left + (right - left) / 2;
+
+#pragma omp parallel sections
+			{
+#pragma omp section
+				{
+					mergeSort(array, left, mid);
+				}
+
+#pragma omp section
+				{
+					mergeSort(array, mid + 1, right);
+				}
+			}
+
+			merge(array, left, mid, right);
+		}
+	}
 
 } // tglib
 
@@ -2136,119 +2191,235 @@ std::vector<double> temporal_edge_betweenness(tglib::OrderedEdgeList<E> const &t
  * for full license details.
  */
 
-/** @file TemporalClusteringCoefficient.h
- *  @brief Contains function for computing the temporal clustering coefficient.
- */
+ /** @file TemporalClusteringCoefficient.h
+  *  @brief Contains function for computing the temporal clustering coefficient.
+  */
 
 #ifndef TGLIB_TEMPORALCLUSTERINGCOEFFICIENT_H
 #define TGLIB_TEMPORALCLUSTERINGCOEFFICIENT_H
 
 #include "../core/BasicTypes.h"
 #include "../core/IncidentLists.h"
+#include <iostream>
+#include <thread>
+#include <future>
+#include <algorithm>
+#include <omp.h>
 
 namespace tglib {
 
-/**
- * @brief Computes the temporal clustering coefficient for one node
- *
- * The temporal clustering coefficient is defined as
- * \f[
- * C_C(u) = \frac{\sum_{t\in T(\mathcal{G})} \pi_t(u)}{|T(\mathcal{G})|{|N(u)| \choose 2}},
- * \f]
- * where \f$\pi_t(u)=|\{(v,w,t,\lambda)\in\mathcal{E}\mid v,w\in N(u)\}|\f$
- * and \f$N(u)\f$ the neighbors of \f$u\f$ [1].
- *
- * [1] Tang, John, et al. "Temporal distance metrics for social network analysis."
- * Proceedings of the 2nd ACM workshop on Online social networks. 2009.
- *
- * @tparam N Node type
- * @param tg The temporal graph
- * @param nid The node for which the temporal clustering coefficient is computed
- * @param ti A restrictive time interval
- * @return The temporal clustering coefficient for node with node id nid with respect to the time interval ti
- */
-template<typename N, typename E>
-double temporal_clustering_coefficient(IncidentLists<N, E> const& tg, NodeId nid, TimeInterval ti){
+	/**
+	 * @brief Computes the temporal clustering coefficient for one node
+	 *
+	 * The temporal clustering coefficient is defined as
+	 * \f[
+	 * C_C(u) = \frac{\sum_{t\in T(\mathcal{G})} \pi_t(u)}{|T(\mathcal{G})|{|N(u)| \choose 2}},
+	 * \f]
+	 * where \f$\pi_t(u)=|\{(v,w,t,\lambda)\in\mathcal{E}\mid v,w\in N(u)\}|\f$
+	 * and \f$N(u)\f$ the neighbors of \f$u\f$ [1].
+	 *
+	 * [1] Tang, John, et al. "Temporal distance metrics for social network analysis."
+	 * Proceedings of the 2nd ACM workshop on Online social networks. 2009.
+	 *
+	 * @tparam N Node type
+	 * @param tg The temporal graph
+	 * @param nid The node for which the temporal clustering coefficient is computed
+	 * @param ti A restrictive time interval
+	 * @return The temporal clustering coefficient for node with node id nid with respect to the time interval ti
+	 */
+	template<typename N, typename E>
+	double temporal_clustering_coefficient(IncidentLists<N, E> const& tg, NodeId nid, TimeInterval ti) {
 
-    std::set<NodeId> neighbors;
-    for (auto &e : tg.getNode(nid).outEdges) {
-        if (e.t < ti.first || e.t > ti.second) continue;
-        neighbors.insert(e.v);
-    }
+		std::set<NodeId> neighbors;
+		for (auto& e : tg.getNode(nid).outEdges) {
+			if (e.t < ti.first || e.t > ti.second) continue;
+			neighbors.insert(e.v);
+		}
 
-    double count = 0;
-    for (auto &v : neighbors) {
-        for (auto &e : tg.getNode(v).outEdges) {
-            if (neighbors.find(e.v) != neighbors.end()) {
-                count += 1;
-            }
-        }
-    }
+		double count = 0;
+		for (auto& v : neighbors) {
+			for (auto& e : tg.getNode(v).outEdges) {
+				if (neighbors.find(e.v) != neighbors.end()) {
+					count += 1;
+				}
+			}
+		}
 
-    if (count == 0) return 0;
+		if (count == 0) return 0;
 
-    auto timesteps = ti.second - ti.first;
-    auto m = (double)(neighbors.size() * (neighbors.size() - 1));
-    double result = (1.0 / (double)timesteps) * (count / m);
+		auto timesteps = ti.second - ti.first;
+		auto m = (double)(neighbors.size() * (neighbors.size() - 1));
+		double result = (1.0 / (double)timesteps) * (count / m);
 
-    return result;
-}
-
-
-/**
- * @brief Computes the temporal clustering coefficient for all nodes
- *
- * The temporal clustering coefficient is defined as
- * \f[
- * C_C(u) = \frac{\sum_{t\in T(\mathcal{G})} \pi_t(u)}{|T(\mathcal{G})|{|N(u)| \choose 2}},
- * \f]
- * where \f$\pi_t(u)=|\{(v,w,t,\lambda)\in\mathcal{E}\mid v,w\in N(u)\}|\f$
- * and \f$N(u)\f$ the neighbors of \f$u\f$ [1].
- *
- * [1] Tang, John, et al. "Temporal distance metrics for social network analysis."
- * Proceedings of the 2nd ACM workshop on Online social networks. 2009.
- *
- * @tparam N Node type
- * @param tg The temporal graph
- * @param ti A restrictive time interval
- * @return The temporal clustering coefficients for all nodes with respect to the time interval ti
- */
-template<typename N, typename E>
-std::vector<double> temporal_clustering_coefficient(IncidentLists<N, E> const& tg, TimeInterval ti){
-
-    std::vector<double> result(tg.getNumberOfNodes(), 0);
-    auto timesteps = ti.second - ti.first;
-
-    for (size_t nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
-        std::set<NodeId> neighbors;
-
-        for (auto &e : tg.getNode(nid).outEdges) {
-            if (e.t < ti.first || e.t > ti.second) continue;
-            neighbors.insert(e.v);
-        }
-
-        double count = 0;
-        for (auto &v : neighbors) {
-            for (auto &e : tg.getNode(v).outEdges) {
-                if (e.t < ti.first || e.t > ti.second) continue;
-                if (neighbors.find(e.v) != neighbors.end()) {
-                    count += 1;
-                }
-            }
-        }
-
-        if (neighbors.empty() || neighbors.size() == 1) {
-            result[nid] = 0.0;
-        } else {
-            auto m = (double)(neighbors.size() * (neighbors.size() - 1));
-            result[nid] = (1.0 / (double)timesteps) * (count / m);
-        }
-    }
-
-    return result;
-}
+		return result;
+	}
 
 
+	/**
+	 * @brief Computes the temporal clustering coefficient for all nodes
+	 *
+	 * The temporal clustering coefficient is defined as
+	 * \f[
+	 * C_C(u) = \frac{\sum_{t\in T(\mathcal{G})} \pi_t(u)}{|T(\mathcal{G})|{|N(u)| \choose 2}},
+	 * \f]
+	 * where \f$\pi_t(u)=|\{(v,w,t,\lambda)\in\mathcal{E}\mid v,w\in N(u)\}|\f$
+	 * and \f$N(u)\f$ the neighbors of \f$u\f$ [1].
+	 *
+	 * [1] Tang, John, et al. "Temporal distance metrics for social network analysis."
+	 * Proceedings of the 2nd ACM workshop on Online social networks. 2009.
+	 *
+	 * @tparam N Node type
+	 * @param tg The temporal graph
+	 * @param ti A restrictive time interval
+	 * @return The temporal clustering coefficients for all nodes with respect to the time interval ti
+	 */
+	template<typename N, typename E>
+	std::vector<double> temporal_clustering_coefficient(IncidentLists<N, E> const& tg, TimeInterval ti) {
+
+		std::vector<double> result(tg.getNumberOfNodes(), 0);
+		auto timesteps = ti.second - ti.first;
+
+		for (int nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+			std::set<NodeId> neighbors;
+
+			for (auto& e : tg.getNode(nid).outEdges) {
+				if (e.t < ti.first || e.t > ti.second) continue;
+				neighbors.insert(e.v);
+			}
+
+			double count = 0;
+			for (auto& v : neighbors) {
+				for (auto& e : tg.getNode(v).outEdges) {
+					if (e.t < ti.first || e.t > ti.second) continue;
+					if (neighbors.find(e.v) != neighbors.end()) {
+						count += 1;
+					}
+				}
+			}
+
+			if (neighbors.empty() || neighbors.size() == 1) {
+				result[nid] = 0.0;
+			}
+			else {
+				auto m = (double)(neighbors.size() * (neighbors.size() - 1));
+				result[nid] = (1.0 / (double)timesteps) * (count / m);
+			}
+		}
+
+		return result;
+	}
+
+	// =====================================================================================================================================================================
+
+	template<typename N, typename E>
+	std::vector<double> temporal_clustering_coefficient_open_mp(IncidentLists<N, E> const& tg, TimeInterval ti, int numThreads) {
+
+		std::vector<double> result(tg.getNumberOfNodes(), 0);
+		auto timesteps = ti.second - ti.first;
+
+		omp_set_num_threads(numThreads);
+#pragma omp parallel for
+		for (int nid = 0; nid < tg.getNumberOfNodes(); ++nid) {
+			std::set<NodeId> neighbors;
+
+			for (auto& e : tg.getNode(nid).outEdges) {
+				if (e.t < ti.first || e.t > ti.second) continue;
+				neighbors.insert(e.v);
+			}
+
+			double count = 0;
+			for (auto& v : neighbors) {
+				for (auto& e : tg.getNode(v).outEdges) {
+					if (e.t < ti.first || e.t > ti.second) continue;
+					if (neighbors.find(e.v) != neighbors.end()) {
+						count += 1;
+					}
+				}
+			}
+
+			if (neighbors.empty() || neighbors.size() == 1) {
+				result[nid] = 0.0;
+			}
+			else {
+				auto m = (double)(neighbors.size() * (neighbors.size() - 1));
+				result[nid] = (1.0 / (double)timesteps) * (count / m);
+			}
+		}
+
+		return result;
+	}
+
+	// =====================================================================================================================================================================
+
+	template<typename N, typename E>
+	std::vector<double> do_cc(IncidentLists<N, E> const& tg, TimeInterval ti, size_t startNid, size_t endNid) { //, std::vector<double> result) {
+		//std::chrono::time_point<std::chrono::system_clock> start, end;
+		//start = std::chrono::system_clock::now();
+
+		std::vector<double> result(endNid - startNid, 0);
+		auto timesteps = ti.second - ti.first;
+		for (size_t nid = startNid; nid < endNid; ++nid) {
+			std::set<NodeId> neighbors;
+
+			for (auto& e : tg.getNode(nid).outEdges) {
+				if (e.t < ti.first || e.t > ti.second) continue;
+				neighbors.insert(e.v);
+			}
+
+			double count = 0;
+			for (auto& v : neighbors) {
+				for (auto& e : tg.getNode(v).outEdges) {
+					if (e.t < ti.first || e.t > ti.second) continue;
+					if (neighbors.find(e.v) != neighbors.end()) {
+						count += 1;
+					}
+				}
+			}
+
+			if (neighbors.empty() || neighbors.size() == 1) {
+				result[nid - startNid] = 0.0;
+			}
+			else {
+				auto m = (double)(neighbors.size() * (neighbors.size() - 1));
+				result[nid - startNid] = (1.0 / (double)timesteps) * (count / m);
+			}
+		}
+		//end = std::chrono::system_clock::now();
+		//std::chrono::duration<double> elapsed_seconds = end - start;
+		//std::cout << "Done at " << startNid << " in time " << elapsed_seconds.count() << ", size: " << result.size() << "\n";
+		return result;
+	}
+
+	template<typename N, typename E>
+	std::vector<double> temporal_clustering_coefficient_multi(IncidentLists<N, E> const& tg, TimeInterval ti, int numThreads) {
+		auto numNodes = tg.getNumberOfNodes();
+		std::vector<double> result;
+		auto timesteps = ti.second - ti.first;
+		//auto numThreads = 28;
+		long long incr = numNodes / numThreads;
+		std::vector<std::future<std::vector<double>>> result_futures;
+
+		for (size_t i = 0; i < numThreads; i++) {
+			auto startNid = i * incr;
+			auto endNid = 0;
+			if (i == numThreads - 1) {
+				endNid = numNodes;
+			}
+			else {
+				endNid = startNid + incr;
+			}
+			//std::cout << "total: " << numNodes << ", start: " << startNid << ", end: " << endNid << " at: " << std::chrono::system_clock::now() << "\n";
+			result_futures.push_back(std::async(do_cc<N, E>, std::ref(tg), ti, startNid, endNid));
+		}
+
+		for (auto& res : result_futures) {
+			auto temp = res.get();
+			result.insert(result.end(), temp.begin(), temp.end());
+		}
+		return result;
+	}
+
+	// ==========================================================================================================================================================
 }
 
 #endif //TGLIB_TEMPORALCLUSTERINGCOEFFICIENT_H
@@ -4305,14 +4476,14 @@ return reachable;
  * for full license details.
  */
 
-/** @file InputOutput.h
- *  @brief Contains IO functionality
- */
+ /** @file InputOutput.h
+  *  @brief Contains IO functionality
+  */
 
 #ifndef TGLIB_INPUTOUTPUT_H
 #define TGLIB_INPUTOUTPUT_H
 
-// #include "stdafx.h"
+  // #include "stdafx.h"
 #include <string>
 #include <iostream>
 
@@ -4324,156 +4495,248 @@ return reachable;
 #include "../core/IncidentLists.h"
 #include "../core/TRSGraph.h"
 #include "../core/Transformations.h"
+#include <omp.h>
 
 
 namespace tglib {
 
-/**
- * @brief Mananges node ids.
- */
-struct NodeIdManager {
-    /**
-     * @brief Constructor
-     */
-    NodeIdManager() : nid(0){};
+	/**
+	 * @brief Mananges node ids.
+	 */
+	struct NodeIdManager {
+		/**
+		 * @brief Constructor
+		 */
+		NodeIdManager() : nid(0) {};
 
-    /**
-     * @brief mapping between node ids
-     */
-    std::unordered_map<NodeId, NodeId> nidmap;
+		/**
+		 * @brief mapping between node ids
+		 */
+		std::unordered_map<NodeId, NodeId> nidmap;
 
-    /**
-     *
-     * @param id Node id from input graph
-     * @return Node id if id is already assigned or new node id
-     */
-    NodeId getNodeId(NodeId id) {
-        NodeId r;
-        if (nidmap.find(id) == nidmap.end()) {
-            r = nid;
-            nidmap.emplace(id, nid++);
-        } else {
-            r = nidmap.at(id);
-        }
-        return r;
-    }
+		/**
+		 *
+		 * @param id Node id from input graph
+		 * @return Node id if id is already assigned or new node id
+		 */
+		NodeId getNodeId(NodeId id) {
+			NodeId r;
+			if (nidmap.find(id) == nidmap.end()) {
+				r = nid;
+				nidmap.emplace(id, nid++);
+			}
+			else {
+				r = nidmap.at(id);
+			}
+			return r;
+		}
 
-    /**
-     * @brief stores the number of nodes / used node ids
-     */
-    NodeId nid = 0;
-};
+		/**
+		 * @brief stores the number of nodes / used node ids
+		 */
+		NodeId nid = 0;
+	};
 
-/**
- * @brief Helper function for splitting lines
- * @param s the line
- * @param delim the delimiter
- * @return vector of ints
- */
-inline std::vector<Time> split_string(const std::string& s, char delim) {
-    std::vector<Time> result;
-    std::stringstream ss(s);
-    while (ss.good()) {
-        std::string substr;
-        getline(ss, substr, delim);
-        if (!substr.empty())
-            result.push_back(stoll(substr));
-    }
-    return result;
-}
+	/**
+	 * @brief Helper function for splitting lines
+	 * @param s the line
+	 * @param delim the delimiter
+	 * @return vector of ints
+	 */
+	inline std::vector<Time> split_string(const std::string& s, char delim) {
+		std::vector<Time> result;
+		std::stringstream ss(s);
+		while (ss.good()) {
+			std::string substr;
+			getline(ss, substr, delim);
+			if (!substr.empty())
+				result.push_back(stoll(substr));
+		}
+		return result;
+	}
 
-/**
- * @brief Loads a temporal graph in ordered edge list representation from a file
- * @param filename The file in which each line represents one temporal edge (u,v,t,tt)
- * @param directed If false, each edge will be inserted in both directions
- * @return The ordered edge stream
- */
-template<typename E>
-tglib::OrderedEdgeList<E> load_ordered_edge_list(const std::string &filename, bool directed) {
-    std::ifstream fs;
-    fs.open(filename);
-    auto opened_file = fs.is_open();
+	/**
+	 * @brief Loads a temporal graph in ordered edge list representation from a file
+	 * @param filename The file in which each line represents one temporal edge (u,v,t,tt)
+	 * @param directed If false, each edge will be inserted in both directions
+	 * @return The ordered edge stream
+	 */
+	template<typename E>
+	tglib::OrderedEdgeList<E> load_ordered_edge_list(const std::string& filename, bool directed) {
+		std::ifstream fs;
+		fs.open(filename);
+		auto opened_file = fs.is_open();
 
-    if (!opened_file) {
-        throw std::runtime_error("Could not open file " + filename);
-    }
+		if (!opened_file) {
+			throw std::runtime_error("Could not open file " + filename);
+		}
+
+		std::string line;
+		auto numLines = 0;
+		long i;
+		std::vector<std::string> lineVector;
+		for (i = 0; getline(fs, line); ++i) {
+			numLines++;
+			lineVector.push_back(line);
+		}
 
 
-    std::string line;
+		std::vector<E> edges;
+		TimeInterval ti{ inf, 0 };
 
-    std::vector<E> edges;
-    TimeInterval ti{inf, 0};
+		NodeIdManager nidman;
+		//		omp_set_num_threads(1);
+		//#pragma omp parallel for
+		for (i = 0; i < numLines; ++i) {
+			//while (getline(fs, line)) {
+			line = lineVector[i];
+			if (line.empty()) continue;
 
-    NodeIdManager nidman;
-    while (getline(fs, line)) {
-        if (line.empty()) continue;
+			std::vector<Time> l = split_string(line, ' ');
 
-        std::vector<Time> l = split_string(line, ' ');
+			if (l.size() < 3) continue;
 
-        if (l.size() < 3) continue;
+			NodeId u = nidman.getNodeId(l[0]);
+			NodeId v = nidman.getNodeId(l[1]);
 
-        NodeId u = nidman.getNodeId(l[0]);
-        NodeId v = nidman.getNodeId(l[1]);
 
-        Time t = l[2];
+			Time t = l[2];
 
-        Time tt = 1; // todo optional argument
-        if (l.size() >= 4)
-            tt = l[3];
+			Time tt = 1; // todo optional argument
+			if (l.size() >= 4)
+				tt = l[3];
 
-        edges.push_back({u, v, t, tt});
-        if (!directed) {
-            edges.push_back({v, u, t, tt});
-        }
+			edges.push_back({ u, v, t, tt });
+			if (!directed) {
+				edges.push_back({ v, u, t, tt });
+			}
 
-        if (t < ti.first) {
-            ti.first = t;
-        }
+			if (t < ti.first) {
+				ti.first = t;
+			}
 
-        if (t + tt > ti.second) {
-            ti.second = t + tt;
-        }
-    }
-    fs.close();
-    sort(edges.begin(), edges.end());
+			if (t + tt > ti.second) {
+				ti.second = t + tt;
+			}
+		}
+		fs.close();
+		sort(edges.begin(), edges.end());
 
-    OrderedEdgeList<E> tgs(nidman.nid, edges, ti, nidman.nidmap);
+		OrderedEdgeList<E> tgs(nidman.nid, edges, ti, nidman.nidmap);
 
-    return tgs;
-}
+		return tgs;
+	}
 
-/**
- * @brief Loads a directed temporal graph in ordered edge list representation from a file
- * @param filename The file in which each line represents one temporal edge (u,v,t,tt)
- * @return The ordered edge stream
- */
-template<typename E>
-tglib::OrderedEdgeList<E> load_ordered_edge_list(const std::string &filename) {
-    return load_ordered_edge_list<E>(filename, true);
-}
+	template<typename E>
+	tglib::OrderedEdgeList<E> load_ordered_edge_list_omp(const std::string& filename, bool directed, int num_threads) {
+		std::ifstream fs;
+		fs.open(filename);
+		auto opened_file = fs.is_open();
 
-/**
- * @brief Loads a temporal graph in incident lists representation from a file
- * @param filename The file in which each line represents one temporal edge (u,v,t,tt)
- * @param directed If false, each edge will be inserted in both directions
- * @return The temporal graph in incidents list representation
- */
-template<typename E, class T>
-tglib::IncidentLists<T, E> load_incident_lists(const std::string &filename, bool directed) {
-    OrderedEdgeList<E> tgs = load_ordered_edge_list<E>(filename, directed);
-    return to_incident_lists(tgs);
-}
+		if (!opened_file) {
+			throw std::runtime_error("Could not open file " + filename);
+		}
 
-/**
- * @brief Loads a temporal graph in time-respecting static graph representation from a file
- * @param filename The file in which each line represents one temporal edge (u,v,t,tt)
- * @param directed If false, each edge will be inserted in both directions
- * @return The temporal graph in time-respecting static graph representation
- */
-inline tglib::TRSGraph load_TRS(const std::string &filename, bool directed) {
-    auto tgs = load_ordered_edge_list<TemporalEdge>(filename, directed);
-    return to_trs_graph<TemporalEdge>(tgs);
-}
+		std::string line;
+		auto numLines = 0;
+		long long i;
+		std::vector<std::string> lineVector;
+		for (i = 0; getline(fs, line); ++i) {
+			numLines++;
+			lineVector.push_back(line);
+		}
+
+
+		std::vector<E> edges;
+		TimeInterval ti{ inf, 0 };
+
+		NodeIdManager nidman;
+
+		omp_set_num_threads(num_threads);
+		omp_lock_t getNodesLock;
+		omp_init_lock(&getNodesLock);
+		omp_lock_t getLineLock;
+		omp_init_lock(&getLineLock);
+
+#pragma omp parallel for shared(ti)
+		for (i = 0; i < numLines; ++i) {
+			omp_set_lock(&getLineLock);
+			std::string line = lineVector[i];
+			if (line.empty()) continue;
+
+			std::vector<Time> l = split_string(line, ' ');
+			omp_unset_lock(&getLineLock);
+
+			if (l.size() < 3) continue;
+			NodeId u;
+			NodeId v;
+
+#pragma omp critical
+			{
+				u = nidman.getNodeId(l[0]);
+				v = nidman.getNodeId(l[1]);
+			}
+
+			Time t = l[2];
+
+			Time tt = 1; // todo optional argument
+			if (l.size() >= 4)
+				tt = l[3];
+
+#pragma omp critical
+			edges.push_back({ u, v, t, tt });
+			if (!directed) {
+#pragma omp critical
+				edges.push_back({ v, u, t, tt });
+			}
+			if (t < ti.first) {
+				ti.first = t;
+			}
+
+			if (t + tt > ti.second) {
+				ti.second = t + tt;
+			}
+		}
+		fs.close();
+		sort(edges.begin(), edges.end());
+
+		OrderedEdgeList<E> tgs(nidman.nid, edges, ti, nidman.nidmap);
+
+		return tgs;
+	}
+
+	/**
+	 * @brief Loads a directed temporal graph in ordered edge list representation from a file
+	 * @param filename The file in which each line represents one temporal edge (u,v,t,tt)
+	 * @return The ordered edge stream
+	 */
+	template<typename E>
+	tglib::OrderedEdgeList<E> load_ordered_edge_list(const std::string& filename) {
+		return load_ordered_edge_list<E>(filename, true);
+	}
+
+	/**
+	 * @brief Loads a temporal graph in incident lists representation from a file
+	 * @param filename The file in which each line represents one temporal edge (u,v,t,tt)
+	 * @param directed If false, each edge will be inserted in both directions
+	 * @return The temporal graph in incidents list representation
+	 */
+	template<typename E, class T>
+	tglib::IncidentLists<T, E> load_incident_lists(const std::string& filename, bool directed) {
+		OrderedEdgeList<E> tgs = load_ordered_edge_list<E>(filename, directed);
+		return to_incident_lists(tgs);
+	}
+
+	/**
+	 * @brief Loads a temporal graph in time-respecting static graph representation from a file
+	 * @param filename The file in which each line represents one temporal edge (u,v,t,tt)
+	 * @param directed If false, each edge will be inserted in both directions
+	 * @return The temporal graph in time-respecting static graph representation
+	 */
+	inline tglib::TRSGraph load_TRS(const std::string& filename, bool directed) {
+		auto tgs = load_ordered_edge_list<TemporalEdge>(filename, directed);
+		return to_trs_graph<TemporalEdge>(tgs);
+	}
 
 } // tglib
 

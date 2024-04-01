@@ -35,8 +35,10 @@ set(NATIVE_SOURCES
         ../algorithms/TemporalClosenessApproximation.h
         ../algorithms/TemporalWalkCentrality.h
         ../algorithms/TemporalEfficiency.h
-        ../algorithms/TemporalDiameter.h
+        ../algorithms/TemporalDiameter.h        
+	../algorithms/TemporalPaths.h
         ../algorithms/TopologicalOverlap.h
+        ../algorithms/TopkTemporalCloseness.h
         ../algorithms/TemporalReachability.h
 
         ../util/InputOutput.h
