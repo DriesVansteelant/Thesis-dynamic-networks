@@ -41,6 +41,8 @@ set(NATIVE_SOURCES
         ../algorithms/TopkTemporalCloseness.h
         ../algorithms/TemporalReachability.h
 
+        ../algorithms/Statistics.h
+
         ../util/InputOutput.h
 
         )

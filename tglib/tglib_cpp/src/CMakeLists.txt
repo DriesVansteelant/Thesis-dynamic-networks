@@ -39,6 +39,8 @@ set(TO_DOCUMENT
         src/algorithms/TopologicalOverlap.h
         src/algorithms/TemporalReachability.h
 
+        src/algorithms/Statistics.h
+
         src/util/InputOutput.h
 
         PARENT_SCOPE)

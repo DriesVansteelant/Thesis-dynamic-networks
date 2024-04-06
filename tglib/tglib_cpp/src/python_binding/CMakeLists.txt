@@ -33,6 +33,8 @@ set(PYTHON_BINDING_SOURCES
         algorithms_binding/TemporalReachability_binding.cpp
         algorithms_binding/TemporalkhCore_binding.cpp
 
+        algorithms_binding/Statistics_binding.cpp
+
         util_binding/InputOutput_binding.cpp
 
 

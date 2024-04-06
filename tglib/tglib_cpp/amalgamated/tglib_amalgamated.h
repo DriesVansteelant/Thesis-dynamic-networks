@@ -293,7 +293,6 @@ struct TemporalGraphStatistics {
 #include <algorithm> 
 #include <set>
 #include <omp.h>
-#include "BasicTypes.h"
 
 
 namespace tglib {
@@ -683,7 +682,6 @@ namespace tglib {
 #ifndef TGLIB_AGGREGATEDGRAPH_H
 #define TGLIB_AGGREGATEDGRAPH_H
 
-#include "BasicTypes.h"
 
 namespace tglib {
 
@@ -725,7 +723,6 @@ struct StaticWeightedEdge {
 #define TGLIB_INCIDENTLISTS_H
 
 
-#include "OrderedEdgeList.h"
 
 
 namespace tglib {
@@ -898,7 +895,6 @@ namespace tglib {
 #define TGLIB_TRSGRAPH_H
 
 #include <vector>
-#include "BasicTypes.h"
 
 
 namespace tglib {
@@ -1003,7 +999,6 @@ struct TRSGraph {
 #define TGLIB_DIRECTEDLINEGRAPH_H
 
 #include <vector>
-#include "BasicTypes.h"
 
 namespace tglib {
 
@@ -1109,7 +1104,6 @@ struct DirectedLineGraph {
 #ifndef TGLIB_AGGREGATEDGRAPH_H
 #define TGLIB_AGGREGATEDGRAPH_H
 
-#include "BasicTypes.h"
 
 namespace tglib {
 
@@ -1152,11 +1146,6 @@ struct StaticWeightedEdge {
 
 #include <map>
 #include <algorithm>
-#include "OrderedEdgeList.h"
-#include "IncidentLists.h"
-#include "TRSGraph.h"
-#include "DirectedLineGraph.h"
-#include "AggregatedGraph.h"
 #include <cassert>
 #include <cmath>
 
@@ -1534,7 +1523,6 @@ OrderedEdgeList<E> make_undirected(tglib::OrderedEdgeList<E> const &tgs) {
 #include <memory>
 #include <set>
 #include <queue>
-#include "../core/OrderedEdgeList.h"
 
 
 namespace tglib {
@@ -1808,7 +1796,6 @@ private:
 
 #include <set>
 #include <memory>
-#include "../core/OrderedEdgeList.h"
 
 
 namespace tglib {
@@ -2091,9 +2078,6 @@ namespace tglib {
 #include <stack>
 #include <queue>
 #include <map>
-#include "../core/DirectedLineGraph.h"
-#include "../core/OrderedEdgeList.h"
-#include "../core/Transformations.h"
 
 namespace tglib {
 
@@ -2198,8 +2182,6 @@ std::vector<double> temporal_edge_betweenness(tglib::OrderedEdgeList<E> const &t
 #ifndef TGLIB_TEMPORALCLUSTERINGCOEFFICIENT_H
 #define TGLIB_TEMPORALCLUSTERINGCOEFFICIENT_H
 
-#include "../core/BasicTypes.h"
-#include "../core/IncidentLists.h"
 #include <iostream>
 #include <thread>
 #include <future>
@@ -2439,7 +2421,6 @@ namespace tglib {
 
 #include <vector>
 #include <map>
-#include "../core/OrderedEdgeList.h"
 
 namespace tglib {
 
@@ -2519,7 +2500,6 @@ std::vector<double> temporal_katz_centrality(OrderedEdgeList<E> const &tgs, doub
 #define TGLIB_TEMPORALPAGERANK_H
 
 #include <vector>
-#include "../core/OrderedEdgeList.h"
 
 
 namespace tglib {
@@ -2582,8 +2562,6 @@ std::vector<double> temporal_pagerank(OrderedEdgeList<E> const &tgs, double alph
 #define TGLIB_BURSTINESS_H
 
 
-#include "../core/OrderedEdgeList.h"
-#include "../util/UtilFunctions.h"
 #include <map>
 
 namespace tglib {
@@ -2726,11 +2704,6 @@ node_burstiness(tglib::OrderedEdgeList<E> const &tgs,
 #include <vector>
 #include <list>
 #include <memory>
-#include "../core/BasicTypes.h"
-#include "../core/OrderedEdgeList.h"
-#include "../core/TRSGraph.h"
-#include "../core/IncidentLists.h"
-#include "../util/LabelPQ.h"
 
 namespace tglib {
 
@@ -3621,9 +3594,6 @@ minimum_transition_times(tglib::TRSGraph const &trs, tglib::NodeId nid, tglib::T
 #include <vector>
 #include <map>
 #include <set>
-#include "../core/AggregatedGraph.h"
-#include "../core/OrderedEdgeList.h"
-#include "../core/Transformations.h"
 
 namespace tglib {
 
@@ -3716,10 +3686,6 @@ std::vector<int> compute_khcores(OrderedEdgeList<E> const &tgs, int h) {
 #define TGLIB_TEMPORALCLOSENESS_H
 
 
-#include "../core/OrderedEdgeList.h"
-#include "../core/IncidentLists.h"
-#include "../core/TRSGraph.h"
-#include "../algorithms/TemporalDistances.h"
 
 namespace tglib {
 
@@ -3983,10 +3949,6 @@ std::vector<double> run_temporal_closeness(TempGraph const& tg, tglib::Distance_
 #ifndef TGLIB_TEMPORALCLOSENESSAPPROXIMATION_H
 #define TGLIB_TEMPORALCLOSENESSAPPROXIMATION_H
 
-#include "../core/OrderedEdgeList.h"
-#include "../core/IncidentLists.h"
-#include "../core/TRSGraph.h"
-#include "../algorithms/TemporalDistances.h"
 
 namespace tglib {
 
@@ -4049,7 +4011,6 @@ std::vector<double> temporal_closeness_aproximation(tglib::IncidentLists<N, E> &
 
 
 #include <map>
-#include "../core/OrderedEdgeList.h"
 
 namespace tglib {
 
@@ -4195,8 +4156,6 @@ std::vector<double> temporal_walk_centrality(tglib::OrderedEdgeList<E> const &tg
 #define TGLIB_TEMPORALEFFICIENCY_H
 
 #include <vector>
-#include "../core/BasicTypes.h"
-#include "../algorithms/TemporalCloseness.h"
 
 /**
  * @brief Computes the temporal efficiency [1] for the temporal graph.
@@ -4248,8 +4207,6 @@ double temporal_efficiency(TempGraph const& tg, tglib::TimeInterval timeInterval
 #define TGLIB_TEMPORALDIAMETER_H
 
 #include <vector>
-#include "../core/BasicTypes.h"
-#include "TemporalDistances.h"
 
 namespace tglib {
 
@@ -4342,8 +4299,6 @@ Time temporal_diameter(TempGraph const &tg, tglib::TimeInterval timeInterval, tg
 
 #include <complex>
 #include <algorithm>
-#include "../core/BasicTypes.h"
-#include "../core/IncidentLists.h"
 
 namespace tglib {
 
@@ -4424,11 +4379,6 @@ double topological_overlap(IncidentLists<N, E> const& tg, NodeId nid, TimeInterv
 #ifndef TGLIB_REACHABILITY_H
 #define TGLIB_REACHABILITY_H
 
-#include "../core/BasicTypes.h"
-#include "../core/OrderedEdgeList.h"
-#include "../core/TRSGraph.h"
-#include "../core/IncidentLists.h"
-#include "../util/LabelPQ.h"
 
 namespace tglib {
 
@@ -4483,7 +4433,6 @@ return reachable;
 #ifndef TGLIB_INPUTOUTPUT_H
 #define TGLIB_INPUTOUTPUT_H
 
-  // #include "stdafx.h"
 #include <string>
 #include <iostream>
 
@@ -4491,10 +4440,6 @@ return reachable;
 #include <sstream>
 #include <unordered_map>
 #include <algorithm>
-#include "../core/OrderedEdgeList.h"
-#include "../core/IncidentLists.h"
-#include "../core/TRSGraph.h"
-#include "../core/Transformations.h"
 #include <omp.h>
 
 

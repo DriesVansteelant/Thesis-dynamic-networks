@@ -11,7 +11,8 @@
 #include "../core/Transformations.h"
 #include "../algorithms/TemporalClusteringCoefficient.h"
 #include "../algorithms/TemporalPageRank.h"
-#include "../algorithms//TemporalPaths.h"
+#include "../algorithms/TemporalPaths.h"
+#include "../algorithms/Statistics.h"
 #include <set>
 #include <algorithm>
 #include <chrono>
@@ -254,7 +255,7 @@ void test_minimum_duration_paths(OrderedEdgeList<TemporalEdge> tgs, int from, in
 	//	std::cout << "OMP Paths time (" << numThreads<< " threads): " << elapsed_seconds3.count() << "s\n";
 	//}
 
-	int thr_list[] = { 1, 2, 4, 8, 16, 24, 36 };
+	int thr_list[] = { 1, 2, 4, 8, 12, 18, 24, 36, 48 };
 	for (auto numThr : thr_list) {
 
 		start = std::chrono::system_clock::now();
@@ -288,7 +289,7 @@ void test_minimum_duration_paths(OrderedEdgeList<TemporalEdge> tgs, int from, in
 }
 
 void test_enron() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/enron.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/enron.txt";
 	auto tgs = test_load_ime(inPath);
 
 	test_minimum_duration_paths(tgs, 179, 129); // 0 -> 26 (9 hops), 115 -> 169x
@@ -303,7 +304,7 @@ void test_enron() {
 }
 
 void test_SocialEvo() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/SocialEvo.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/SocialEvo.txt";
 	auto tgs = test_load_ime(inPath);
 
 	test_minimum_duration_paths(tgs, 0, 0);
@@ -318,7 +319,7 @@ void test_SocialEvo() {
 }
 
 void test_wikipedia() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/wikipedia.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/wikipedia.txt";
 	auto tgs = test_load_ime(inPath);
 
 	test_minimum_duration_paths(tgs, 944, 73);
@@ -333,7 +334,7 @@ void test_wikipedia() {
 }
 
 void test_UNvote() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/UNvote.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/UNvote.txt";
 	auto tgs = test_load_ime(inPath);
 
 	test_minimum_duration_paths(tgs, 47, 112);
@@ -348,7 +349,7 @@ void test_UNvote() {
 }
 
 void test_CanParl() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/CanParl.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/CanParl.txt";
 	auto tgs = test_load_ime(inPath);
 
 	test_minimum_duration_paths(tgs, 1, 364);
@@ -363,7 +364,7 @@ void test_CanParl() {
 }
 
 void test_reddit() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/reddit.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/reddit.txt";
 	auto tgs = test_load_ime(inPath);
 
 	test_minimum_duration_paths(tgs, 944, 1);
@@ -378,7 +379,7 @@ void test_reddit() {
 }
 
 void test_lastfm() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/lastfm.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/lastfm.txt";
 	auto tgs = test_load_ime(inPath);
 
 	test_minimum_duration_paths(tgs, 366, 63);
@@ -393,7 +394,7 @@ void test_lastfm() {
 }
 
 void test_Flights() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/Flights.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/Flights.txt";
 	auto tgs = test_load_ime(inPath);
 
 	test_minimum_duration_paths(tgs, 1440, 2294);
@@ -409,7 +410,7 @@ void test_Flights() {
 
 
 void test_tgbl_review() {
-	std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/tgbl-review.txt";
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/tgbl-review.txt";
 
 	auto tgs = test_load_ime(inPath);
 
@@ -429,11 +430,25 @@ void test_tgbl_review() {
 
 int main(int argc, char* argv[])
 {
+	std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/enron.txt";
+	//auto tgs = test_load_ime("C:/Users/dries/Documents/school/Thesis/Code/Data/enron.txt");
+
+	auto tgs = load_ordered_edge_list<TemporalEdge>(inPath);
+	auto tg = to_incident_lists<TGNode>(tgs);
+	auto node = getNode(tg, 1);
+	std::cout << node.outEdges.size() << "\n";
+	//getNode(tg, 1, tgs.getTimeInterval());
+
+	node = getNode(tg, 1, TimeInterval(16337160, 21070440));
+	std::cout << node.outEdges.size() << "\n";
+	node = getNode(tg, 1);
+	std::cout << node.outEdges.size() << "\n";
+
 	//__itt_domain* domain = __itt_domain_create("Domain.tglib");
 	//__itt_string_handle* handle_pr = __itt_string_handle_create("pr");
 	//__itt_string_handle* handle_cc = __itt_string_handle_create("cc");
 
-	//std::string inPath = "C:/Users/dries/Documents/GitHub/Code/Data/flights.txt";
+	//std::string inPath = "C:/Users/dries/Documents/school/Thesis/Code/Data/flights.txt";
 
 	//auto start = std::chrono::system_clock::now();
 	//auto tgs = test_load_ime(inPath);
@@ -452,28 +467,28 @@ int main(int argc, char* argv[])
 
 	//for (int i = 0; i < 1000; i++) {
 
-	std::cout << "test_enron \n";
-	test_enron();
+	//std::cout << "test_enron \n";
+	//test_enron();
 
-	std::cout << "================================================================================ \n";
-	std::cout << "test_wikipedia \n";
-	test_wikipedia();
-	std::cout << "test_UNvote \n";
-	test_UNvote();
-	std::cout << "test_CanParl \n";
-	test_CanParl();
-	std::cout << "test_reddit \n";
-	test_reddit();
-	std::cout << "test_lastfm \n";
-	test_lastfm();
+	//std::cout << "================================================================================ \n";
+	//std::cout << "test_wikipedia \n";
+	//test_wikipedia();
+	//std::cout << "test_UNvote \n";
+	//test_UNvote();
+	//std::cout << "test_CanParl \n";
+	//test_CanParl();
+	//std::cout << "test_reddit \n";
+	//test_reddit();
+	//std::cout << "test_lastfm \n";
+	//test_lastfm();
 
-	std::cout << "test_Flights \n";
-	test_Flights();
-	std::cout << "test_tgbl_review \n";
-	test_tgbl_review();
-	std::cout << "test_SocialEvo \n";
-	test_SocialEvo();
-	std::cout << "DONE! \n";
+	//std::cout << "test_Flights \n";
+	//test_Flights();
+	//std::cout << "test_tgbl_review \n";
+	//test_tgbl_review();
+	//std::cout << "test_SocialEvo \n";
+	//test_SocialEvo();
+	//std::cout << "DONE! \n";
 	//}
 
 	return 1; // optional return value
