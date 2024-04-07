@@ -236,6 +236,7 @@ void test_minimum_duration_paths(OrderedEdgeList<TemporalEdge> tgs, int from, in
 	start = std::chrono::system_clock::now();
 	auto sp = minimum_duration_path(tg, from, to, tg.getTimeInterval());
 	end = std::chrono::system_clock::now();
+	print_edge_vector(sp);
 
 	std::chrono::duration<double> elapsed_seconds;
 	std::chrono::duration<double> elapsed_seconds2 = end - start;
@@ -254,33 +255,33 @@ void test_minimum_duration_paths(OrderedEdgeList<TemporalEdge> tgs, int from, in
 	//	std::cout << "OMP Paths time (" << numThreads<< " threads): " << elapsed_seconds3.count() << "s\n";
 	//}
 
-	int thr_list[] = { 1, 2, 4, 8, 16, 24, 36 };
-	for (auto numThr : thr_list) {
+	//int thr_list[] = { 1, 2, 4, 8, 16, 24, 36 };
+	//for (auto numThr : thr_list) {
 
-		start = std::chrono::system_clock::now();
-		sp = minimum_duration_path_omp(tg, from, to, tg.getTimeInterval(), numThr);
-		end = std::chrono::system_clock::now();
+	//	start = std::chrono::system_clock::now();
+	//	sp = minimum_duration_path_omp(tg, from, to, tg.getTimeInterval(), numThr);
+	//	end = std::chrono::system_clock::now();
 
-		elapsed_seconds = end - start;
+	//	elapsed_seconds = end - start;
 
-		result_set["multi_thread"].push_back(elapsed_seconds.count());
-		//std::cout << "multi threaded time: " << elapsed_seconds.count() << "s\n";
+	//	result_set["multi_thread"].push_back(elapsed_seconds.count());
+	//	//std::cout << "multi threaded time: " << elapsed_seconds.count() << "s\n";
 
-		//start = std::chrono::system_clock::now();
-		//sp = minimum_duration_path_omp(tg, from, to, tg.getTimeInterval(), numThr);
-		//end = std::chrono::system_clock::now();
+	//	//start = std::chrono::system_clock::now();
+	//	//sp = minimum_duration_path_omp(tg, from, to, tg.getTimeInterval(), numThr);
+	//	//end = std::chrono::system_clock::now();
 
-		//elapsed_seconds = end - start;
+	//	//elapsed_seconds = end - start;
 
-		//result_set["open_mp_multi_thread"].push_back(elapsed_seconds.count());
-		//std::cout << "openMp time: " << elapsed_seconds.count() << "s\n";
-	}
-	std::cout << "single_thread: ";
-	print_vector(result_set["single_thread"]);
-	std::cout << "\n";
-	std::cout << "multi_thread: ";
-	print_vector(result_set["multi_thread"]);
-	std::cout << "\n";
+	//	//result_set["open_mp_multi_thread"].push_back(elapsed_seconds.count());
+	//	//std::cout << "openMp time: " << elapsed_seconds.count() << "s\n";
+	//}
+	//std::cout << "single_thread: ";
+	//print_vector(result_set["single_thread"]);
+	//std::cout << "\n";
+	//std::cout << "multi_thread: ";
+	//print_vector(result_set["multi_thread"]);
+	//std::cout << "\n";
 	//std::cout << "open_mp_multi_thread: ";
 	//print_vector(result_set["open_mp_multi_thread"]);
 	//std::cout << "\n";

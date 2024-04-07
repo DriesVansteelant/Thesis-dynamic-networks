@@ -1,5 +1,5 @@
 
-multi_thread_test = {"enron": {
+multi_thread_test_cc = {"enron": {
     "single_thread": [0.0447604],
 
     "std::thread": [0.0466771, 0.0352848, 0.0257682, 0.0174631, 0.0138795, 0.011244, 0.0115998, 0.0108549, 0.0145421],
@@ -72,4 +72,4 @@ multi_thread_test = {"enron": {
     }
 }
 
-num_threads = [1, 2, 4, 8, 12, 18, 24, 36, 48]
+num_threads_cc = [1, 2, 4, 8, 12, 18, 24, 36, 48]
